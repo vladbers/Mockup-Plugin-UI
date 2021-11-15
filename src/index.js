@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {TemplatePage} from "./TemplatePage";
+import {lSTheme} from "./theme";
+import {ThemeProvider} from "@mui/material";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <ThemeProvider theme={lSTheme}>
+        <TemplatePage />
+      </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
