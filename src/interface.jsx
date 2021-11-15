@@ -59,7 +59,7 @@ export const Interface = () => {
                 </Typography>
                 <PreviewBlock>
                     <ScreenBlock sx={{width: 400, height: 900}}>
-                        Component
+                        Screen component
                     </ScreenBlock>
                 </PreviewBlock>
             </PreviewContainer>

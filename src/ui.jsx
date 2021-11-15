@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {styled} from '@mui/material/styles';
 import {Typography} from "@mui/material";
+import {useNavigate} from "react-router-dom";
 
 // Mock data
 import dropdownsIcon from './assets/dropdownsIcon.png'
@@ -13,6 +14,9 @@ import {DistortIcon} from "./UIElements/components/icons/distort";
 import {CrownIcon} from "./UIElements/components/icons/crown";
 import {ErrorIcon} from "./UIElements/components/icons/error";
 import {PriceIcon} from "./UIElements/components/icons/price";
+import {StyleIcon} from "./UIElements/components/icons/style";
+import {ResizeIcon} from "./UIElements/components/icons/resize";
+import {SizeIcon} from "./UIElements/components/icons/size";
 
 // Mock
 import {ColorsMock} from "./UIElements/mock/colorPalette";
@@ -34,7 +38,9 @@ import {TableContainer} from "./UIElements/components/tabsContainer";
 import {UiAuthButton} from "./UIElements/components/authBtn";
 import {UiChekBox} from "./UIElements/components/checkBox";
 import {UITabsHorizontal} from "./UIElements/components/UITabsHorizontal";
-import {useNavigate} from "react-router-dom";
+import {UiInfoBar} from "./UIElements/components/info";
+
+
 
 
 // Mock data Dropdowns
@@ -481,6 +487,31 @@ export const Ui = () => {
                                 Two content
                             </TableContainer>
                         </div>
+                    </GapContainer>
+                </div>
+            </PreviewBlock>
+            <PreviewBlock>
+                <Typography variant="type-16" component="p" sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                    Info
+                </Typography>
+                <div>
+                    <GapContainer sx={{flexDirection: 'column'}}>
+                        <UiInfoBar
+                            iconElement={<SizeIcon sx={{width: 14, color: (theme) => theme.palette.text['low']}} />}
+                            titleText={'Max Resolution'}
+                            type={'size'}
+                            resolutionText={'6000 x 4500 px'} />
+                        <UiInfoBar
+                            iconElement={<ResizeIcon sx={{width: 14, color: (theme) => theme.palette.text['low']}} />}
+                            titleText={'Screen Proportions'}
+                            type={'size'}
+                            resolutionText={'2000 x 1500 px'} />
+                        <UiInfoBar
+                            iconElement={<StyleIcon sx={{width: 14, color: (theme) => theme.palette.text['low']}} />}
+                            titleText={'Style'}
+                            type={'link'}
+                            href={'https://longscroll-mockups.com'}
+                        />
                     </GapContainer>
                 </div>
             </PreviewBlock>
