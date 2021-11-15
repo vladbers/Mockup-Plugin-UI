@@ -2,14 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import {Ui} from "./ui";
 import {lSTheme} from "./theme";
 import {ThemeProvider} from "@mui/material";
+import {BrowserRouter} from "react-router-dom";
+import {Onboard} from "./onboarding";
 
 ReactDOM.render(
   <React.StrictMode>
       <ThemeProvider theme={lSTheme}>
-        <Ui />
+          <BrowserRouter>
+                <Onboard />
+          </BrowserRouter>
       </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

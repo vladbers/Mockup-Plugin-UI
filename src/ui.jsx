@@ -171,7 +171,7 @@ export const Ui = () => {
     return (
         <PreviewContainer>
             <Typography variant="type-20" component="p" sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
-                NEW UI Kit
+                UI Kit
             </Typography>
 
             {/*{ Preview Colors }*/}
