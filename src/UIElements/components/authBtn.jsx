@@ -24,6 +24,7 @@ export const UiAuthButton = ({text, type, fullWidth, onClick}) => {
     }));
 
     const createIcon = (t) => {
+        // eslint-disable-next-line default-case
         switch (t) {
             case 'google':
                 return <GoogleIcon sx={{width: 24}} />

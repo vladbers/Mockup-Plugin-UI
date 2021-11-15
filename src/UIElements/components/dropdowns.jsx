@@ -186,7 +186,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export const UiDropdown = ({variant, data, isDropdownSelect}) => {
-    const [selected, setSelected] = React.useState('');
+    const [selected, setSelected] = React.useState(null);
 
     const classes = useStyles()
 
@@ -227,7 +227,7 @@ export const UiDropdown = ({variant, data, isDropdownSelect}) => {
 
     useEffect(() => {
         !selected && setSelected(data[0].value);
-    }, [selected])
+    }, [data, selected])
 
 
     const iconComponent = (props) => {
