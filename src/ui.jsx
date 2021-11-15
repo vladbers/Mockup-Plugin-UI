@@ -34,6 +34,7 @@ import {TableContainer} from "./UIElements/components/tabsContainer";
 import {UiAuthButton} from "./UIElements/components/authBtn";
 import {UiChekBox} from "./UIElements/components/checkBox";
 import {UITabsHorizontal} from "./UIElements/components/UITabsHorizontal";
+import {useNavigate} from "react-router-dom";
 
 
 // Mock data Dropdowns
@@ -162,13 +163,24 @@ const GapContainerFullElements = styled('div')(({theme}) => ({
 }));
 
 
+
+
 export const Ui = () => {
+    const navigate = useNavigate()
+
+    const goTo = (path) => {
+        navigate(path);
+    };
     // Mock state
     const [mockOpen, setMockOpen] = useState(true);
     const [mockTabContent, setMockTabContent] = useState(2);
     const [mockTabContentTwo, setMockTabContentTwo] = useState(0);
 
     return (
+        <div>
+            <div style={{marginTop:8, marginLeft: 8}}>
+                <UiRoundButton icon={<ArrowIcon sx={{width: 16}}/>} onClick={() => goTo('/')}/>
+            </div>
         <PreviewContainer>
             <Typography variant="type-20" component="p" sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
                 UI Kit
@@ -473,5 +485,6 @@ export const Ui = () => {
                 </div>
             </PreviewBlock>
         </PreviewContainer>
+        </div>
     )
 }
