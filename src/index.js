@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import {TemplatePage} from "./TemplatePage";
+import {Ui} from "./ui";
 import {lSTheme} from "./theme";
 import {ThemeProvider} from "@mui/material";
 
 ReactDOM.render(
   <React.StrictMode>
       <ThemeProvider theme={lSTheme}>
-        <TemplatePage />
+        <Ui />
       </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

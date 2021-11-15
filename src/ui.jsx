@@ -162,7 +162,7 @@ const GapContainerFullElements = styled('div')(({theme}) => ({
 }));
 
 
-export const TemplatePage = () => {
+export const Ui = () => {
     // Mock state
     const [mockOpen, setMockOpen] = useState(true);
     const [mockTabContent, setMockTabContent] = useState(2);

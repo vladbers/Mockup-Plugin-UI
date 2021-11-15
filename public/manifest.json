@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "LS Graphics - UI",
+  "name": "LS Graphics Ui theme for @mui",
   "icons": [
     {
       "src": "favicon.ico",
