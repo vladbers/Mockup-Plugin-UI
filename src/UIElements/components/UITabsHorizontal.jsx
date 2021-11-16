@@ -3,7 +3,6 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import {styled} from "@mui/material/styles";
-import {padding} from "@mui/system";
 
 export const UITabsHorizontal = ({tabs, defaultTabId, selectedID}) => {
     const [value, setValue] = React.useState(defaultTabId ? defaultTabId : 0);
