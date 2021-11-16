@@ -17,6 +17,7 @@ import {PriceIcon} from "./UIElements/components/icons/price";
 import {StyleIcon} from "./UIElements/components/icons/style";
 import {ResizeIcon} from "./UIElements/components/icons/resize";
 import {SizeIcon} from "./UIElements/components/icons/size";
+import {CatalogIcon} from "./UIElements/components/icons/catalog";
 
 // Mock
 import {ColorsMock} from "./UIElements/mock/colorPalette";
@@ -39,6 +40,7 @@ import {UiAuthButton} from "./UIElements/components/authBtn";
 import {UiChekBox} from "./UIElements/components/checkBox";
 import {UITabsHorizontal} from "./UIElements/components/UITabsHorizontal";
 import {UiInfoBar} from "./UIElements/components/info";
+import {UiMenuPoint} from "./UIElements/components/menuPoint";
 
 
 
@@ -495,6 +497,10 @@ export const Ui = () => {
                     Info
                 </Typography>
                 <div>
+                    {/*iconElement: icon component */}
+                    {/*titleText: text*/}
+                    {/*type: size / link */}
+                    {/*href: url */}
                     <GapContainer sx={{flexDirection: 'column'}}>
                         <UiInfoBar
                             iconElement={<SizeIcon sx={{width: 14, color: (theme) => theme.palette.text['low']}} />}
@@ -512,6 +518,48 @@ export const Ui = () => {
                             type={'link'}
                             href={'https://longscroll-mockups.com'}
                         />
+                    </GapContainer>
+                </div>
+            </PreviewBlock>
+            <PreviewBlock>
+                <Typography variant="type-16" component="p" sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                    Menu Points
+                </Typography>
+                <div>
+                    {/*icon: icon component */}
+                    {/*text: text*/}
+                    {/*type: selected / icon /  small */}
+                    {/*onClick: return click callback */}
+                    <GapContainer sx={{flexDirection: 'row'}}>
+                        <UiMenuPoint
+                            icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                            text={'Go Pro'}
+                            type={'icon'}
+                        />
+                        <UiMenuPoint
+                            icon={<CrownIcon sx={{width: 12, color: (theme) => theme.palette.accent['one']}} />}
+                            text={'Go Pro'}
+                            type={'selected'}
+                        />
+                        <UiMenuPoint
+                            icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                            text={'Go Pro'}
+                            type={'small'}
+                        />
+                    </GapContainer>
+                </div>
+            </PreviewBlock>
+            <PreviewBlock>
+                <Typography variant="type-16" component="p" sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                    Menu horizontal
+                </Typography>
+                <div>
+                    {/*icon: icon component */}
+                    {/*text: text*/}
+                    {/*type: selected / icon /  small */}
+                    {/*onClick: return click callback */}
+                    <GapContainer sx={{flexDirection: 'row'}}>
+
                     </GapContainer>
                 </div>
             </PreviewBlock>
