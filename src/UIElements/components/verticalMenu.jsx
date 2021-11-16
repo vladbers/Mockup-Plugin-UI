@@ -3,13 +3,12 @@ import {styled} from "@mui/material/styles";
 import {UiVerticalMenuDivider} from "./verticalMenuDevider";
 import {Typography} from "@mui/material";
 
-export const UiVerticalMenu = ({children, type, icon, heroTitle, heroSubtext}) => {
+export const UiVerticalMenu = ({children, type, icon, heroTitle, heroSubtext, onClick}) => {
 
     const VerticalMenu = styled('div')(({ theme }) => ({
         display: 'flex',
         flexDirection: 'column',
         borderRadius: 16,
-        padding: 10,
         background: theme.palette.transparent['light-90'],
         justifyContent: 'space-between',
         gap: 2
@@ -17,9 +16,10 @@ export const UiVerticalMenu = ({children, type, icon, heroTitle, heroSubtext}) =
     const VerticalMenuHeroBox = styled('div')(({ theme }) => ({
         display: 'flex',
         flexDirection: 'row',
-        padding: '10px 10px 4px',
+        padding: '20px 20px 14px',
         alignItems: 'center',
         alignContent: 'center',
+        cursor: 'pointer',
     }));
 
 
@@ -27,7 +27,7 @@ export const UiVerticalMenu = ({children, type, icon, heroTitle, heroSubtext}) =
         <>
             {type && type === 'hero' &&
                 <VerticalMenu>
-                    <VerticalMenuHeroBox>
+                    <VerticalMenuHeroBox onClick={onClick}>
                         {icon && icon}
                         <Typography variant="type-24" component="p" sx={{color: (theme) => theme.palette.text['high'], marginLeft: '10px', marginRight: '12px'}}>
                             {heroTitle}

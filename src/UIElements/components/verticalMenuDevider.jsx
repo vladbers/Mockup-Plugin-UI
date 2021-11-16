@@ -5,8 +5,6 @@ export const UiVerticalMenuDivider = () => {
 
     const VerticalMenuDivider = styled('div')(({ theme }) => ({
         borderBottom: '1px solid ' + theme.palette.line,
-        marginBottom: 10,
-        marginTop: 10
     }));
 
 

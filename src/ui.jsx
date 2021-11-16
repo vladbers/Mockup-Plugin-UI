@@ -44,6 +44,8 @@ import {UiInfoBar} from "./UIElements/components/info";
 import {UiMenuPoint} from "./UIElements/components/menuPoint";
 import {UiVerticalMenu} from "./UIElements/components/verticalMenu";
 import {UiVerticalMenuDivider} from "./UIElements/components/verticalMenuDevider";
+import {UiHorizontalMenu} from "./UIElements/components/horizontalMenu";
+import {UiVerticalMenuBox} from "./UIElements/components/verticalMenuBox";
 
 
 
@@ -141,6 +143,20 @@ const tabArrayMockTwo = [
     {
         id: 1,
         label: 'Catalog',
+    }
+]
+const tabArrayMockThree = [
+    {
+        id: 0,
+        label: 'Featured',
+    },
+    {
+        id: 1,
+        label: 'Find',
+    },
+    {
+        id: 2,
+        label: 'Distort',
     }
 ]
 
@@ -558,98 +574,106 @@ export const Ui = () => {
                     Menu vertical
                 </Typography>
                 <div>
-                    {/*icon: icon component */}
-                    {/*text: text*/}
-                    {/*type: selected / icon /  small */}
-                    {/*onClick: return click callback */}
                     <GapContainer sx={{flexDirection: 'row'}}>
                         <UiVerticalMenu>
-                            <UiMenuPoint
-                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'Mockups'}
-                                type={'icon'}
-                            />
-                            <UiMenuPoint
-                                icon={<DistortIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'Distort'}
-                                type={'icon'}
-                            />
+                            <UiVerticalMenuBox>
+                                <UiMenuPoint
+                                    icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'Mockups'}
+                                    type={'icon'}
+                                />
+                                <UiMenuPoint
+                                    icon={<DistortIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'Distort'}
+                                    type={'icon'}
+                                />
+                            </UiVerticalMenuBox>
                             <UiVerticalMenuDivider />
-                            <UiMenuPoint
-                                icon={<CrownIcon sx={{width: 12, color: (theme) => theme.palette.accent['one']}} />}
-                                text={'Go Pro'}
-                                type={'selected'}
-                            />
-                            <UiMenuPoint
-                                icon={<UserIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'Log in'}
-                                type={'icon'}
-                            />
-                            <UiMenuPoint
-                                icon={<PlusIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'Create an account'}
-                                type={'icon'}
-                            />
+                            <UiVerticalMenuBox>
+                                <UiMenuPoint
+                                    icon={<CrownIcon sx={{width: 12, color: (theme) => theme.palette.accent['one']}} />}
+                                    text={'Go Pro'}
+                                    type={'selected'}
+                                />
+                                <UiMenuPoint
+                                    icon={<UserIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'Log in'}
+                                    type={'icon'}
+                                />
+                                <UiMenuPoint
+                                    icon={<PlusIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'Create an account'}
+                                    type={'icon'}
+                                />
+                            </UiVerticalMenuBox>
                             <UiVerticalMenuDivider />
-                            <UiMenuPoint
-                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'How to'}
-                                type={'small'}
-                            />
-                            <UiMenuPoint
-                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'Support'}
-                                type={'small'}
-                            />
-                            <UiMenuPoint
-                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'License'}
-                                type={'small'}
-                            />
+                            <UiVerticalMenuBox>
+                                <UiMenuPoint
+                                    icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'How to'}
+                                    type={'small'}
+                                />
+                                <UiMenuPoint
+                                    icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'Support'}
+                                    type={'small'}
+                                />
+                                <UiMenuPoint
+                                    icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'License'}
+                                    type={'small'}
+                                />
+                            </UiVerticalMenuBox>
                         </UiVerticalMenu>
                         <UiVerticalMenu>
-                            <UiMenuPoint
-                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'Mockups'}
-                                type={'icon'}
-                            />
-                            <UiMenuPoint
-                                icon={<DistortIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'Distort'}
-                                type={'icon'}
-                            />
+                            <UiVerticalMenuBox>
+                                <UiMenuPoint
+                                    icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'Mockups'}
+                                    type={'icon'}
+                                />
+                                <UiMenuPoint
+                                    icon={<DistortIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'Distort'}
+                                    type={'icon'}
+                                />
+                            </UiVerticalMenuBox>
                             <UiVerticalMenuDivider />
-                            <UiMenuPoint
-                                icon={<CrownIcon sx={{width: 12, color: (theme) => theme.palette.accent['one']}} />}
-                                text={'Go Pro'}
-                                type={'selected'}
-                            />
-                            <UiMenuPoint
-                                icon={<UserIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'Profile'}
-                                type={'icon'}
-                            />
+                            <UiVerticalMenuBox>
+                                <UiMenuPoint
+                                    icon={<CrownIcon sx={{width: 12, color: (theme) => theme.palette.accent['one']}} />}
+                                    text={'Go Pro'}
+                                    type={'selected'}
+                                />
+                                <UiMenuPoint
+                                    icon={<UserIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'Profile'}
+                                    type={'icon'}
+                                />
+                            </UiVerticalMenuBox>
                             <UiVerticalMenuDivider />
-                            <UiMenuPoint
-                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'How to'}
-                                type={'small'}
-                            />
-                            <UiMenuPoint
-                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'Support'}
-                                type={'small'}
-                            />
-                            <UiMenuPoint
-                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'License'}
-                                type={'small'}
-                            />
-                            <UiMenuPoint
-                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'Logout'}
-                                type={'small'}
-                            />
+                            <UiVerticalMenuBox>
+                                <UiMenuPoint
+                                    icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'How to'}
+                                    type={'small'}
+                                />
+                                <UiMenuPoint
+                                    icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'Support'}
+                                    type={'small'}
+                                />
+                                <UiMenuPoint
+                                    icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'License'}
+                                    type={'small'}
+                                />
+                                <UiMenuPoint
+                                    icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'Logout'}
+                                    type={'small'}
+                                />
+                            </UiVerticalMenuBox>
                         </UiVerticalMenu>
                         <UiVerticalMenu
                             type={'hero'}
@@ -657,45 +681,68 @@ export const Ui = () => {
                             heroTitle={'Pro'}
                             heroSubtext={'Thank you!'}
                         >
-                            <UiMenuPoint
-                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'Mockups'}
-                                type={'icon'}
-                            />
-                            <UiMenuPoint
-                                icon={<DistortIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'Distort'}
-                                type={'icon'}
-                            />
+                            <UiVerticalMenuBox>
+                                <UiMenuPoint
+                                    icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'Mockups'}
+                                    type={'icon'}
+                                />
+                                <UiMenuPoint
+                                    icon={<DistortIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'Distort'}
+                                    type={'icon'}
+                                />
+                            </UiVerticalMenuBox>
                             <UiVerticalMenuDivider />
-                            <UiMenuPoint
-                                icon={<UserIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'Profile'}
-                                type={'icon'}
-                            />
+                            <UiVerticalMenuBox>
+                                <UiMenuPoint
+                                    icon={<UserIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'Profile'}
+                                    type={'icon'}
+                                />
+                            </UiVerticalMenuBox>
                             <UiVerticalMenuDivider />
-                            <UiMenuPoint
-                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'How to'}
-                                type={'small'}
-                            />
-                            <UiMenuPoint
-                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'Support'}
-                                type={'small'}
-                            />
-                            <UiMenuPoint
-                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'License'}
-                                type={'small'}
-                            />
-                            <UiMenuPoint
-                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
-                                text={'Logout'}
-                                type={'small'}
-                            />
+                            <UiVerticalMenuBox>
+                                <UiMenuPoint
+                                    icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'How to'}
+                                    type={'small'}
+                                />
+                                <UiMenuPoint
+                                    icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'Support'}
+                                    type={'small'}
+                                />
+                                <UiMenuPoint
+                                    icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'License'}
+                                    type={'small'}
+                                />
+                                <UiMenuPoint
+                                    icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                    text={'Logout'}
+                                    type={'small'}
+                                />
+                            </UiVerticalMenuBox>
                         </UiVerticalMenu>
                     </GapContainer>
+                </div>
+            </PreviewBlock>
+            <PreviewBlock>
+                <Typography variant="type-16" component="p" sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                    Menu horizontal
+                </Typography>
+                <div>
+                    <UiHorizontalMenu
+                        button={<UiTinyButton
+                            text={'Go Pro'}
+                            icon={<CrownIcon sx={{width: 14}}/>}
+                            variant={'accent'}
+                            onClick={() => alert('Get pro page')}/>}
+                        onClickBurger={() => alert('Burger is clicked')}
+                    >
+                        <UITabsHorizontal tabs={tabArrayMockThree} defaultTabId={0} selectedID={(e) => console.log(e)} />
+                    </UiHorizontalMenu>
                 </div>
             </PreviewBlock>
         </PreviewContainer>

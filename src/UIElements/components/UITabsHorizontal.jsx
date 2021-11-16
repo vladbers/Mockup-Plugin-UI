@@ -3,6 +3,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import {styled} from "@mui/material/styles";
+import {padding} from "@mui/system";
 
 export const UITabsHorizontal = ({tabs, defaultTabId, selectedID}) => {
     const [value, setValue] = React.useState(defaultTabId ? defaultTabId : 0);
@@ -32,6 +33,9 @@ export const UITabsHorizontal = ({tabs, defaultTabId, selectedID}) => {
 
     const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
         ({ theme }) => ({
+            padding: 0,
+            minWidth: 0,
+            marginRight: 11,
             textTransform: 'none',
             fontFamily: theme.typography['type-14'].fontFamily,
             fontSize: theme.typography['type-14'].fontSize,
