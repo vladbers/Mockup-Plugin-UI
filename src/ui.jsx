@@ -46,6 +46,7 @@ import {UiVerticalMenu} from "./UIElements/components/verticalMenu";
 import {UiVerticalMenuDivider} from "./UIElements/components/verticalMenuDevider";
 import {UiHorizontalMenu} from "./UIElements/components/horizontalMenu";
 import {UiVerticalMenuBox} from "./UIElements/components/verticalMenuBox";
+import {InfoBox} from "./UIElements/components/infoBox";
 
 
 
@@ -538,6 +539,33 @@ export const Ui = () => {
                             type={'link'}
                             href={'https://longscroll-mockups.com'}
                         />
+                    </GapContainer>
+                </div>
+            </PreviewBlock>
+            <PreviewBlock>
+                <Typography variant="type-16" component="p" sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                    Info Box
+                </Typography>
+                <div>
+                    <GapContainer sx={{flexDirection: 'column'}}>
+                        <InfoBox title={'Info'}>
+                            <UiInfoBar
+                                iconElement={<SizeIcon sx={{width: 14, color: (theme) => theme.palette.text['low']}} />}
+                                titleText={'Max Resolution'}
+                                type={'size'}
+                                resolutionText={'6000 x 4500 px'} />
+                            <UiInfoBar
+                                iconElement={<ResizeIcon sx={{width: 14, color: (theme) => theme.palette.text['low']}} />}
+                                titleText={'Screen Proportions'}
+                                type={'size'}
+                                resolutionText={'2000 x 1500 px'} />
+                            <UiInfoBar
+                                iconElement={<StyleIcon sx={{width: 14, color: (theme) => theme.palette.text['low']}} />}
+                                titleText={'Style'}
+                                type={'link'}
+                                href={'https://longscroll-mockups.com'}
+                            />
+                        </InfoBox>
                     </GapContainer>
                 </div>
             </PreviewBlock>
