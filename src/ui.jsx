@@ -41,6 +41,11 @@ import {UiChekBox} from "./UIElements/components/checkBox";
 import {UITabsHorizontal} from "./UIElements/components/UITabsHorizontal";
 import {UiInfoBar} from "./UIElements/components/info";
 import {UiMenuPoint} from "./UIElements/components/menuPoint";
+import {UiHorizontalMenu} from "./UIElements/components/horizontalMenu";
+import {UiHorizontalMenuDivider} from "./UIElements/components/horizontalMenuDevider";
+import {LoginIcon} from "./UIElements/components/icons/login";
+import {UserIcon} from "./UIElements/components/icons/user";
+import {PlusIcon} from "./UIElements/components/icons/plus";
 
 
 
@@ -559,7 +564,138 @@ export const Ui = () => {
                     {/*type: selected / icon /  small */}
                     {/*onClick: return click callback */}
                     <GapContainer sx={{flexDirection: 'row'}}>
-
+                        <UiHorizontalMenu>
+                            <UiMenuPoint
+                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'Mockups'}
+                                type={'icon'}
+                            />
+                            <UiMenuPoint
+                                icon={<DistortIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'Distort'}
+                                type={'icon'}
+                            />
+                            <UiHorizontalMenuDivider />
+                            <UiMenuPoint
+                                icon={<CrownIcon sx={{width: 12, color: (theme) => theme.palette.accent['one']}} />}
+                                text={'Go Pro'}
+                                type={'selected'}
+                            />
+                            <UiMenuPoint
+                                icon={<UserIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'Log in'}
+                                type={'icon'}
+                            />
+                            <UiMenuPoint
+                                icon={<PlusIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'Create an account'}
+                                type={'icon'}
+                            />
+                            <UiHorizontalMenuDivider />
+                            <UiMenuPoint
+                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'How to'}
+                                type={'small'}
+                            />
+                            <UiMenuPoint
+                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'Support'}
+                                type={'small'}
+                            />
+                            <UiMenuPoint
+                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'License'}
+                                type={'small'}
+                            />
+                        </UiHorizontalMenu>
+                        <UiHorizontalMenu>
+                            <UiMenuPoint
+                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'Mockups'}
+                                type={'icon'}
+                            />
+                            <UiMenuPoint
+                                icon={<DistortIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'Distort'}
+                                type={'icon'}
+                            />
+                            <UiHorizontalMenuDivider />
+                            <UiMenuPoint
+                                icon={<CrownIcon sx={{width: 12, color: (theme) => theme.palette.accent['one']}} />}
+                                text={'Go Pro'}
+                                type={'selected'}
+                            />
+                            <UiMenuPoint
+                                icon={<UserIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'Profile'}
+                                type={'icon'}
+                            />
+                            <UiHorizontalMenuDivider />
+                            <UiMenuPoint
+                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'How to'}
+                                type={'small'}
+                            />
+                            <UiMenuPoint
+                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'Support'}
+                                type={'small'}
+                            />
+                            <UiMenuPoint
+                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'License'}
+                                type={'small'}
+                            />
+                            <UiMenuPoint
+                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'Logout'}
+                                type={'small'}
+                            />
+                        </UiHorizontalMenu>
+                        <UiHorizontalMenu
+                            type={'hero'}
+                            icon={<CrownIcon sx={{width: 24, color: (theme) => theme.palette.text['high']}} />}
+                            heroTitle={'Pro'}
+                            heroSubtext={'Thank you!'}
+                        >
+                            <UiMenuPoint
+                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'Mockups'}
+                                type={'icon'}
+                            />
+                            <UiMenuPoint
+                                icon={<DistortIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'Distort'}
+                                type={'icon'}
+                            />
+                            <UiHorizontalMenuDivider />
+                            <UiMenuPoint
+                                icon={<UserIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'Profile'}
+                                type={'icon'}
+                            />
+                            <UiHorizontalMenuDivider />
+                            <UiMenuPoint
+                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'How to'}
+                                type={'small'}
+                            />
+                            <UiMenuPoint
+                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'Support'}
+                                type={'small'}
+                            />
+                            <UiMenuPoint
+                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'License'}
+                                type={'small'}
+                            />
+                            <UiMenuPoint
+                                icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
+                                text={'Logout'}
+                                type={'small'}
+                            />
+                        </UiHorizontalMenu>
                     </GapContainer>
                 </div>
             </PreviewBlock>
