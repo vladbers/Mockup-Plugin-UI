@@ -18,7 +18,8 @@ import {StyleIcon} from "./UIElements/components/icons/style";
 import {ResizeIcon} from "./UIElements/components/icons/resize";
 import {SizeIcon} from "./UIElements/components/icons/size";
 import {CatalogIcon} from "./UIElements/components/icons/catalog";
-
+import {UserIcon} from "./UIElements/components/icons/user";
+import {PlusIcon} from "./UIElements/components/icons/plus";
 // Mock
 import {ColorsMock} from "./UIElements/mock/colorPalette";
 import {TextMock} from "./UIElements/mock/textTeampleate";
@@ -41,11 +42,9 @@ import {UiChekBox} from "./UIElements/components/checkBox";
 import {UITabsHorizontal} from "./UIElements/components/UITabsHorizontal";
 import {UiInfoBar} from "./UIElements/components/info";
 import {UiMenuPoint} from "./UIElements/components/menuPoint";
-import {UiHorizontalMenu} from "./UIElements/components/horizontalMenu";
-import {UiHorizontalMenuDivider} from "./UIElements/components/horizontalMenuDevider";
-import {LoginIcon} from "./UIElements/components/icons/login";
-import {UserIcon} from "./UIElements/components/icons/user";
-import {PlusIcon} from "./UIElements/components/icons/plus";
+import {UiVerticalMenu} from "./UIElements/components/verticalMenu";
+import {UiVerticalMenuDivider} from "./UIElements/components/verticalMenuDevider";
+
 
 
 
@@ -556,7 +555,7 @@ export const Ui = () => {
             </PreviewBlock>
             <PreviewBlock>
                 <Typography variant="type-16" component="p" sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
-                    Menu horizontal
+                    Menu vertical
                 </Typography>
                 <div>
                     {/*icon: icon component */}
@@ -564,7 +563,7 @@ export const Ui = () => {
                     {/*type: selected / icon /  small */}
                     {/*onClick: return click callback */}
                     <GapContainer sx={{flexDirection: 'row'}}>
-                        <UiHorizontalMenu>
+                        <UiVerticalMenu>
                             <UiMenuPoint
                                 icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
                                 text={'Mockups'}
@@ -575,7 +574,7 @@ export const Ui = () => {
                                 text={'Distort'}
                                 type={'icon'}
                             />
-                            <UiHorizontalMenuDivider />
+                            <UiVerticalMenuDivider />
                             <UiMenuPoint
                                 icon={<CrownIcon sx={{width: 12, color: (theme) => theme.palette.accent['one']}} />}
                                 text={'Go Pro'}
@@ -591,7 +590,7 @@ export const Ui = () => {
                                 text={'Create an account'}
                                 type={'icon'}
                             />
-                            <UiHorizontalMenuDivider />
+                            <UiVerticalMenuDivider />
                             <UiMenuPoint
                                 icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
                                 text={'How to'}
@@ -607,8 +606,8 @@ export const Ui = () => {
                                 text={'License'}
                                 type={'small'}
                             />
-                        </UiHorizontalMenu>
-                        <UiHorizontalMenu>
+                        </UiVerticalMenu>
+                        <UiVerticalMenu>
                             <UiMenuPoint
                                 icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
                                 text={'Mockups'}
@@ -619,7 +618,7 @@ export const Ui = () => {
                                 text={'Distort'}
                                 type={'icon'}
                             />
-                            <UiHorizontalMenuDivider />
+                            <UiVerticalMenuDivider />
                             <UiMenuPoint
                                 icon={<CrownIcon sx={{width: 12, color: (theme) => theme.palette.accent['one']}} />}
                                 text={'Go Pro'}
@@ -630,7 +629,7 @@ export const Ui = () => {
                                 text={'Profile'}
                                 type={'icon'}
                             />
-                            <UiHorizontalMenuDivider />
+                            <UiVerticalMenuDivider />
                             <UiMenuPoint
                                 icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
                                 text={'How to'}
@@ -651,8 +650,8 @@ export const Ui = () => {
                                 text={'Logout'}
                                 type={'small'}
                             />
-                        </UiHorizontalMenu>
-                        <UiHorizontalMenu
+                        </UiVerticalMenu>
+                        <UiVerticalMenu
                             type={'hero'}
                             icon={<CrownIcon sx={{width: 24, color: (theme) => theme.palette.text['high']}} />}
                             heroTitle={'Pro'}
@@ -668,13 +667,13 @@ export const Ui = () => {
                                 text={'Distort'}
                                 type={'icon'}
                             />
-                            <UiHorizontalMenuDivider />
+                            <UiVerticalMenuDivider />
                             <UiMenuPoint
                                 icon={<UserIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
                                 text={'Profile'}
                                 type={'icon'}
                             />
-                            <UiHorizontalMenuDivider />
+                            <UiVerticalMenuDivider />
                             <UiMenuPoint
                                 icon={<CatalogIcon sx={{width: 12, color: (theme) => theme.palette.text['high']}} />}
                                 text={'How to'}
@@ -695,7 +694,7 @@ export const Ui = () => {
                                 text={'Logout'}
                                 type={'small'}
                             />
-                        </UiHorizontalMenu>
+                        </UiVerticalMenu>
                     </GapContainer>
                 </div>
             </PreviewBlock>

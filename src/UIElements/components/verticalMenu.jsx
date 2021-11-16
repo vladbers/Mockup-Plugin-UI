@@ -1,11 +1,11 @@
 import React from 'react';
 import {styled} from "@mui/material/styles";
-import {UiHorizontalMenuDivider} from "./horizontalMenuDevider";
+import {UiVerticalMenuDivider} from "./verticalMenuDevider";
 import {Typography} from "@mui/material";
 
-export const UiHorizontalMenu = ({children, type, icon, heroTitle, heroSubtext}) => {
+export const UiVerticalMenu = ({children, type, icon, heroTitle, heroSubtext}) => {
 
-    const HorizontalMenu = styled('div')(({ theme }) => ({
+    const VerticalMenu = styled('div')(({ theme }) => ({
         display: 'flex',
         flexDirection: 'column',
         borderRadius: 16,
@@ -14,7 +14,7 @@ export const UiHorizontalMenu = ({children, type, icon, heroTitle, heroSubtext})
         justifyContent: 'space-between',
         gap: 2
     }));
-    const HorizontalMenuHeroBox = styled('div')(({ theme }) => ({
+    const VerticalMenuHeroBox = styled('div')(({ theme }) => ({
         display: 'flex',
         flexDirection: 'row',
         padding: '10px 10px 4px',
@@ -26,8 +26,8 @@ export const UiHorizontalMenu = ({children, type, icon, heroTitle, heroSubtext})
     return (
         <>
             {type && type === 'hero' &&
-                <HorizontalMenu>
-                    <HorizontalMenuHeroBox>
+                <VerticalMenu>
+                    <VerticalMenuHeroBox>
                         {icon && icon}
                         <Typography variant="type-24" component="p" sx={{color: (theme) => theme.palette.text['high'], marginLeft: '10px', marginRight: '12px'}}>
                             {heroTitle}
@@ -35,16 +35,16 @@ export const UiHorizontalMenu = ({children, type, icon, heroTitle, heroSubtext})
                         <Typography variant="type-10" component="p" sx={{color: (theme) => theme.palette.text['low'], width: 30}}>
                             {heroSubtext}
                         </Typography>
-                    </HorizontalMenuHeroBox>
-                    <UiHorizontalMenuDivider />
+                    </VerticalMenuHeroBox>
+                    <UiVerticalMenuDivider />
                     {children}
-                </HorizontalMenu>
+                </VerticalMenu>
             }
             {/* eslint-disable-next-line no-mixed-operators */}
             {!type && type !== 'hero' &&
-            <HorizontalMenu>
+            <VerticalMenu>
                 {children}
-            </HorizontalMenu>
+            </VerticalMenu>
             }
         </>
     )

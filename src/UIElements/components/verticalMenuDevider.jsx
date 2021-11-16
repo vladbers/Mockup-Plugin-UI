@@ -1,9 +1,9 @@
 import React from 'react';
 import {styled} from "@mui/material/styles";
 
-export const UiHorizontalMenuDivider = () => {
+export const UiVerticalMenuDivider = () => {
 
-    const UiHorizontalMenuDivider = styled('div')(({ theme }) => ({
+    const VerticalMenuDivider = styled('div')(({ theme }) => ({
         borderBottom: '1px solid ' + theme.palette.line,
         marginBottom: 10,
         marginTop: 10
@@ -11,6 +11,6 @@ export const UiHorizontalMenuDivider = () => {
 
 
     return (
-        <UiHorizontalMenuDivider />
+        <VerticalMenuDivider />
     )
 }
