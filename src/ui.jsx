@@ -47,6 +47,7 @@ import {UiVerticalMenuDivider} from "./UIElements/components/verticalMenuDevider
 import {UiHorizontalMenu} from "./UIElements/components/horizontalMenu";
 import {UiVerticalMenuBox} from "./UIElements/components/verticalMenuBox";
 import {InfoBox} from "./UIElements/components/infoBox";
+import {UiSubheader} from "./UIElements/components/subheaders";
 
 
 
@@ -158,6 +159,28 @@ const tabArrayMockThree = [
     {
         id: 2,
         label: 'Distort',
+    }
+]
+const ArrayMockColors = [
+    {
+        id: 0,
+        hex: '#C4C4C4',
+    },
+    {
+        id: 1,
+        hex: '#ffacac',
+    },
+    {
+        id: 2,
+        hex: '#acc8ff',
+    },
+    {
+        id: 3,
+        hex: '#ffbd81',
+    },
+    {
+        id: 4,
+        hex: '#a09cca',
     }
 ]
 
@@ -771,6 +794,34 @@ export const Ui = () => {
                     >
                         <UITabsHorizontal tabs={tabArrayMockThree} defaultTabId={0} selectedID={(e) => console.log(e)} />
                     </UiHorizontalMenu>
+                </div>
+            </PreviewBlock>
+            <PreviewBlock>
+                <Typography variant="type-16" component="p" sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                    Subheaders
+                </Typography>
+                <div>
+                    <GapContainer sx={{flexDirection: 'column'}}>
+                        <UiSubheader
+                            onClickBack={() => alert('Back btn clicked')}
+                            title="iMac 24 Inch"
+                            type={'simple'}
+                        />
+                        <UiSubheader
+                            onClickBack={() => alert('Back btn clicked')}
+                            title="iMac 24 Inch"
+                            onClickInfo={() => alert('Info btn clicked')}
+                            type={'info'}
+                        />
+                        <UiSubheader
+                            onClickBack={() => alert('Back btn clicked')}
+                            title="iMac 24 Inch"
+                            colors={ArrayMockColors}
+                            defaultColorId={0}
+                            onClickColor={(e) => alert('Color is selected ' + e.hex + ' where id is ' + e.id )}
+                            type={'colors'}
+                        />
+                    </GapContainer>
                 </div>
             </PreviewBlock>
         </PreviewContainer>
