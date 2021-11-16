@@ -515,7 +515,7 @@ export const Ui = () => {
             </PreviewBlock>
             <PreviewBlock>
                 <Typography variant="type-16" component="p" sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
-                    Info
+                    Info Points
                 </Typography>
                 <div>
                     {/*iconElement: icon component */}
