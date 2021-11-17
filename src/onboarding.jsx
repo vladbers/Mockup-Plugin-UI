@@ -5,7 +5,7 @@ import {Interface} from "./interface";
 import {styled} from "@mui/material/styles";
 import {Typography} from "@mui/material";
 import logo from './assets/logo.png'
-import {NewWindowIcon} from "./UI/components/icons/newWindow";
+import {NewWindowIcon} from "./UI/icons/newWindow";
 import {UiBigButton} from "./UI/components/bigButton";
 
 const Home = () => {
