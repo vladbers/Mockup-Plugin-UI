@@ -5,7 +5,7 @@ import Collapse from '@mui/material/Collapse';
 import {makeStyles} from "@mui/styles";
 import {Typography} from "@mui/material";
 import {styled} from "@mui/material/styles";
-import {CloseIcon} from "./icons/close";
+import {CloseIcon} from "../icons/close";
 import {UiRoundButton} from "./roundButton";
 
 

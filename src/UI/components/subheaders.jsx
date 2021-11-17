@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {styled} from "@mui/material/styles";
 import {Typography} from "@mui/material";
-import {ArrowIcon} from "./icons/arrow";
-import {InfoIcon} from "./icons/info";
+import {ArrowIcon} from "../icons/arrow";
+import {InfoIcon} from "../icons/info";
 
 export const UiSubheader = ({title, type, onClickBack, onClickInfo, onClickColor, colors, defaultColorId}) => {
     const [selected, setSelected] = useState(defaultColorId ? defaultColorId : 1);

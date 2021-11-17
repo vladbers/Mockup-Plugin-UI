@@ -2,9 +2,9 @@ import React from 'react';
 import {Button, Typography} from "@mui/material";
 import {styled} from "@mui/material/styles";
 // Icons
-import {GoogleIcon} from "./icons/ggl";
-import {TwitterIcon} from "./icons/tw";
-import {FacebookIcon} from "./icons/fb";
+import {GoogleIcon} from "../icons/ggl";
+import {TwitterIcon} from "../icons/tw";
+import {FacebookIcon} from "../icons/fb";
 
 export const UiAuthButton = ({text, type, fullWidth, onClick}) => {
 

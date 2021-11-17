@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {InputBase, Typography} from "@mui/material";
-import {ErrorIcon} from "./icons/error";
-import {EyeIcon} from "./icons/eye";
-import {ClosedEyeIcon} from "./icons/closedEye";
+import {ErrorIcon} from "../icons/error";
+import {EyeIcon} from "../icons/eye";
+import {ClosedEyeIcon} from "../icons/closedEye";
 
 
 export const UiInput = ({placeholder, fullWidth, errorText, error, disabled, type, dispatchValue}) => {

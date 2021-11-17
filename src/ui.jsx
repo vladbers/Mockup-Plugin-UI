@@ -5,26 +5,26 @@ import {useNavigate} from "react-router-dom";
 
 // Mock data
 import dropdownsIcon from './assets/dropdownsIcon.png'
-import {NewWindowIcon} from "./UI/components/icons/newWindow";
-import {RefreshIcon} from "./UI/components/icons/refrash";
-import {CloseIcon} from "./UI/components/icons/close";
-import {ArrowIcon} from "./UI/components/icons/arrow";
-import {MockSizeIcon} from "./UI/components/icons/mocksize";
-import {DistortIcon} from "./UI/components/icons/distort";
-import {CrownIcon} from "./UI/components/icons/crown";
-import {ErrorIcon} from "./UI/components/icons/error";
-import {PriceIcon} from "./UI/components/icons/price";
-import {StyleIcon} from "./UI/components/icons/style";
-import {ResizeIcon} from "./UI/components/icons/resize";
-import {SizeIcon} from "./UI/components/icons/size";
-import {CatalogIcon} from "./UI/components/icons/catalog";
-import {UserIcon} from "./UI/components/icons/user";
-import {PlusIcon} from "./UI/components/icons/plus";
+import {NewWindowIcon} from "./UI/icons/newWindow";
+import {RefreshIcon} from "./UI/icons/refrash";
+import {CloseIcon} from "./UI/icons/close";
+import {ArrowIcon} from "./UI/icons/arrow";
+import {MockSizeIcon} from "./UI/icons/mocksize";
+import {DistortIcon} from "./UI/icons/distort";
+import {CrownIcon} from "./UI/icons/crown";
+import {ErrorIcon} from "./UI/icons/error";
+import {PriceIcon} from "./UI/icons/price";
+import {StyleIcon} from "./UI/icons/style";
+import {ResizeIcon} from "./UI/icons/resize";
+import {SizeIcon} from "./UI/icons/size";
+import {CatalogIcon} from "./UI/icons/catalog";
+import {UserIcon} from "./UI/icons/user";
+import {PlusIcon} from "./UI/icons/plus";
 // Mock
 import {ColorsMock} from "./UI/mock/colorPalette";
 import {TextMock} from "./UI/mock/textTeampleate";
 import {SpacingMock} from "./UI/mock/spacingMock";
-import {StarIcon} from "./UI/components/icons/star";
+import {StarIcon} from "./UI/icons/star";
 import {IconsMock} from "./UI/mock/iconsMock";
 
 // components

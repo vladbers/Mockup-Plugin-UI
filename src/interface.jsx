@@ -1,7 +1,7 @@
 import React from 'react'
 import {styled} from "@mui/material/styles";
 import {Typography} from "@mui/material";
-import {ArrowIcon} from "./UI/components/icons/arrow";
+import {ArrowIcon} from "./UI/icons/arrow";
 import {UiRoundButton} from "./UI/components/roundButton";
 import {useNavigate} from "react-router-dom";
 

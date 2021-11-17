@@ -1,6 +1,6 @@
 import React from 'react';
 import {styled} from "@mui/material/styles";
-import {MenuIcon} from "./icons/menu";
+import {MenuIcon} from "../icons/menu";
 
 
 export const UiHorizontalMenu = ({children, button, onClickBurger}) => {
