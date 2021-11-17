@@ -4,6 +4,7 @@ import {Typography} from "@mui/material";
 import {ArrowIcon} from "./UI/icons/arrow";
 import {UiRoundButton} from "./UI/components/roundButton";
 import {useNavigate} from "react-router-dom";
+import {ScreenProfile} from "./UI/screens/profile";
 
 
 export const Interface = () => {
@@ -31,19 +32,7 @@ export const Interface = () => {
     const ScreenBlock = styled('div')(({theme}) => ({
         background: theme.palette.pure['white'],
     }));
-    //
-    // const GapContainer = styled('div')(({theme}) => ({
-    //     display: 'flex',
-    //     flexDirection: 'row',
-    //     flexWrap: 'wrap',
-    //     gap: theme.spacingsValues.xs,
-    // }));
-    // const GapContainerFullElements = styled('div')(({theme}) => ({
-    //     display: 'flex',
-    //     flexDirection: 'row',
-    //     flexWrap: 'wrap',
-    //     gap: theme.spacingsValues.xxl,
-    // }));
+
 
     return (<div>
             <div style={{marginTop:8, marginLeft: 8}}>
@@ -59,7 +48,7 @@ export const Interface = () => {
                 </Typography>
                 <PreviewBlock>
                     <ScreenBlock sx={{width: 400, height: 900}}>
-                        Screen component
+                        <ScreenProfile />
                     </ScreenBlock>
                 </PreviewBlock>
             </PreviewContainer>
