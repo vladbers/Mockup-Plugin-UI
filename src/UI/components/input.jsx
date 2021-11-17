@@ -103,7 +103,7 @@ export const UiInput = ({placeholder, fullWidth, errorText, error, disabled, typ
             endAdornment={<ErrorIcon sx={{ position: 'absolute', right: 12, fontSize: 14, color: (theme) => theme.palette.error['main']}} />}
             fullWidth={fullWidth && fullWidth}
             placeholder={placeholder && placeholder}
-            value={valueInput}
+            value={'Error'}
             onChange={SetupText}/>
             <Typography variant="type-10" component="p" sx={{color: (theme) => theme.palette.error['main']}}>
                 {errorText}

@@ -63,10 +63,10 @@ const BpCheckbox = (props) => {
     );
 }
 
-export const UiChekBox = ({defaultChecked, disabled, checked}) => {
+export const UiChekBox = (props) => {
     return (
         <div>
-            <BpCheckbox defaultChecked={defaultChecked} disabled={disabled} checked={checked} />
+            <BpCheckbox {...props} />
         </div>
     );
 }

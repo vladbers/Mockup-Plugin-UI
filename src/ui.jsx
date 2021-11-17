@@ -48,6 +48,8 @@ import {UiHorizontalMenu} from "./UI/components/horizontalMenu";
 import {UiVerticalMenuBox} from "./UI/components/verticalMenuBox";
 import {InfoBox} from "./UI/components/infoBox";
 import {UiSubheader} from "./UI/components/subheaders";
+import {Walkthroug} from "./UI/components/walkthroug";
+import {WalkthrougThemeComponent} from "./UI/components/walkthrougThemeComponent";
 
 
 
@@ -508,7 +510,7 @@ export const Ui = () => {
                     {/* disabled: true / false */}
                     {/* checked: true / false */}
                     <GapContainer>
-                        <UiChekBox defaultChecked={true}/>
+                        <UiChekBox defaultChecked={true} />
                         <UiChekBox/>
                         <UiChekBox checked={true} disabled={true}/>
                     </GapContainer>
@@ -821,6 +823,29 @@ export const Ui = () => {
                             onClickColor={(e) => alert('Color is selected ' + e.hex + ' where id is ' + e.id )}
                             type={'colors'}
                         />
+                    </GapContainer>
+                </div>
+            </PreviewBlock>
+            <PreviewBlock sx={{marginBottom: '130px'}}>
+                <Typography variant="type-16" component="p" sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                    Walkthroug
+                </Typography>
+                <div>
+                    <GapContainer sx={{margin: 5}}>
+                        <Walkthroug title={
+                            <WalkthrougThemeComponent onChange={() => alert('Walkthroug')} defaultChecked={true}>
+                                Click here to add your<br/> design and select a frame<br/> in popup window
+                            </WalkthrougThemeComponent>
+                        } open={true}>
+                            <p>Opened state</p>
+                        </Walkthroug>
+                        <Walkthroug title={
+                            <WalkthrougThemeComponent onChange={() => alert('Walkthroug')}>
+                                Great! Now select a size<br/> and add it to your canvas
+                            </WalkthrougThemeComponent>
+                        } placement={'top'}>
+                            <p>Opened up</p>
+                        </Walkthroug>
                     </GapContainer>
                 </div>
             </PreviewBlock>
