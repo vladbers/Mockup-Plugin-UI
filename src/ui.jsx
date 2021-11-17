@@ -5,49 +5,49 @@ import {useNavigate} from "react-router-dom";
 
 // Mock data
 import dropdownsIcon from './assets/dropdownsIcon.png'
-import {NewWindowIcon} from "./UIElements/components/icons/newWindow";
-import {RefreshIcon} from "./UIElements/components/icons/refrash";
-import {CloseIcon} from "./UIElements/components/icons/close";
-import {ArrowIcon} from "./UIElements/components/icons/arrow";
-import {MockSizeIcon} from "./UIElements/components/icons/mocksize";
-import {DistortIcon} from "./UIElements/components/icons/distort";
-import {CrownIcon} from "./UIElements/components/icons/crown";
-import {ErrorIcon} from "./UIElements/components/icons/error";
-import {PriceIcon} from "./UIElements/components/icons/price";
-import {StyleIcon} from "./UIElements/components/icons/style";
-import {ResizeIcon} from "./UIElements/components/icons/resize";
-import {SizeIcon} from "./UIElements/components/icons/size";
-import {CatalogIcon} from "./UIElements/components/icons/catalog";
-import {UserIcon} from "./UIElements/components/icons/user";
-import {PlusIcon} from "./UIElements/components/icons/plus";
+import {NewWindowIcon} from "./UI/components/icons/newWindow";
+import {RefreshIcon} from "./UI/components/icons/refrash";
+import {CloseIcon} from "./UI/components/icons/close";
+import {ArrowIcon} from "./UI/components/icons/arrow";
+import {MockSizeIcon} from "./UI/components/icons/mocksize";
+import {DistortIcon} from "./UI/components/icons/distort";
+import {CrownIcon} from "./UI/components/icons/crown";
+import {ErrorIcon} from "./UI/components/icons/error";
+import {PriceIcon} from "./UI/components/icons/price";
+import {StyleIcon} from "./UI/components/icons/style";
+import {ResizeIcon} from "./UI/components/icons/resize";
+import {SizeIcon} from "./UI/components/icons/size";
+import {CatalogIcon} from "./UI/components/icons/catalog";
+import {UserIcon} from "./UI/components/icons/user";
+import {PlusIcon} from "./UI/components/icons/plus";
 // Mock
-import {ColorsMock} from "./UIElements/mock/colorPalette";
-import {TextMock} from "./UIElements/mock/textTeampleate";
-import {SpacingMock} from "./UIElements/mock/spacingMock";
-import {StarIcon} from "./UIElements/components/icons/star";
-import {IconsMock} from "./UIElements/mock/iconsMock";
+import {ColorsMock} from "./UI/mock/colorPalette";
+import {TextMock} from "./UI/mock/textTeampleate";
+import {SpacingMock} from "./UI/mock/spacingMock";
+import {StarIcon} from "./UI/components/icons/star";
+import {IconsMock} from "./UI/mock/iconsMock";
 
 // components
-import {UiBigButton} from "./UIElements/components/bigButton";
-import {UiTinyButton} from "./UIElements/components/tinyButton";
-import {UiRoundButton} from "./UIElements/components/roundButton";
-import {UiToggleButton} from "./UIElements/components/toggleButton";
-import {UiDropdown} from "./UIElements/components/dropdowns";
-import {UiInput} from "./UIElements/components/input";
-import {UiBanner} from "./UIElements/components/banner";
-import {UiTabsHeader} from "./UIElements/components/UITabs";
-import {TableContainer} from "./UIElements/components/tabsContainer";
-import {UiAuthButton} from "./UIElements/components/authBtn";
-import {UiChekBox} from "./UIElements/components/checkBox";
-import {UITabsHorizontal} from "./UIElements/components/UITabsHorizontal";
-import {UiInfoBar} from "./UIElements/components/info";
-import {UiMenuPoint} from "./UIElements/components/menuPoint";
-import {UiVerticalMenu} from "./UIElements/components/verticalMenu";
-import {UiVerticalMenuDivider} from "./UIElements/components/verticalMenuDevider";
-import {UiHorizontalMenu} from "./UIElements/components/horizontalMenu";
-import {UiVerticalMenuBox} from "./UIElements/components/verticalMenuBox";
-import {InfoBox} from "./UIElements/components/infoBox";
-import {UiSubheader} from "./UIElements/components/subheaders";
+import {UiBigButton} from "./UI/components/bigButton";
+import {UiTinyButton} from "./UI/components/tinyButton";
+import {UiRoundButton} from "./UI/components/roundButton";
+import {UiToggleButton} from "./UI/components/toggleButton";
+import {UiDropdown} from "./UI/components/dropdowns";
+import {UiInput} from "./UI/components/input";
+import {UiBanner} from "./UI/components/banner";
+import {UiTabsHeader} from "./UI/components/UITabs";
+import {TableContainer} from "./UI/components/tabsContainer";
+import {UiAuthButton} from "./UI/components/authBtn";
+import {UiChekBox} from "./UI/components/checkBox";
+import {UITabsHorizontal} from "./UI/components/UITabsHorizontal";
+import {UiInfoBar} from "./UI/components/info";
+import {UiMenuPoint} from "./UI/components/menuPoint";
+import {UiVerticalMenu} from "./UI/components/verticalMenu";
+import {UiVerticalMenuDivider} from "./UI/components/verticalMenuDevider";
+import {UiHorizontalMenu} from "./UI/components/horizontalMenu";
+import {UiVerticalMenuBox} from "./UI/components/verticalMenuBox";
+import {InfoBox} from "./UI/components/infoBox";
+import {UiSubheader} from "./UI/components/subheaders";
 
 
 

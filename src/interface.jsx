@@ -1,8 +1,8 @@
 import React from 'react'
 import {styled} from "@mui/material/styles";
 import {Typography} from "@mui/material";
-import {ArrowIcon} from "./UIElements/components/icons/arrow";
-import {UiRoundButton} from "./UIElements/components/roundButton";
+import {ArrowIcon} from "./UI/components/icons/arrow";
+import {UiRoundButton} from "./UI/components/roundButton";
 import {useNavigate} from "react-router-dom";
 
 

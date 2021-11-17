@@ -5,8 +5,8 @@ import {Interface} from "./interface";
 import {styled} from "@mui/material/styles";
 import {Typography} from "@mui/material";
 import logo from './assets/logo.png'
-import {NewWindowIcon} from "./UIElements/components/icons/newWindow";
-import {UiBigButton} from "./UIElements/components/bigButton";
+import {NewWindowIcon} from "./UI/components/icons/newWindow";
+import {UiBigButton} from "./UI/components/bigButton";
 
 const Home = () => {
     const navigate = useNavigate()
