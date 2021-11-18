@@ -21,7 +21,7 @@ export const TableContainer = (props) => {
             {...other}
         >
             {value === index && (
-                <Box sx={{ pt: 3, pb: 3 }}>
+                <Box>
                     {children}
                 </Box>
             )}

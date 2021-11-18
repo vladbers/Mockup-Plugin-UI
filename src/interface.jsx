@@ -47,7 +47,7 @@ export const Interface = () => {
                     Profile
                 </Typography>
                 <PreviewBlock>
-                    <ScreenBlock sx={{width: 400, height: 900}}>
+                    <ScreenBlock sx={{width: 400, height: 700}}>
                         <ScreenProfile />
                     </ScreenBlock>
                 </PreviewBlock>

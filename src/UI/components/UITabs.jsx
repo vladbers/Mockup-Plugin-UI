@@ -66,9 +66,9 @@ export const UiTabsHeader = ({tabs, selectedID, defaultTabId}) => {
             </div>
         )
     }
-    return (
-       <TabPanel>
-           {tabs.map(tab => <TabButton id={tab.id} label={tab.label} subtext={tab.subtext} click={dispatchTab}/>)}
-       </TabPanel>
-    );
+    return (<>
+        <TabPanel>
+            {tabs.map(tab => <TabButton id={tab.id} label={tab.label} subtext={tab.subtext} click={dispatchTab}/>)}
+        </TabPanel>
+    </>);
 }

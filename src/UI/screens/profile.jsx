@@ -5,27 +5,17 @@ import {CrownIcon} from "../icons/crown";
 import {UITabsHorizontal} from "../components/UITabsHorizontal";
 import {UiHorizontalMenu} from "../components/horizontalMenu";
 import {UiSubheader} from "../components/subheaders";
+import {tabArrayMockFour, tabArrayMockThree} from "../mock/mockData";
+import {UiUnlockAccess} from "../components/unlockAccess";
 
 export const ScreenProfile = () => {
 
-    const Profile = styled('div')(({theme}) => ({
+    const Profile = styled('div')(({theme}) => ({}));
 
+    const ProfileBody = styled('div')(({theme}) => ({
+        paddingRight: '20px',
+        paddingLeft: '20px'
     }));
-
-    const tabArrayMockThree = [
-        {
-            id: 0,
-            label: 'Featured',
-        },
-        {
-            id: 1,
-            label: 'Find',
-        },
-        {
-            id: 2,
-            label: 'Distort',
-        }
-    ]
 
 
     return (<>
@@ -36,15 +26,22 @@ export const ScreenProfile = () => {
                     icon={<CrownIcon sx={{width: 14}}/>}
                     variant={'accent'}
                     onClick={() => alert('Get pro page')}/>}
-                onClickBurger={() => alert('Burger is clicked')}
-            >
-                <UITabsHorizontal tabs={tabArrayMockThree} defaultTabId={0} selectedID={(e) => console.log(e)} />
+                onClickBurger={() => alert('Burger is clicked')}>
+                <UITabsHorizontal tabs={tabArrayMockThree} defaultTabId={0} selectedID={(e) => console.log(e)}/>
             </UiHorizontalMenu>
             <UiSubheader
                 onClickBack={() => alert('Back btn clicked')}
                 title="Profile"
                 type={'simple'}
             />
+            <ProfileBody>
+                <UiUnlockAccess
+                    icon={<CrownIcon sx={{width: 16, color: (theme) => theme.palette.pure['white']}}/>}
+                    title={'Pro'}
+                    tabArray={tabArrayMockFour}
+                    onclick={(e) => alert('subscribe: ' + e)}
+                />
+            </ProfileBody>
         </Profile>
     </>)
 }
