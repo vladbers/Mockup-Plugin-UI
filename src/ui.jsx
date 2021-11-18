@@ -62,7 +62,6 @@ import {
 } from "./UI/mock/mockData";
 
 
-
 // Preview styles
 const PreviewContainer = styled('div')(({theme}) => ({
     display: 'flex',
@@ -269,9 +268,8 @@ export const Ui = () => {
                             {/*errorText: text*/}
                             <UiInput placeholder={'Placeholder'} type={'text'} dispatchValue={(e) => console.log(e)}/>
                             <UiInput placeholder={'Password'} type={'password'} dispatchValue={(e) => console.log(e)}/>
-                            <UiInput placeholder={'Error'} error={true} errorText={'Please use real email'}
-                                     type={'text'}
-                                     dispatchValue={(e) => console.log(e)}/>
+                            <UiInput placeholder={'Error'} error={true} errorText={'Please use real password'}
+                                     type={'password'}/>
                         </GapContainer>
                     </div>
                 </PreviewBlock>
@@ -352,18 +350,20 @@ export const Ui = () => {
                                 {/*value: selected id state*/}
                                 {/*index: index key*/}
                                 {/*children: node*/}
-                                <TableContainer value={mockTabContent} index={0}>
-                                    Scenes content
-                                </TableContainer>
-                                <TableContainer value={mockTabContent} index={1}>
-                                    Front content
-                                </TableContainer>
-                                <TableContainer value={mockTabContent} index={2}>
-                                    Top content
-                                </TableContainer>
-                                <TableContainer value={mockTabContent} index={3}>
-                                    Iso content
-                                </TableContainer>
+                                <div style={{marginTop: '20px'}}>
+                                    <TableContainer value={mockTabContent} index={0}>
+                                        Scenes content
+                                    </TableContainer>
+                                    <TableContainer value={mockTabContent} index={1}>
+                                        Front content
+                                    </TableContainer>
+                                    <TableContainer value={mockTabContent} index={2}>
+                                        Top content
+                                    </TableContainer>
+                                    <TableContainer value={mockTabContent} index={3}>
+                                        Iso content
+                                    </TableContainer>
+                                </div>
                             </div>
                         </GapContainer>
                     </div>
@@ -418,12 +418,14 @@ export const Ui = () => {
                             <div>
                                 <UITabsHorizontal tabs={tabArrayMockTwo} defaultTabId={0}
                                                   selectedID={(e) => setMockTabContentTwo(e)}/>
-                                <TableContainer value={mockTabContentTwo} index={0}>
-                                    One content
-                                </TableContainer>
-                                <TableContainer value={mockTabContentTwo} index={1}>
-                                    Two content
-                                </TableContainer>
+                                <div style={{marginTop: '20px'}}>
+                                    <TableContainer value={mockTabContentTwo} index={0}>
+                                        One content
+                                    </TableContainer>
+                                    <TableContainer value={mockTabContentTwo} index={1}>
+                                        Two content
+                                    </TableContainer>
+                                </div>
                             </div>
                         </GapContainer>
                     </div>

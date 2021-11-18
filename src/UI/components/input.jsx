@@ -59,13 +59,13 @@ export const UiInput = ({placeholder, fullWidth, errorText, error, disabled, typ
             }}
             type={type && type}
             disabled={disabled && disabled}
-            fullWidth={fullWidth && fullWidth}x
+            fullWidth={fullWidth && fullWidth}
             placeholder={placeholder && placeholder}
             value={valueInput}
             onChange={SetupText}/>
         </div>
         }
-        {error && <div>
+        {error && type === 'password' && <div>
             <InputBase
             sx={{
                 '& .MuiInputBase-input': {
@@ -110,7 +110,7 @@ export const UiInput = ({placeholder, fullWidth, errorText, error, disabled, typ
             </Typography>
         </div>
         }
-        {type === 'password' && <div>
+        {type === 'password' && !error && <div>
             <InputBase
                 sx={{
                     '& .MuiInputBase-input': {
