@@ -1,13 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {styled} from "@mui/material/styles";
 import {Typography} from "@mui/material";
 import {ArrowIcon} from "./UI/icons/arrow";
 import {UiRoundButton} from "./UI/components/roundButton";
 import {useNavigate} from "react-router-dom";
 import {ScreenProfile} from "./UI/screens/profile";
+import {ScreenAccount} from "./UI/screens/account";
+import {ScreenConstructor} from "./UI/screens/constructor";
+import {PriceIcon} from "./UI/icons/price";
+import {UiBanner} from "./UI/components/banner";
 
 
 export const Interface = () => {
+
+    const [showState, setShowState] = useState(true);
 
     const navigate = useNavigate()
 
@@ -32,6 +38,11 @@ export const Interface = () => {
     const ScreenBlock = styled('div')(({theme}) => ({
         background: theme.palette.pure['white'],
     }));
+    const BannerBox = styled('div')(({theme}) => ({
+        position: 'absolute',
+        bottom: '18px',
+        width: '100%'
+    }));
 
 
     return (<div>
@@ -49,6 +60,34 @@ export const Interface = () => {
                 <PreviewBlock>
                     <ScreenBlock sx={{width: 400, height: 956}}>
                         <ScreenProfile />
+                    </ScreenBlock>
+                    <ScreenBlock sx={{width: 400, height: 956}}>
+                        <ScreenAccount />
+                    </ScreenBlock>
+                </PreviewBlock>
+                <Typography variant="type-16" component="p" sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                    Distort Transformation
+                </Typography>
+                <PreviewBlock>
+                    <ScreenBlock sx={{width: 400, height: '692px'}}>
+                        <ScreenConstructor showPromotion={true}/>
+                    </ScreenBlock>
+                    <ScreenBlock sx={{width: 400, height: '692px', position: 'relative'}}>
+                        <ScreenConstructor showPromotion={false} />
+                        {/*  children props special for notification  */}
+                        <BannerBox>
+                            <div style={{marginLeft: '16px', marginRight: '16px'}}>
+                                <UiBanner open={showState} close={(e) => setShowState(e)}
+                                          icon={{
+                                              element: <PriceIcon
+                                                  sx={{width: 48, color: (theme) => theme.palette.background.paper}}/>,
+                                              background: '#76cc09'
+                                          }}
+                                          positionProps={'fixed'}
+                                          title={'Pro account 30% Discount'}
+                                          subtext={'Two weeks only. Code: 352dc4'} />
+                            </div>
+                        </BannerBox>
                     </ScreenBlock>
                 </PreviewBlock>
             </PreviewContainer>

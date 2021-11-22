@@ -174,3 +174,56 @@ export const ArrayMockColors = [
         hex: '#a09cca',
     }
 ]
+
+export const userAccount = {
+    id: 0,
+    email: 'stasgalanin@ya.ru',
+    subscriptions: [
+        {
+            id: 0,
+            daysLeft: '1668771341',
+            subscriptionTitle: 'Year',
+            autoReNew: {
+                id: 0,
+                data: '1668770558', //timestamp
+                status: 'enabled', // status (enabled / disabled)
+            },
+            invoices: [
+                {
+                    id: 0,
+                    data: '1631964333', //timestamp
+                    link: 'https://' // link to get invoice from paddle online
+                },
+                {
+                    id: 0,
+                    data: '1637234733',
+                    link: 'https://'
+                }
+            ]
+        },
+        {
+            id: 1,
+            daysLeft: '1645184141',
+            subscriptionTitle: 'Quarter',
+            autoReNew: {
+                id: 0,
+                data: '1668770558', //timestamp
+                status: 'enabled', // status (enabled / disabled)
+            },
+            invoices: [
+                {
+                    id: 0,
+                    data: '1631964333', //timestamp
+                    link: 'https://' // link to get invoice from paddle online
+                },
+                {
+                    id: 0,
+                    data: '1637234733',
+                    link: 'https://'
+                }
+            ]
+        }
+    ]
+}
+
+

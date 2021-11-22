@@ -5,15 +5,14 @@ import {CrownIcon} from "../icons/crown";
 import {UITabsHorizontal} from "../components/UITabsHorizontal";
 import {UiHorizontalMenu} from "../components/horizontalMenu";
 import {UiSubheader} from "../components/subheaders";
-import {tabArrayMockFour, tabArrayMockThree} from "../mock/mockData";
-import {UiUnlockAccess} from "../components/unlockAccess";
+import {tabArrayMockThree} from "../mock/mockData";
 import {Typography} from "@mui/material";
 import {UiVerticalMenuDivider} from "../components/verticalMenuDevider";
 import {UiToggleButton} from "../components/toggleButton";
 import {UiInput} from "../components/input";
 import {UiBigButton} from "../components/bigButton";
 
-export const ScreenProfile = (props) => {
+export const ScreenAccount = () => {
 
     const Profile = styled('div')(({theme}) => ({}));
 
@@ -22,6 +21,10 @@ export const ScreenProfile = (props) => {
         paddingLeft: '20px'
     }));
     const NewsletterBody = styled('div')(({theme}) => ({
+        display: 'flex',
+        flexDirection: 'column',
+    }));
+    const AccountBody = styled('div')(({theme}) => ({
         display: 'flex',
         flexDirection: 'column',
     }));
@@ -44,18 +47,6 @@ export const ScreenProfile = (props) => {
         gap: '10px'
     }));
 
-
-    const MoreInfoContainer = ({children, moreText, click}) => {
-        return (
-            <Typography variant="type-12" component="p"
-                        sx={{color: (theme) => theme.palette.text['low'], marginTop: '10px', marginBottom: '14px'}}>
-                {children} <Typography variant="type-12" onClick={click} component="span"
-                                       sx={{color: (theme) => theme.palette.accent['two'], cursor: 'pointer'}}>
-                {moreText}
-            </Typography>
-            </Typography>
-        )
-    }
 
     const SendyChecker = ({click, toggleDefaultState}) => {
         const [status, setStatus] = useState(toggleDefaultState ? toggleDefaultState : false)
@@ -85,7 +76,6 @@ export const ScreenProfile = (props) => {
             </NewsletterBody>
         )
     }
-
     const ChangePasswordContainer = ({newPassword}) => {
         const [fitstInput, setFitstInput] = useState('')
         const [secondInput, setSecondInput] = useState('')
@@ -168,6 +158,11 @@ export const ScreenProfile = (props) => {
             </ChangePasswordBody>
         )
     }
+    const Account = () => {
+        return (
+            <div style={{paddingTop: 20, paddingBottom: 20}}>Not loaded module (Account line)</div>
+        )
+    }
 
     return (
         <Profile>
@@ -186,15 +181,10 @@ export const ScreenProfile = (props) => {
                 type={'simple'}
             />
             <ProfileBody>
-                <UiUnlockAccess
-                    icon={<CrownIcon sx={{width: 16, color: (theme) => theme.palette.pure['white']}}/>}
-                    title={'Pro'}
-                    tabArray={tabArrayMockFour}
-                    onclick={(e) => alert('subscribe: ' + e)}
-                />
-                <MoreInfoContainer moreText={'More info'} click={() => alert('More info link')}>
-                    Grab yearly subscription and get ls.graphics unlimited access for free.
-                </MoreInfoContainer>
+                <UiVerticalMenuDivider/>
+                <AccountBody>
+                    <Account />
+                </AccountBody>
                 <UiVerticalMenuDivider/>
                 <NewsletterBody>
                     <SendyChecker toggleDefaultState={true} click={(e) => alert('subscribe: ' + e)}/>
@@ -208,7 +198,6 @@ export const ScreenProfile = (props) => {
                     <ChangeEmailContainer newEmail={(e) => alert('New email: ' + e)}/>
                 </ChangeEmailBody>
             </ProfileBody>
-            {props.children}
         </Profile>
     )
 }

@@ -49,6 +49,8 @@ import {UiSubheader} from "./UI/components/subheaders";
 import {Walkthroug} from "./UI/components/walkthroug";
 import {WalkthrougThemeComponent} from "./UI/components/walkthrougThemeComponent";
 import {UiUnlockAccess} from "./UI/components/unlockAccess";
+import {UiAccountLine} from "./UI/components/accountLine";
+
 
 // mock data
 import {
@@ -60,6 +62,7 @@ import {
     tabArrayMockThree,
     tabArrayMockTwo
 } from "./UI/mock/mockData";
+import {UiPasteBlockContainer} from "./UI/components/pasteblockcontainer";
 
 
 // Preview styles
@@ -214,7 +217,7 @@ export const Ui = () => {
                             {/*variant: null / ignore*/}
                             {/*icon: element*/}
                             {/*onclick: return callback*/}
-                            <UiRoundButton icon={<CloseIcon sx={{width: 16}}/>} onClick={() => alert('Simple')}/>
+                            <UiRoundButton icon={<CloseIcon sx={{width: 16, color: (theme) => theme.palette.text['high']}}/>} onClick={() => alert('Simple')}/>
                             <UiRoundButton icon={<ArrowIcon sx={{width: 16}}/>} onClick={() => alert('Simple')}/>
                             <UiRoundButton variant={'ignore'} icon={<CloseIcon sx={{width: 16}}/>}/>
                         </GapContainer>
@@ -719,7 +722,7 @@ export const Ui = () => {
                             onClickBurger={() => alert('Burger is clicked')}
                         >
                             <UITabsHorizontal tabs={tabArrayMockThree} defaultTabId={0}
-                                              selectedID={(e) => console.log(e)}/>
+                                              selectedID={(e) => alert(e)}/>
                         </UiHorizontalMenu>
                     </div>
                 </PreviewBlock>
@@ -789,6 +792,31 @@ export const Ui = () => {
                                 tabArray={tabArrayMockFour}
                                 onclick={(e) => alert('subscribe: ' + e)}
                             />
+                        </GapContainer>
+                    </div>
+                </PreviewBlock>
+                <PreviewBlock>
+                    <Typography variant="type-16" component="p"
+                                sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                       Paste block container
+                    </Typography>
+                    <div>
+                        <GapContainer sx={{flexDirection: 'column'}}>
+                            <UiPasteBlockContainer>
+                                <UiDropdown variant={'image'} data={dropdownsImage} isDropdownSelect={() => {}}/>
+                                <UiBigButton text={'Paste in canvas'} variant={'basic'} onClick={() => alert('Paste in canvas')}/>
+                            </UiPasteBlockContainer>
+                        </GapContainer>
+                    </div>
+                </PreviewBlock>
+                <PreviewBlock>
+                    <Typography variant="type-16" component="p"
+                                sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                        Account line
+                    </Typography>
+                    <div>
+                        <GapContainer sx={{flexDirection: 'column'}}>
+                            <UiAccountLine />
                         </GapContainer>
                     </div>
                 </PreviewBlock>
