@@ -2,7 +2,7 @@
 ## _A set of UI components for the Figma / Sketch plugin mockup_
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://vercel.com/ui-lsgraphics/testbuildlsui/Fd3HV6NcQK3S6kj5ukcJiV7nPNb8)
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+[![N|Solid](https://lsgraphicsui.vercel.app/static/media/logo.6a8b28b0.png)](https://lsgraphicsui.vercel.app/static/media/logo.6a8b28b0.png)
 
 
 
