@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {styled} from '@mui/material/styles';
-import {Typography} from "@mui/material";
+import {Collapse, Typography} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 
 // Mock data
@@ -63,6 +63,7 @@ import {
     tabArrayMockTwo
 } from "./UI/mock/mockData";
 import {UiPasteBlockContainer} from "./UI/components/pasteblockcontainer";
+import {UiPopupInfo} from "./UI/components/popupinfo";
 
 
 // Preview styles
@@ -217,7 +218,9 @@ export const Ui = () => {
                             {/*variant: null / ignore*/}
                             {/*icon: element*/}
                             {/*onclick: return callback*/}
-                            <UiRoundButton icon={<CloseIcon sx={{width: 16, color: (theme) => theme.palette.text['high']}}/>} onClick={() => alert('Simple')}/>
+                            <UiRoundButton
+                                icon={<CloseIcon sx={{width: 16, color: (theme) => theme.palette.text['high']}}/>}
+                                onClick={() => alert('Simple')}/>
                             <UiRoundButton icon={<ArrowIcon sx={{width: 16}}/>} onClick={() => alert('Simple')}/>
                             <UiRoundButton variant={'ignore'} icon={<CloseIcon sx={{width: 16}}/>}/>
                         </GapContainer>
@@ -283,38 +286,57 @@ export const Ui = () => {
                     </Typography>
                     <div>
                         <GapContainerFullElements>
-                            {/*open: open state*/}
                             {/*close: return callback form close (state)*/}
                             {/*icon: element and bg hex*/}
                             {/*fullWidth: true / false*/}
                             {/*title: text*/}
                             {/*subtext: text*/}
-                            <UiBanner open={mockOpen} close={(e) => setMockOpen(e)}
-                                      icon={{
-                                          element: <DistortIcon
-                                              sx={{width: 48, color: (theme) => theme.palette.background.paper}}/>,
-                                          background: '#1184ef'
-                                      }}
-                                      title={'Perspective Transformation'}
-                                      subtext={'A collection of highly detailed'}
-                            />
-                            <UiBanner open={mockOpen} close={(e) => setMockOpen(e)}
-                                      icon={{
-                                          element: <CrownIcon
-                                              sx={{width: 48, color: (theme) => theme.palette.background.paper}}/>,
-                                          background: '#11c7ef'
-                                      }}
-                                      title={'Go Pro'}
-                                      subtext={'A collection of highly detailed'}/>
-                            <UiBanner open={mockOpen} close={(e) => setMockOpen(e)}
-                                      icon={{
-                                          element: <ErrorIcon
-                                              sx={{width: 48, color: (theme) => theme.palette.background.paper}}/>,
-                                          background: '#e7290f'
-                                      }}
-                                      title={'Something went wrong'}
-                                      subtext={'Please check your connection'}/>
-                            <UiBanner open={mockOpen} close={(e) => setMockOpen(e)}
+                            <Collapse in={mockOpen}>
+                                <UiBanner close={(e) => setMockOpen(e)}
+                                          icon={{
+                                              element: <DistortIcon
+                                                  sx={{width: 48, color: (theme) => theme.palette.background.paper}}/>,
+                                              background: '#1184ef'
+                                          }}
+                                          title={'Perspective Transformation'}
+                                          subtext={'A collection of highly detailed'}
+                                />
+                            </Collapse>
+                            <Collapse in={mockOpen}>
+                                <UiBanner close={(e) => setMockOpen(e)}
+                                          icon={{
+                                              element: <CrownIcon
+                                                  sx={{width: 48, color: (theme) => theme.palette.background.paper}}/>,
+                                              background: '#11c7ef'
+                                          }}
+                                          title={'Go Pro'}
+                                          subtext={'A collection of highly detailed'}/>
+                            </Collapse>
+                            <Collapse in={mockOpen}>
+                                <UiBanner close={(e) => setMockOpen(e)}
+                                          icon={{
+                                              element: <ErrorIcon
+                                                  sx={{width: 48, color: (theme) => theme.palette.background.paper}}/>,
+                                              background: '#e7290f'
+                                          }}
+                                          title={'Something went wrong'}
+                                          subtext={'Please check your connection'}/>
+                            </Collapse>
+                            <Collapse in={mockOpen}>
+                                <UiBanner close={(e) => setMockOpen(e)}
+                                          icon={{
+                                              element: <PriceIcon
+                                                  sx={{width: 48, color: (theme) => theme.palette.background.paper}}/>,
+                                              background: '#76cc09'
+                                          }}
+                                          title={'Pro account 30% Discount'}
+                                          subtext={'Two weeks only. Code: 352dc4'}/>
+                            </Collapse>
+
+                        </GapContainerFullElements>
+                        <br/>
+                        <Collapse in={mockOpen}>
+                            <UiBanner close={(e) => setMockOpen(e)}
                                       icon={{
                                           element: <PriceIcon
                                               sx={{width: 48, color: (theme) => theme.palette.background.paper}}/>,
@@ -322,19 +344,11 @@ export const Ui = () => {
                                       }}
                                       title={'Pro account 30% Discount'}
                                       subtext={'Two weeks only. Code: 352dc4'}/>
-                        </GapContainerFullElements>
-                        <br/>
-                        <UiBanner open={mockOpen} close={(e) => setMockOpen(e)}
-                                  icon={{
-                                      element: <PriceIcon
-                                          sx={{width: 48, color: (theme) => theme.palette.background.paper}}/>,
-                                      background: '#76cc09'
-                                  }}
-                                  title={'Pro account 30% Discount'}
-                                  subtext={'Two weeks only. Code: 352dc4'}/>
+                        </Collapse>
                         <br/>
                         <UiBigButton text={'Re-open all'} variant={mockOpen ? '' : 'basic'}
                                      onClick={() => setMockOpen(true)}/>
+
                     </div>
                 </PreviewBlock>
                 <PreviewBlock>
@@ -798,14 +812,39 @@ export const Ui = () => {
                 <PreviewBlock>
                     <Typography variant="type-16" component="p"
                                 sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
-                       Paste block container
+                        Paste block container
                     </Typography>
                     <div>
                         <GapContainer sx={{flexDirection: 'column'}}>
                             <UiPasteBlockContainer>
-                                <UiDropdown variant={'image'} data={dropdownsImage} isDropdownSelect={() => {}}/>
-                                <UiBigButton text={'Paste in canvas'} variant={'basic'} onClick={() => alert('Paste in canvas')}/>
+                                <UiDropdown variant={'image'} data={dropdownsImage} isDropdownSelect={() => {
+                                }}/>
+                                <UiBigButton text={'Paste in canvas'} variant={'basic'}
+                                             onClick={() => alert('Paste in canvas')}/>
                             </UiPasteBlockContainer>
+                        </GapContainer>
+                    </div>
+                </PreviewBlock>
+                <PreviewBlock>
+                    <Typography variant="type-16" component="p"
+                                sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                        Popup Info
+                    </Typography>
+                    <div>
+                        <GapContainer sx={{flexDirection: 'column'}}>
+                            <Collapse in={mockOpen}>
+                                <UiPopupInfo
+                                    open={mockOpen}
+                                    close={(e) => setMockOpen(e)}
+                                    title={<div>Unlock high <br/> resolution mockups<br/> for free</div>}
+                                    subtext={<div>Just create an account or login if<br/> already have it. And you will
+                                        be<br/> able to access free high resolution<br/> version of this mockup</div>}
+                                    button={
+                                        <UiBigButton text={'Go Pro'} fullWidth={false} variant={'basic'}
+                                                     onClick={() => alert('go to pro page')}/>
+                                    }
+                                />
+                            </Collapse>
                         </GapContainer>
                     </div>
                 </PreviewBlock>
@@ -816,7 +855,7 @@ export const Ui = () => {
                     </Typography>
                     <div>
                         <GapContainer sx={{flexDirection: 'column'}}>
-                            <UiAccountLine />
+                            <UiAccountLine/>
                         </GapContainer>
                     </div>
                 </PreviewBlock>

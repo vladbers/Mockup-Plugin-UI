@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {styled} from "@mui/material/styles";
-import {Typography} from "@mui/material";
+import {Collapse, Typography} from "@mui/material";
 import {ArrowIcon} from "./UI/icons/arrow";
 import {UiRoundButton} from "./UI/components/roundButton";
 import {useNavigate} from "react-router-dom";
@@ -9,11 +9,14 @@ import {ScreenAccount} from "./UI/screens/account";
 import {ScreenConstructor} from "./UI/screens/constructor";
 import {PriceIcon} from "./UI/icons/price";
 import {UiBanner} from "./UI/components/banner";
+import {UiBigButton} from "./UI/components/bigButton";
+import {UiPopupInfo} from "./UI/components/popupinfo";
 
 
 export const Interface = () => {
 
     const [showState, setShowState] = useState(true);
+    const [mockOpen, setMockOpen] = useState(true);
 
     const navigate = useNavigate()
 
@@ -77,7 +80,8 @@ export const Interface = () => {
                         {/*  children props special for notification  */}
                         <BannerBox>
                             <div style={{marginLeft: '16px', marginRight: '16px'}}>
-                                <UiBanner open={showState} close={(e) => setShowState(e)}
+                                <Collapse in={showState}>
+                                <UiBanner close={(e) => setShowState(e)}
                                           icon={{
                                               element: <PriceIcon
                                                   sx={{width: 48, color: (theme) => theme.palette.background.paper}}/>,
@@ -86,6 +90,25 @@ export const Interface = () => {
                                           positionProps={'fixed'}
                                           title={'Pro account 30% Discount'}
                                           subtext={'Two weeks only. Code: 352dc4'} />
+                                </Collapse>
+                            </div>
+                        </BannerBox>
+                    </ScreenBlock>
+                    <ScreenBlock sx={{width: 400, height: '692px', position: 'relative'}}>
+                        <ScreenConstructor showPromotion={false} />
+                        {/*  children props special for notification  */}
+                        <BannerBox sx={{bottom: '145px'}}>
+                            <div style={{marginLeft: '16px', marginRight: '16px'}}>
+                                <Collapse in={mockOpen}>
+                                <UiPopupInfo
+                                    close={(e) => setMockOpen(e)}
+                                    title={<div>Unlock high <br/> resolution mockups<br/> for free</div>}
+                                    subtext={<div>Just create an account or login if<br/> already have it. And you will be<br/> able to access free high resolution<br/> version of this mockup</div>}
+                                    button={
+                                        <UiBigButton text={'Go Pro'} fullWidth={false} variant={'basic'} onClick={() => alert('go to pro page')}/>
+                                    }
+                                />
+                                </Collapse>
                             </div>
                         </BannerBox>
                     </ScreenBlock>

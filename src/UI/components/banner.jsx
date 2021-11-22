@@ -13,8 +13,7 @@ const useStyles = makeStyles(theme => ({
     banner: {
         borderRadius: 24,
         backgroundColor: theme.palette.transparent['dark-60'],
-        backdropFilter: 'blur(94px)',
-        webKitBackdropFilter: 'blur(94px)',
+        backdropFilter: 'blur(9px)',
         color: theme.palette.pure['white'],
         padding: 12,
         position: 'relative'
@@ -51,30 +50,26 @@ const AlertBanner = styled(Alert)(() => ({
     }
 }));
 
-export const UiBanner = ({open, close, icon, title, subtext}) => {
+export const UiBanner = ({close, icon, title, subtext}) => {
     const classes = useStyles();
 
 
     return (
-        <Box>
-            <Collapse in={open}>
-                <AlertBanner icon={false} className={classes.banner}>
-                    <div className={classes.boxRoot}>
-                        {icon.element && <div className={classes.iconBox} style={{background: icon.background}}>
-                            {icon.element}
-                        </div>}
-                        <div className={classes.textBox}>
-                            <Typography variant="type-14" component="p" sx={{color: (theme) => theme.palette.pure['white']}}>
-                                {title}
-                            </Typography>
-                            <Typography variant="type-14" component="span" sx={{color: (theme) => theme.palette.transparent['light-70']}}>
-                                {subtext}
-                            </Typography>
-                        </div>
-                    </div>
-                    <UiRoundButton icon={<CloseIcon sx={{width: 16, color: (theme) => theme.palette.pure['white']}} />} onClick={() => close(false)} />
-                </AlertBanner>
-            </Collapse>
-        </Box>
+        <AlertBanner icon={false} className={classes.banner}>
+            <div className={classes.boxRoot}>
+                {icon.element && <div className={classes.iconBox} style={{background: icon.background}}>
+                    {icon.element}
+                </div>}
+                <div className={classes.textBox}>
+                    <Typography variant="type-14" component="p" sx={{color: (theme) => theme.palette.pure['white']}}>
+                        {title}
+                    </Typography>
+                    <Typography variant="type-14" component="span" sx={{color: (theme) => theme.palette.transparent['light-70']}}>
+                        {subtext}
+                    </Typography>
+                </div>
+            </div>
+            <UiRoundButton icon={<CloseIcon sx={{width: 16, color: (theme) => theme.palette.pure['white']}} />} onClick={() => close(false)} />
+        </AlertBanner>
     );
 }

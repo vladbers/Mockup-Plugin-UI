@@ -9,8 +9,6 @@ export const UiRoundButton = ({icon, variant, onClick}) => {
         height: 34,
         borderRadius: 100,
         padding: 9,
-        backdropFilter: 'blur(94px)',
-        webKitBackdropFilter: 'blur(94px)',
         backgroundColor: theme.palette.transparent['dark-5'],
         boxShadow: 'none',
         '&:hover': {
