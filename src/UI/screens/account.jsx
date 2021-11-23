@@ -5,12 +5,13 @@ import {CrownIcon} from "../icons/crown";
 import {UITabsHorizontal} from "../components/UITabsHorizontal";
 import {UiHorizontalMenu} from "../components/horizontalMenu";
 import {UiSubheader} from "../components/subheaders";
-import {tabArrayMockThree} from "../mock/mockData";
+import {tabArrayMockThree, userAccount} from "../mock/mockData";
 import {Typography} from "@mui/material";
 import {UiVerticalMenuDivider} from "../components/verticalMenuDevider";
 import {UiToggleButton} from "../components/toggleButton";
 import {UiInput} from "../components/input";
 import {UiBigButton} from "../components/bigButton";
+import {UiAccountLine} from "../components/accountLine";
 
 export const ScreenAccount = () => {
 
@@ -160,7 +161,7 @@ export const ScreenAccount = () => {
     }
     const Account = () => {
         return (
-            <div style={{paddingTop: 20, paddingBottom: 20}}>Not loaded module (Account line)</div>
+            <UiAccountLine data={userAccount}/>
         )
     }
 
@@ -185,7 +186,7 @@ export const ScreenAccount = () => {
                 <AccountBody>
                     <Account />
                 </AccountBody>
-                <UiVerticalMenuDivider/>
+                <UiVerticalMenuDivider margin={'10px 0px 10px 0px'}/>
                 <NewsletterBody>
                     <SendyChecker toggleDefaultState={true} click={(e) => alert('subscribe: ' + e)}/>
                 </NewsletterBody>

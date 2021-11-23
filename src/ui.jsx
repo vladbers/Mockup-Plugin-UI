@@ -60,7 +60,7 @@ import {
     dropdownsSize,
     tabArrayMock, tabArrayMockFour,
     tabArrayMockThree,
-    tabArrayMockTwo
+    tabArrayMockTwo, userAccount
 } from "./UI/mock/mockData";
 import {UiPasteBlockContainer} from "./UI/components/pasteblockcontainer";
 import {UiPopupInfo} from "./UI/components/popupinfo";
@@ -855,7 +855,7 @@ export const Ui = () => {
                     </Typography>
                     <div>
                         <GapContainer sx={{flexDirection: 'column'}}>
-                            <UiAccountLine/>
+                            <UiAccountLine data={userAccount}/>
                         </GapContainer>
                     </div>
                 </PreviewBlock>
