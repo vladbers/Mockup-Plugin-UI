@@ -178,21 +178,21 @@ export const ArrayMockColors = [
 export const userAccount = {
     id: 0,
     email: 'stasgalanin@ya.ru',
-    eventTime: '1645184141',
     subscriptions: [
         {
             id: 0,
             daysLeft: '1668771341',
+            eventTime: '1637307401',
             subscriptionTitle: 'Year',
             autoReNew: {
                 id: 0,
-                data: '1668771341', //timestamp
+                data: '1637307401', //timestamp
                 status: 'enabled', // status (enabled / disabled)
             },
             invoices: [
                 {
                     id: 0,
-                    data: '1631964333', //timestamp
+                    data: '1637307401', //timestamp
                     link: 'https://' // link to get invoice from paddle online
                 },
                 {

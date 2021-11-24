@@ -26,14 +26,15 @@ export const UiAccountLine = ({data, clickToCancel}) => {
         const nextBuildDate = new Date(days * 1000);
         const today = new Date();
         const daysLeft = Math.floor((nextBuildDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
-        const prevPayDate = new Date(eventTime * 1000).getTime();
+        const prevPayDate = new Date(eventTime * 1000)
         const sumPercents = (next, prev, cur) => {
             const fullSum = next - prev;
             const numberOfPercents = next - cur;
             // Формула вычисления процента числа от числа: 141 * 100 / 155
             return (numberOfPercents * 100) / fullSum;
         };
-        const remainingPercent = sumPercents(nextBuildDate.getTime(), prevPayDate, today.getTime());
+        const remainingPercent = sumPercents(nextBuildDate.getTime(), prevPayDate.getTime(), today.getTime());
+        console.log('remainingPercent', remainingPercent)
         return <>
             <BoxLine>
                 <DaysLine sx={{ background: (theme) => theme.palette.accent['one'], width: `${remainingPercent}%` }}>

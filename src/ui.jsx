@@ -863,11 +863,22 @@ export const Ui = () => {
                 <PreviewBlock>
                     <Typography variant="type-16" component="p"
                                 sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
-                        Invoices
+                        Invoices Block
                     </Typography>
                     <div>
                         <GapContainer sx={{flexDirection: 'column'}}>
                             <UiInvoiceLine data={userAccount} />
+                        </GapContainer>
+                    </div>
+                </PreviewBlock>
+                <PreviewBlock>
+                    <Typography variant="type-16" component="p"
+                                sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                        Product Header
+                    </Typography>
+                    <div>
+                        <GapContainer sx={{flexDirection: 'column'}}>
+
                         </GapContainer>
                     </div>
                 </PreviewBlock>
