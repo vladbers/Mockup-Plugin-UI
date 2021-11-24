@@ -2,6 +2,24 @@ import React from "react";
 // Mock data Dropdowns
 import {MockSizeIcon} from "../icons/mocksize";
 import dropdownsIcon from "../../assets/dropdownsIcon.png";
+import Clay from "../../assets/ProductHeader/Clay.png";
+import PresentationKit from "../../assets/ProductHeader/PresentationKit.png";
+import Vector from "../../assets/ProductHeader/Vector.png";
+
+export const Images = [
+    {
+        id: 0,
+        img: Clay
+    },
+    {
+        id: 1,
+        img: PresentationKit
+    },
+    {
+        id: 2,
+        img: Vector
+    }
+]
 
 
 export const dropdownsSize = [

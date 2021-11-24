@@ -58,7 +58,7 @@ export const UiSubheader = ({title, type, onClickBack, onClickInfo, onClickColor
             </Subheader>
             }
             {type === 'info' &&
-            <Subheader>
+            <Subheader sx={{background: 'transparent'}}>
                 <StaticBlock>
                     <div onClick={onClickBack}>
                         <ArrowIcon sx={{width: 16, color: (theme) => theme.palette.text['high'], cursor: 'pointer'}} />

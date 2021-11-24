@@ -53,18 +53,18 @@ import {UiAccountLine} from "./UI/components/accountLine";
 import {UiPasteBlockContainer} from "./UI/components/pasteblockcontainer";
 import {UiPopupInfo} from "./UI/components/popupinfo";
 import {UiInvoiceLine} from "./UI/components/invoice";
+import {UiProductHeader} from "./UI/components/productHeader";
 
 // mock data
 import {
     ArrayMockColors,
     dropdownsImage,
     dropdownsRealistic,
-    dropdownsSize,
+    dropdownsSize, Images,
     tabArrayMock, tabArrayMockFour,
     tabArrayMockThree,
     tabArrayMockTwo, userAccount
 } from "./UI/mock/mockData";
-
 
 
 // Preview styles
@@ -458,7 +458,7 @@ export const Ui = () => {
                         {/*titleText: text*/}
                         {/*type: size / link */}
                         {/*href: url */}
-                        <GapContainer sx={{flexDirection: 'column'}}>
+                        <GapContainer sx={{flexDirection: 'column', width: 400}}>
                             <UiInfoBar
                                 iconElement={<SizeIcon sx={{width: 14, color: (theme) => theme.palette.text['low']}}/>}
                                 titleText={'Max Resolution'}
@@ -485,7 +485,7 @@ export const Ui = () => {
                         Info Box
                     </Typography>
                     <div>
-                        <GapContainer sx={{flexDirection: 'column'}}>
+                        <GapContainer sx={{flexDirection: 'column', width: 400}}>
                             <InfoBox title={'Info'}>
                                 <UiInfoBar
                                     iconElement={<SizeIcon
@@ -727,7 +727,7 @@ export const Ui = () => {
                                 sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
                         Menu horizontal
                     </Typography>
-                    <div>
+                    <div style={{width: 400}}>
                         <UiHorizontalMenu
                             button={<UiTinyButton
                                 text={'Go Pro'}
@@ -747,7 +747,7 @@ export const Ui = () => {
                         Subheaders
                     </Typography>
                     <div>
-                        <GapContainer sx={{flexDirection: 'column'}}>
+                        <GapContainer sx={{flexDirection: 'column', width: 400}}>
                             <UiSubheader
                                 onClickBack={() => alert('Back btn clicked')}
                                 title="iMac 24 Inch"
@@ -776,7 +776,7 @@ export const Ui = () => {
                         Walkthroug
                     </Typography>
                     <div>
-                        <GapContainer sx={{margin: 5}}>
+                        <GapContainer sx={{margin: 5, width: 400}}>
                             <Walkthroug title={
                                 <WalkthrougThemeComponent onChange={() => alert('Walkthroug')} defaultChecked={true}>
                                     Click here to add your<br/> design and select a frame<br/> in popup window
@@ -800,7 +800,7 @@ export const Ui = () => {
                         Unlock access block
                     </Typography>
                     <div>
-                        <GapContainer sx={{flexDirection: 'column'}}>
+                        <GapContainer sx={{flexDirection: 'column', width: 400}}>
                             <UiUnlockAccess
                                 icon={<CrownIcon sx={{width: 16, color: (theme) => theme.palette.pure['white']}}/>}
                                 title={'Pro'}
@@ -816,7 +816,7 @@ export const Ui = () => {
                         Paste block container
                     </Typography>
                     <div>
-                        <GapContainer sx={{flexDirection: 'column'}}>
+                        <GapContainer sx={{flexDirection: 'column', width: 400}}>
                             <UiPasteBlockContainer>
                                 <UiDropdown variant={'image'} data={dropdownsImage} isDropdownSelect={() => {
                                 }}/>
@@ -832,7 +832,7 @@ export const Ui = () => {
                         Popup Info
                     </Typography>
                     <div>
-                        <GapContainer sx={{flexDirection: 'column'}}>
+                        <GapContainer sx={{flexDirection: 'column', width: 400}}>
                             <Collapse in={mockOpen}>
                                 <UiPopupInfo
                                     open={mockOpen}
@@ -855,7 +855,7 @@ export const Ui = () => {
                         Account line
                     </Typography>
                     <div>
-                        <GapContainer sx={{flexDirection: 'column'}}>
+                        <GapContainer sx={{flexDirection: 'column', width: 400}}>
                             <UiAccountLine data={userAccount} clickToCancel={() => alert('Cancel subscription')}/>
                         </GapContainer>
                     </div>
@@ -866,8 +866,8 @@ export const Ui = () => {
                         Invoices Block
                     </Typography>
                     <div>
-                        <GapContainer sx={{flexDirection: 'column'}}>
-                            <UiInvoiceLine data={userAccount} />
+                        <GapContainer sx={{flexDirection: 'column', width: 400}}>
+                            <UiInvoiceLine data={userAccount}/>
                         </GapContainer>
                     </div>
                 </PreviewBlock>
@@ -877,8 +877,35 @@ export const Ui = () => {
                         Product Header
                     </Typography>
                     <div>
-                        <GapContainer sx={{flexDirection: 'column'}}>
-
+                        <GapContainer sx={{flexDirection: 'column', width: 400}}>
+                            <UiProductHeader
+                                backgroundColor={'#D8E2EB'}
+                                image={Images[2].img}
+                                headerElement={
+                                    <UiSubheader
+                                        onClickBack={() => alert('Back btn clicked')}
+                                        title="iMac 24 Inch"
+                                        onClickInfo={() => alert('Info btn clicked')}
+                                        type={'info'}
+                                    />
+                                }>
+                                <div style={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    alignContent: 'center'
+                                }}>
+                                    <Typography variant="type-12" component="p"
+                                                sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                                        Sort by items or scenes
+                                    </Typography>
+                                    <div style={{marginBottom: '19px'}}>
+                                        <UiTabsHeader tabs={tabArrayMock} defaultTabId={2}
+                                                      selectedID={(e) => setMockTabContent(e)}/>
+                                    </div>
+                                </div>
+                            </UiProductHeader>
                         </GapContainer>
                     </div>
                 </PreviewBlock>
