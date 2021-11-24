@@ -1,4 +1,4 @@
-![alt text][logo]{height=150px width=150px}
+![alt text][logo]
 
 [logo]: https://github.com/vladbers/Mockup-Plugin-UI/blob/master/preview.png "Mockup Plugin UI Logo"
 
