@@ -877,35 +877,96 @@ export const Ui = () => {
                         Product Header
                     </Typography>
                     <div>
-                        <GapContainer sx={{flexDirection: 'column', width: 400}}>
-                            <UiProductHeader
-                                backgroundColor={'#D8E2EB'}
-                                image={Images[2].img}
-                                headerElement={
-                                    <UiSubheader
-                                        onClickBack={() => alert('Back btn clicked')}
-                                        title="iMac 24 Inch"
-                                        onClickInfo={() => alert('Info btn clicked')}
-                                        type={'info'}
-                                    />
-                                }>
-                                <div style={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    alignContent: 'center'
-                                }}>
-                                    <Typography variant="type-12" component="p"
-                                                sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
-                                        Sort by items or scenes
-                                    </Typography>
-                                    <div style={{marginBottom: '19px'}}>
-                                        <UiTabsHeader tabs={tabArrayMock} defaultTabId={2}
-                                                      selectedID={(e) => setMockTabContent(e)}/>
+                        <GapContainer>
+                            <div style={{width: 400}}>
+                                <UiProductHeader
+                                    backgroundColor={'#D8E2EB'}
+                                    image={Images[2].img}
+                                    headerElement={
+                                        <UiSubheader
+                                            onClickBack={() => alert('Back btn clicked')}
+                                            title="iMac 24 Inch"
+                                            onClickInfo={() => alert('Info btn clicked')}
+                                            type={'info'}
+                                        />
+                                    }>
+                                    <div style={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                        alignContent: 'center'
+                                    }}>
+                                        <Typography variant="type-12" component="p"
+                                                    sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                                            Sort by items or scenes
+                                        </Typography>
+                                        <div style={{marginBottom: '19px'}}>
+                                            <UiTabsHeader tabs={tabArrayMock} defaultTabId={2}
+                                                          selectedID={(e) => setMockTabContent(e)}/>
+                                        </div>
                                     </div>
-                                </div>
-                            </UiProductHeader>
+                                </UiProductHeader>
+                            </div>
+                            <div style={{width: 400}}>
+                                <UiProductHeader
+                                    image={Images[1].img}
+                                    headerElement={
+                                        <UiSubheader
+                                            onClickBack={() => alert('Back btn clicked')}
+                                            title="iMac 24 Inch"
+                                            onClickInfo={() => alert('Info btn clicked')}
+                                            type={'info'}
+                                        />
+                                    }>
+                                    <div style={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                        alignContent: 'center'
+                                    }}>
+                                        <Typography variant="type-12" component="p"
+                                                    sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                                            Sort by items or scenes
+                                        </Typography>
+                                        <div style={{marginBottom: '19px'}}>
+                                            <UiTabsHeader tabs={tabArrayMock} defaultTabId={2}
+                                                          selectedID={(e) => setMockTabContent(e)}/>
+                                        </div>
+                                    </div>
+                                </UiProductHeader>
+                            </div>
+                            <div style={{width: 400}}>
+                                <UiProductHeader
+                                    backgroundColor={'#F1F2F4'}
+                                    image={Images[0].img}
+                                    headerElement={
+                                        <UiSubheader
+                                            onClickBack={() => alert('Back btn clicked')}
+                                            title="iMac 24 Inch"
+                                            onClickInfo={() => alert('Info btn clicked')}
+                                            type={'info'}
+                                        />
+                                    }>
+                                    <div style={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                        alignContent: 'center'
+                                    }}>
+                                        <Typography variant="type-12" component="p"
+                                                    sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                                            Sort by items or scenes
+                                        </Typography>
+                                        <div style={{marginBottom: '19px'}}>
+                                            <UiTabsHeader tabs={tabArrayMock} defaultTabId={2}
+                                                          selectedID={(e) => setMockTabContent(e)}/>
+                                        </div>
+                                    </div>
+                                </UiProductHeader>
+                            </div>
                         </GapContainer>
                     </div>
                 </PreviewBlock>
