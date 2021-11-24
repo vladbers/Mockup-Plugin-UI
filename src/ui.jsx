@@ -50,7 +50,9 @@ import {Walkthroug} from "./UI/components/walkthroug";
 import {WalkthrougThemeComponent} from "./UI/components/walkthrougThemeComponent";
 import {UiUnlockAccess} from "./UI/components/unlockAccess";
 import {UiAccountLine} from "./UI/components/accountLine";
-
+import {UiPasteBlockContainer} from "./UI/components/pasteblockcontainer";
+import {UiPopupInfo} from "./UI/components/popupinfo";
+import {UiInvoiceLine} from "./UI/components/invoice";
 
 // mock data
 import {
@@ -62,8 +64,7 @@ import {
     tabArrayMockThree,
     tabArrayMockTwo, userAccount
 } from "./UI/mock/mockData";
-import {UiPasteBlockContainer} from "./UI/components/pasteblockcontainer";
-import {UiPopupInfo} from "./UI/components/popupinfo";
+
 
 
 // Preview styles
@@ -855,7 +856,18 @@ export const Ui = () => {
                     </Typography>
                     <div>
                         <GapContainer sx={{flexDirection: 'column'}}>
-                            <UiAccountLine data={userAccount}/>
+                            <UiAccountLine data={userAccount} clickToCancel={() => alert('Cancel subscription')}/>
+                        </GapContainer>
+                    </div>
+                </PreviewBlock>
+                <PreviewBlock>
+                    <Typography variant="type-16" component="p"
+                                sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                        Invoices
+                    </Typography>
+                    <div>
+                        <GapContainer sx={{flexDirection: 'column'}}>
+                            <UiInvoiceLine data={userAccount} />
                         </GapContainer>
                     </div>
                 </PreviewBlock>

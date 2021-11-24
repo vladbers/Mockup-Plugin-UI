@@ -178,7 +178,7 @@ export const ArrayMockColors = [
 export const userAccount = {
     id: 0,
     email: 'stasgalanin@ya.ru',
-    eventTime: '',
+    eventTime: '1645184141',
     subscriptions: [
         {
             id: 0,
@@ -186,7 +186,7 @@ export const userAccount = {
             subscriptionTitle: 'Year',
             autoReNew: {
                 id: 0,
-                data: '1668770558', //timestamp
+                data: '1668771341', //timestamp
                 status: 'enabled', // status (enabled / disabled)
             },
             invoices: [
@@ -196,35 +196,12 @@ export const userAccount = {
                     link: 'https://' // link to get invoice from paddle online
                 },
                 {
-                    id: 0,
+                    id: 1,
                     data: '1637234733',
                     link: 'https://'
                 }
             ]
         }
-        // },
-        // {
-        //     id: 1,
-        //     daysLeft: '1645184141',
-        //     subscriptionTitle: 'Quarter',
-        //     autoReNew: {
-        //         id: 0,
-        //         data: '1668770558', //timestamp
-        //         status: 'enabled', // status (enabled / disabled)
-        //     },
-        //     invoices: [
-        //         {
-        //             id: 0,
-        //             data: '1631964333', //timestamp
-        //             link: 'https://' // link to get invoice from paddle online
-        //         },
-        //         {
-        //             id: 0,
-        //             data: '1637234733',
-        //             link: 'https://'
-        //         }
-        //     ]
-        // }
     ]
 }
 

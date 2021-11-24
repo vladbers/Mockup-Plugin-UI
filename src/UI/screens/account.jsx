@@ -12,6 +12,7 @@ import {UiToggleButton} from "../components/toggleButton";
 import {UiInput} from "../components/input";
 import {UiBigButton} from "../components/bigButton";
 import {UiAccountLine} from "../components/accountLine";
+import {UiInvoiceLine} from "../components/invoice";
 
 export const ScreenAccount = () => {
 
@@ -26,6 +27,10 @@ export const ScreenAccount = () => {
         flexDirection: 'column',
     }));
     const AccountBody = styled('div')(({theme}) => ({
+        display: 'flex',
+        flexDirection: 'column',
+    }));
+    const invoiceBody = styled('div')(({theme}) => ({
         display: 'flex',
         flexDirection: 'column',
     }));
@@ -159,11 +164,6 @@ export const ScreenAccount = () => {
             </ChangePasswordBody>
         )
     }
-    const Account = () => {
-        return (
-            <UiAccountLine data={userAccount}/>
-        )
-    }
 
     return (
         <Profile>
@@ -184,8 +184,12 @@ export const ScreenAccount = () => {
             <ProfileBody>
                 <UiVerticalMenuDivider/>
                 <AccountBody>
-                    <Account />
+                    <UiAccountLine data={userAccount} clickToCancel={() => alert('Cancel subscription')}/>
                 </AccountBody>
+                <UiVerticalMenuDivider margin={'10px 0px 10px 0px'}/>
+                <invoiceBody>
+                    <UiInvoiceLine data={userAccount} />
+                </invoiceBody>
                 <UiVerticalMenuDivider margin={'10px 0px 10px 0px'}/>
                 <NewsletterBody>
                     <SendyChecker toggleDefaultState={true} click={(e) => alert('subscribe: ' + e)}/>
