@@ -71,29 +71,34 @@ const useStyles = makeStyles(() => ({
 
     hovered: {
         // transform: 'scale(0.6)',
+
     },
 
     // SWITCH CASE ITEMS
     firstItem: {
         transform: 'translate(0px, 5.7px)',
-        boxShadow: '1px 1px 1px  rgba(0, 0, 0, 0.12)'
+        boxShadow: '1px 1px 1px  rgba(0, 0, 0, 0.12)',
+        zIndex: '1'
     },
     secondItem: {
         transform: 'translate(0px, 2px)',
-        boxShadow: '1px 1px 1px  rgba(0, 0, 0, 0.12)'
-
+        boxShadow: '1px 1px 1px  rgba(0, 0, 0, 0.12)',
+        zIndex: '1'
     },
     secondCardVarTwo: {
         transform: 'translate(14px, -24.9px) rotate(12deg)',
-        boxShadow: '1px 1px 1px  rgba(0, 0, 0, 0.12)'
+        boxShadow: '1px 1px 1px  rgba(0, 0, 0, 0.12)',
+        zIndex: '1'
     },
     thirdItem: {
         transform: 'translate(30px, -54.9px) rotate(24deg)',
-        boxShadow: '1px 1px 1px  rgba(0, 0, 0, 0.12)'
+        boxShadow: '1px 1px 1px  rgba(0, 0, 0, 0.12)',
+        zIndex: '1'
     },
     fourItem: {
         transform: 'translate(0px, 3.8px)',
-        boxShadow: '1px 1px 1px  rgba(0, 0, 0, 0.12)'
+        boxShadow: '1px 1px 1px  rgba(0, 0, 0, 0.12)',
+        zIndex: '1'
     },
     fiveItem: {}
 
@@ -102,8 +107,6 @@ const useStyles = makeStyles(() => ({
 export const UiSortingPreview = ({items, onClick}) => {
 
     const [isHovered, setIsHovered] = useState(false);
-    // eslint-disable-next-line no-unused-vars
-    const imgRef = useRef(null)
 
     const classes = useStyles()
 

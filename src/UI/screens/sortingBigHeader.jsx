@@ -26,10 +26,10 @@ export const ScreenSortingBigHeader = () => {
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        gap: '37px 12px'
+        gap: '37px 12px',
+        justifyContent: 'space-between'
     }));
-    const SortingGridCol = styled('div')(({theme}) => ({
-    }));
+    const SortingGridCol = styled('div')(({theme}) => ({}));
 
 
 

@@ -22,19 +22,19 @@ export const Images = [
 ]
 
 export const Card = {
-    name: 'iPad Air',
+    name: 'iPhone 12',
     items: [
         {
             id: 0,
-            pngFile: Clay,
+            pngFile: PresentationKit,
         },
         {
             id: 1,
-            pngFile: Clay,
+            pngFile: PresentationKit,
         },
         {
             id: 2,
-            pngFile: Clay,
+            pngFile: PresentationKit,
         }
     ]
 }
