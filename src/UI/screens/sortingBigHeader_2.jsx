@@ -46,6 +46,7 @@ export const ScreenSortingBigHeader2 = () => {
                 <UITabsHorizontal tabs={tabArrayMockThree} defaultTabId={0} selectedID={(e) => console.log(e)}/>
             </UiHorizontalMenu>
             <UiProductHeader
+                background={'#FAFAFA'}
                 image={Images[1].img}
                 headerElement={
                     <UiSubheader
@@ -60,7 +61,7 @@ export const ScreenSortingBigHeader2 = () => {
                     flexDirection: 'row',
                     justifyContent: 'space-between',
                     gap: '10px',
-                    width: '100%'
+                    width: '100%',
                 }}>
                     <div style={{width: '170px'}}>
                         <Typography variant="type-12" component="p"

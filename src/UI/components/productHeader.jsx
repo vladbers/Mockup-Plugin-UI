@@ -26,6 +26,7 @@ export const UiProductHeader = (props) => {
         marginLeft: '20px',
         marginRight: '20px',
         minHeight: '68px',
+        backgroundColor: 'inherit'
     }));
     const SpacingElement = styled('div')(({theme}) => ({
         height: '176px',
