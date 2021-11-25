@@ -11,6 +11,7 @@ import {PriceIcon} from "./UI/icons/price";
 import {UiBanner} from "./UI/components/banner";
 import {UiBigButton} from "./UI/components/bigButton";
 import {UiPopupInfo} from "./UI/components/popupinfo";
+import {ScreenSortingBigHeader} from "./UI/screens/sortingBigHeader";
 
 
 export const Interface = () => {
@@ -111,6 +112,14 @@ export const Interface = () => {
                                 </Collapse>
                             </div>
                         </BannerBox>
+                    </ScreenBlock>
+                </PreviewBlock>
+                <Typography variant="type-16" component="p" sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                    Sorting
+                </Typography>
+                <PreviewBlock>
+                    <ScreenBlock sx={{width: 400, height: 956}}>
+                        <ScreenSortingBigHeader />
                     </ScreenBlock>
                 </PreviewBlock>
             </PreviewContainer>

@@ -54,10 +54,11 @@ import {UiPasteBlockContainer} from "./UI/components/pasteblockcontainer";
 import {UiPopupInfo} from "./UI/components/popupinfo";
 import {UiInvoiceLine} from "./UI/components/invoice";
 import {UiProductHeader} from "./UI/components/productHeader";
+import {UiSortingPreview} from "./UI/components/sortingPreview";
 
 // mock data
 import {
-    ArrayMockColors,
+    ArrayMockColors, Card,
     dropdownsImage,
     dropdownsRealistic,
     dropdownsSize, Images,
@@ -65,6 +66,8 @@ import {
     tabArrayMockThree,
     tabArrayMockTwo, userAccount
 } from "./UI/mock/mockData";
+import CardsBroum from "./UI/components/CardsBroum";
+
 
 
 // Preview styles
@@ -932,7 +935,7 @@ export const Ui = () => {
                                         </Typography>
                                         <div style={{marginBottom: '19px'}}>
                                             <UiTabsHeader tabs={tabArrayMock} defaultTabId={2}
-                                                          selectedID={(e) => setMockTabContent(e)}/>
+                                                          selectedID={(e) => setMockTabContent(e)} />
                                         </div>
                                     </div>
                                 </UiProductHeader>
@@ -967,6 +970,18 @@ export const Ui = () => {
                                     </div>
                                 </UiProductHeader>
                             </div>
+                        </GapContainer>
+                    </div>
+                </PreviewBlock>
+                <PreviewBlock>
+                    <Typography variant="type-16" component="p"
+                                sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                        Sorting Preview
+                    </Typography>
+                    <div>
+                        <GapContainer sx={{flexDirection: 'row', gap: '15px', marginBottom: '25px'}}>
+                            <UiSortingPreview items={Card} onClick={() => alert('click')} />
+                            <CardsBroum items={Card} onClick={() => alert('click')} />
                         </GapContainer>
                     </div>
                 </PreviewBlock>

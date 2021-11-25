@@ -21,6 +21,23 @@ export const Images = [
     }
 ]
 
+export const Card = {
+    name: 'iPad Air',
+    items: [
+        {
+            id: 0,
+            pngFile: Clay,
+        },
+        {
+            id: 1,
+            pngFile: Clay,
+        },
+        {
+            id: 2,
+            pngFile: Clay,
+        }
+    ]
+}
 
 export const dropdownsSize = [
     {
