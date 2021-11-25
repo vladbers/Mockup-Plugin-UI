@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {LazyLoadImage, trackWindowScroll} from 'react-lazy-load-image-component';
 import {makeStyles} from "@mui/styles";
 import {Typography} from "@mui/material";
