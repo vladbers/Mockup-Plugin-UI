@@ -6,7 +6,7 @@ import {Typography} from "@mui/material";
 
 const useStyles = makeStyles(() => ({
     container: {
-        height: 175,
+        height: 130,
         // background: '#F9F9F9',
         // borderRadius: "10px",
     },
@@ -16,12 +16,12 @@ const useStyles = makeStyles(() => ({
         marginTop: '12px',
         gap: '6px',
         zIndex: 9,
-        width: '228px',
+        width: '170px',
         justifyContent: 'center'
     },
     main: {
         position: 'relative',
-        height: 175,
+        height: 130,
         transition: 'all ease .5s',
         cursor: 'pointer',
         display: 'flex',
@@ -30,7 +30,7 @@ const useStyles = makeStyles(() => ({
         top: 0,
         left: 0,
         position: "absolute",
-        height: "175px",
+        height: "130px",
         transform: 'rotate(5deg)',
         textAlign: "center",
         fontFamily: "sans-serif",
@@ -43,7 +43,7 @@ const useStyles = makeStyles(() => ({
         background: '#F9F9F9',
     },
     cardInner: {
-        height: "175px",
+        height: "130px",
         textAlign: "center",
         fontFamily: "sans-serif",
         fontSize: "12px",
@@ -163,12 +163,12 @@ export const UiSortingPreview = ({items, onClick}) => {
             <div className={classes.main} onClick={onClick} onMouseEnter={() => setIsHovered(true)}
                  onMouseLeave={() => setIsHovered(false)}>
                 {arrToMap.reverse().map((card, index) => index > 2 ? null : (
-                    <div style={{maxWidth: 300}}
+                    <div style={{maxWidth: 200}}
                          key={card.id}
                          className={`${classes.card} ${rotateDetect(index + 1)} ${isHovered && `${classes.hovered} ${positionDetect(index + 1)}`}`}>
                         <LazyLoadImage
                             effect="opacity"
-                            style={{maxWidth: 300}}
+                            style={{maxWidth: 200}}
                             className={`${classes.cardInner}`}
                             src={card.pngFile}
                             alt="preview"/>

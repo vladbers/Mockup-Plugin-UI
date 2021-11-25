@@ -118,7 +118,7 @@ export const Interface = () => {
                     Sorting
                 </Typography>
                 <PreviewBlock>
-                    <ScreenBlock sx={{width: 400, height: 956}}>
+                    <ScreenBlock sx={{width: 400, height: 900, overflow: 'hidden'}}>
                         <ScreenSortingBigHeader />
                     </ScreenBlock>
                 </PreviewBlock>

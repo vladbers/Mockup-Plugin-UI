@@ -4,21 +4,31 @@ import {UiTinyButton} from "../components/tinyButton";
 import {CrownIcon} from "../icons/crown";
 import {UITabsHorizontal} from "../components/UITabsHorizontal";
 import {UiHorizontalMenu} from "../components/horizontalMenu";
-import {Images, tabArrayMock, tabArrayMockThree} from "../mock/mockData";
+import {Card, Images, tabArrayMock, tabArrayMockThree} from "../mock/mockData";
 import {UiSubheader} from "../components/subheaders";
 import {Typography} from "@mui/material";
 import {UiTabsHeader} from "../components/UITabs";
 import {UiProductHeader} from "../components/productHeader";
+import {UiSortingPreview} from "../components/sortingPreview";
 
 
 
 export const ScreenSortingBigHeader = () => {
 
-    const SortingPage = styled('div')(({theme}) => ({}));
+    const SortingPage = styled('div')(({theme}) => ({
+        scroll: 'auto'
+    }));
 
     const SortingPageBody = styled('div')(({theme}) => ({
-        paddingRight: '20px',
-        paddingLeft: '20px'
+        paddingTop: '20px',
+        paddingRight: '19px',
+        paddingLeft: '19px',
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        gap: '37px 12px'
+    }));
+    const SortingGridCol = styled('div')(({theme}) => ({
     }));
 
 
@@ -63,7 +73,24 @@ export const ScreenSortingBigHeader = () => {
                 </div>
             </UiProductHeader>
             <SortingPageBody>
-
+                <SortingGridCol>
+                    <UiSortingPreview items={Card} onClick={() => alert('click')} />
+                </SortingGridCol>
+                <SortingGridCol>
+                    <UiSortingPreview items={Card} onClick={() => alert('click')} />
+                </SortingGridCol>
+                <SortingGridCol>
+                    <UiSortingPreview items={Card} onClick={() => alert('click')} />
+                </SortingGridCol>
+                <SortingGridCol>
+                    <UiSortingPreview items={Card} onClick={() => alert('click')} />
+                </SortingGridCol>
+                <SortingGridCol>
+                    <UiSortingPreview items={Card} onClick={() => alert('click')} />
+                </SortingGridCol>
+                <SortingGridCol>
+                    <UiSortingPreview items={Card} onClick={() => alert('click')} />
+                </SortingGridCol>
             </SortingPageBody>
         </SortingPage>
     )
