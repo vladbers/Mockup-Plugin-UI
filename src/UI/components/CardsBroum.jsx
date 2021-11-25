@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {LazyLoadImage, trackWindowScroll} from 'react-lazy-load-image-component';
 import {makeStyles} from "@mui/styles";
 
@@ -93,7 +93,6 @@ const useStyles = makeStyles(() => ({
 const CardsBroum = ({items, onClick}) => {
 
     const [isHovered, setIsHovered] = useState(false);
-    const imgRef = useRef(null)
 
     const classes = useStyles()
 
@@ -102,6 +101,7 @@ const CardsBroum = ({items, onClick}) => {
 
 
     const positionDetect = (index) => {
+        // eslint-disable-next-line default-case
         switch (index) {
             case 1: {
                 return classes.firstItem
@@ -125,6 +125,7 @@ const CardsBroum = ({items, onClick}) => {
         }
     }
     const rotateDetect = (index) => {
+        // eslint-disable-next-line default-case
         switch (index) {
             case 1: {
                 return classes.firstCard

@@ -55,6 +55,7 @@ import {UiPopupInfo} from "./UI/components/popupinfo";
 import {UiInvoiceLine} from "./UI/components/invoice";
 import {UiProductHeader} from "./UI/components/productHeader";
 import {UiSortingPreview} from "./UI/components/sortingPreview";
+import CardsBroum from "./UI/components/CardsBroum";
 
 // mock data
 import {
@@ -66,7 +67,7 @@ import {
     tabArrayMockThree,
     tabArrayMockTwo, userAccount
 } from "./UI/mock/mockData";
-import CardsBroum from "./UI/components/CardsBroum";
+
 
 
 

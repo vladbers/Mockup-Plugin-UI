@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {styled} from "@mui/material/styles";
 import {UiTinyButton} from "../components/tinyButton";
 import {CrownIcon} from "../icons/crown";
@@ -13,7 +13,6 @@ import {UiProductHeader} from "../components/productHeader";
 
 
 export const ScreenSortingBigHeader = () => {
-    const [mockTabContent, setMockTabContent] = useState(2);
 
     const SortingPage = styled('div')(({theme}) => ({}));
 
@@ -59,7 +58,7 @@ export const ScreenSortingBigHeader = () => {
                     </Typography>
                     <div style={{marginBottom: '19px'}}>
                         <UiTabsHeader tabs={tabArrayMock} defaultTabId={2}
-                                      selectedID={(e) => setMockTabContent(e)} />
+                                      selectedID={1} />
                     </div>
                 </div>
             </UiProductHeader>
