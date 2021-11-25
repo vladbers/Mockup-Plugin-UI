@@ -982,7 +982,6 @@ export const Ui = () => {
                     <div>
                         <GapContainer sx={{flexDirection: 'row', gap: '15px', marginBottom: '25px'}}>
                             <UiSortingPreview items={Card} onClick={() => alert('click')} />
-                            <CardsBroum items={Card} onClick={() => alert('click')} />
                         </GapContainer>
                     </div>
                 </PreviewBlock>

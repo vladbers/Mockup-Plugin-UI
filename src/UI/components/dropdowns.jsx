@@ -243,7 +243,7 @@ export const UiDropdown = ({variant, data, isDropdownSelect}) => {
                 {data.map(item => <MenuItem value={item.value}>{item.icon} {item.title}</MenuItem>)}
             </Select>
         case 'usually':
-            return <Select className={classes.rootUsually} autoWidth={true} MenuProps={menuProps} IconComponent={iconComponent}
+            return <Select className={classes.rootUsually} sx={{width: '170px'}} autoWidth={false} MenuProps={menuProps} IconComponent={iconComponent}
                            onChange={handleChange} value={selected}>
                 {data.map(item => <MenuItem value={item.value}>{item.title}</MenuItem>)}
             </Select>

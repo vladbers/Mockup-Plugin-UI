@@ -12,6 +12,7 @@ import {UiBanner} from "./UI/components/banner";
 import {UiBigButton} from "./UI/components/bigButton";
 import {UiPopupInfo} from "./UI/components/popupinfo";
 import {ScreenSortingBigHeader} from "./UI/screens/sortingBigHeader";
+import {ScreenSortingBigHeader2} from "./UI/screens/sortingBigHeader_2";
 
 
 export const Interface = () => {
@@ -120,6 +121,9 @@ export const Interface = () => {
                 <PreviewBlock>
                     <ScreenBlock sx={{width: 400, height: 900, overflow: 'hidden'}}>
                         <ScreenSortingBigHeader />
+                    </ScreenBlock>
+                    <ScreenBlock sx={{width: 400, height: 900, overflow: 'hidden'}}>
+                        <ScreenSortingBigHeader2 />
                     </ScreenBlock>
                 </PreviewBlock>
             </PreviewContainer>
