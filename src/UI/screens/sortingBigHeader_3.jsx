@@ -4,16 +4,15 @@ import {UiTinyButton} from "../components/tinyButton";
 import {CrownIcon} from "../icons/crown";
 import {UITabsHorizontal} from "../components/UITabsHorizontal";
 import {UiHorizontalMenu} from "../components/horizontalMenu";
-import {Card, dropdownsRealistic, Images, tabArrayMockThree} from "../mock/mockData";
-import {UiSubheader} from "../components/subheaders";
-import {Typography} from "@mui/material";
-import {UiProductHeader} from "../components/productHeader";
+import {Card, dropdownsImage, dropdownsRealistic, tabArrayMockThree} from "../mock/mockData";
 import {UiSortingPreview} from "../components/sortingPreview";
+import {Typography} from "@mui/material";
 import {UiDropdown} from "../components/dropdowns";
+import {UiProductHeaderFilter} from "../components/productHeaderFilter";
 
 
 
-export const ScreenSortingBigHeader2 = () => {
+export const ScreenSortingBigHeader3 = () => {
 
     const SortingPage = styled('div')(({theme}) => ({
         scroll: 'auto'
@@ -45,17 +44,11 @@ export const ScreenSortingBigHeader2 = () => {
                 onClickBurger={() => alert('Burger is clicked')}>
                 <UITabsHorizontal tabs={tabArrayMockThree} defaultTabId={0} selectedID={(e) => console.log(e)}/>
             </UiHorizontalMenu>
-            <UiProductHeader
-                background={'#FAFAFA'}
-                image={Images[1].img}
-                headerElement={
-                    <UiSubheader
-                        onClickBack={() => alert('Back btn clicked')}
-                        title="iMac 24 Inch"
-                        onClickInfo={() => alert('Info btn clicked')}
-                        type={'info'}
-                    />
-                }>
+            <UiProductHeaderFilter
+                search={(search) => console.log('search', search)}
+                placeholder={''}
+            >
+                {/* Search filter inner */}
                 <div style={{
                     display: 'flex',
                     flexDirection: 'row',
@@ -66,7 +59,32 @@ export const ScreenSortingBigHeader2 = () => {
                     <div style={{width: '170px'}}>
                         <Typography variant="type-12" component="p"
                                     sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
-                            Sort by items or scenes
+                            Style:
+                        </Typography>
+                        <UiDropdown variant={'image'} autoWidth={false} sx={{width: '170px'}} data={dropdownsImage} isDropdownSelect={() => {
+                        }}/>
+                    </div>
+                    <div style={{width: '170px'}}>
+                        <Typography variant="type-12" component="p"
+                                    sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                            Platform:
+                        </Typography>
+                        <UiDropdown variant={'usually'} autoWidth={false} sx={{width: '170px'}} data={dropdownsRealistic} isDropdownSelect={() => {
+                        }}/>
+                    </div>
+                </div>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    gap: '10px',
+                    width: '100%',
+                    marginTop: '10px'
+                }}>
+                    <div style={{width: '170px'}}>
+                        <Typography variant="type-12" component="p"
+                                    sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                            Device
                         </Typography>
                         <UiDropdown variant={'usually'} autoWidth={false} sx={{width: '170px'}} data={dropdownsRealistic} isDropdownSelect={() => {
                         }}/>
@@ -74,13 +92,14 @@ export const ScreenSortingBigHeader2 = () => {
                     <div style={{width: '170px'}}>
                         <Typography variant="type-12" component="p"
                                     sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
-                            Sort by items or scenes
+                            Angle
                         </Typography>
                         <UiDropdown variant={'usually'} autoWidth={false} sx={{width: '170px'}} data={dropdownsRealistic} isDropdownSelect={() => {
                         }}/>
                     </div>
                 </div>
-            </UiProductHeader>
+                {/* Search filter inner end */}
+            </UiProductHeaderFilter>
             <SortingPageBody>
                 <SortingGridCol>
                     <UiSortingPreview items={Card} onClick={() => alert('click')} />

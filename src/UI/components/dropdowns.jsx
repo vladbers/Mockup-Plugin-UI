@@ -185,7 +185,7 @@ const useStyles = makeStyles(theme => ({
     },
 }))
 
-export const UiDropdown = ({variant, data, isDropdownSelect}) => {
+export const UiDropdown = ({variant, data, isDropdownSelect, autoWidth, sx}) => {
     const [selected, setSelected] = React.useState(null);
 
     const classes = useStyles()
@@ -238,18 +238,18 @@ export const UiDropdown = ({variant, data, isDropdownSelect}) => {
 
     switch (variant) {
         case 'size':
-            return <Select className={classes.rootIcons} autoWidth={true} MenuProps={menuPropsSize} IconComponent={iconComponent}
+            return <Select className={classes.rootIcons} autoWidth={autoWidth} sx={sx} MenuProps={menuPropsSize} IconComponent={iconComponent}
                            onChange={handleChange} value={selected}>
                 {data.map(item => <MenuItem value={item.value}>{item.icon} {item.title}</MenuItem>)}
             </Select>
         case 'usually':
-            return <Select className={classes.rootUsually} sx={{width: '170px'}} autoWidth={false} MenuProps={menuProps} IconComponent={iconComponent}
+            return <Select className={classes.rootUsually} autoWidth={autoWidth} sx={sx} MenuProps={menuProps} IconComponent={iconComponent}
                            onChange={handleChange} value={selected}>
                 {data.map(item => <MenuItem value={item.value}>{item.title}</MenuItem>)}
             </Select>
 
         case 'image':
-            return <Select className={classes.rootIcons} autoWidth={true} MenuProps={menuPropsSize} IconComponent={iconComponent}
+            return <Select className={classes.rootIcons} autoWidth={autoWidth} sx={sx} MenuProps={menuPropsSize} IconComponent={iconComponent}
                            onChange={handleChange} value={selected}>
                 {data.map(item => <MenuItem value={item.value}>
                     <img src={item.img} alt={item.title} className={classes.iconImage}/> {item.title}

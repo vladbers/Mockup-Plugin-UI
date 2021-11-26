@@ -12,8 +12,8 @@ export const InfoBox = ({title, children, expanded}) => {
         backgroundColor: theme.palette.background['default'],
         border: 'none',
         boxShadow: 'none',
-        padding: 20,
-        margin: 0
+        margin: 0,
+        paddingBottom: '20px'
     }));
 
     return (

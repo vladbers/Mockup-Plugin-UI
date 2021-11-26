@@ -66,6 +66,7 @@ import {
     tabArrayMockThree,
     tabArrayMockTwo, userAccount
 } from "./UI/mock/mockData";
+import {UiProductHeaderFilter} from "./UI/components/productHeaderFilter";
 
 
 
@@ -254,6 +255,8 @@ export const Ui = () => {
                         <GapContainer>
                             {/*variant: size / usually / image*/}
                             {/*data: array according to type (see mock)*/}
+                            {/*sx: other special styles for specific components / styles */}
+                            {/*autoWidth: this props for automatic layout in dropdown / true / false*/}
                             {/*isDropdownSelect: return callback*/}
                             <UiDropdown variant={'size'} data={dropdownsSize} isDropdownSelect={() => {
                             }}/>
@@ -981,6 +984,72 @@ export const Ui = () => {
                     <div>
                         <GapContainer sx={{flexDirection: 'row', gap: '15px', marginBottom: '25px'}}>
                             <UiSortingPreview items={Card} onClick={() => alert('click')} />
+                        </GapContainer>
+                    </div>
+                </PreviewBlock>
+                <PreviewBlock>
+                    <Typography variant="type-16" component="p"
+                                sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                        Product Header Filter
+                    </Typography>
+                    <div>
+                        <GapContainer sx={{flexDirection: 'row', width: '400px'}}>
+                            <UiProductHeaderFilter
+                                search={(search) => console.log('search', search)}
+                                placeholder={''}
+                            >
+                                {/* Search filter inner */}
+                                <div style={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                    justifyContent: 'space-between',
+                                    gap: '10px',
+                                    width: '100%',
+                                }}>
+                                    <div style={{width: '170px'}}>
+                                        <Typography variant="type-12" component="p"
+                                                    sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                                            Style:
+                                        </Typography>
+                                        <UiDropdown variant={'image'} autoWidth={false} sx={{width: '170px'}} data={dropdownsImage} isDropdownSelect={() => {
+                                        }}/>
+                                    </div>
+                                    <div style={{width: '170px'}}>
+                                        <Typography variant="type-12" component="p"
+                                                    sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                                            Platform:
+                                        </Typography>
+                                        <UiDropdown variant={'usually'} autoWidth={false} sx={{width: '170px'}} data={dropdownsRealistic} isDropdownSelect={() => {
+                                        }}/>
+                                    </div>
+                                </div>
+                                <div style={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                    justifyContent: 'space-between',
+                                    gap: '10px',
+                                    width: '100%',
+                                    marginTop: '10px'
+                                }}>
+                                    <div style={{width: '170px'}}>
+                                        <Typography variant="type-12" component="p"
+                                                    sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                                            Device
+                                        </Typography>
+                                        <UiDropdown variant={'usually'} autoWidth={false} sx={{width: '170px'}} data={dropdownsRealistic} isDropdownSelect={() => {
+                                        }}/>
+                                    </div>
+                                    <div style={{width: '170px'}}>
+                                        <Typography variant="type-12" component="p"
+                                                    sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                                            Angle
+                                        </Typography>
+                                        <UiDropdown variant={'usually'} autoWidth={false} sx={{width: '170px'}} data={dropdownsRealistic} isDropdownSelect={() => {
+                                        }}/>
+                                    </div>
+                                </div>
+                                {/* Search filter inner end */}
+                            </UiProductHeaderFilter>
                         </GapContainer>
                     </div>
                 </PreviewBlock>

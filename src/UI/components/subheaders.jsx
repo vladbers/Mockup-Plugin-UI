@@ -9,7 +9,8 @@ export const UiSubheader = ({title, type, onClickBack, onClickInfo, onClickColor
 
     const Subheader = styled('div')(({theme}) => ({
         background: theme.palette.pure['white'],
-        padding: '13px 24px',
+        paddingTop: '13px',
+        paddingBottom: '13px',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',

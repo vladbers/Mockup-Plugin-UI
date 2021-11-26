@@ -180,12 +180,13 @@ export const ScreenProfile = (props) => {
                 onClickBurger={() => alert('Burger is clicked')}>
                 <UITabsHorizontal tabs={tabArrayMockThree} defaultTabId={0} selectedID={(e) => console.log(e)}/>
             </UiHorizontalMenu>
+            <ProfileBody>
             <UiSubheader
                 onClickBack={() => alert('Back btn clicked')}
                 title="Profile"
                 type={'simple'}
             />
-            <ProfileBody>
+
                 <UiUnlockAccess
                     icon={<CrownIcon sx={{width: 16, color: (theme) => theme.palette.pure['white']}}/>}
                     title={'Pro'}

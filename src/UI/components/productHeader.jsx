@@ -19,6 +19,8 @@ export const UiProductHeader = (props) => {
         width: '100%',
     }));
     const HeaderElement = styled('div')(({theme}) => ({
+        paddingLeft: '20px',
+        paddingRight: '20px',
         zIndex: '0'
     }));
     const FooterElement = styled('div')(({theme}) => ({

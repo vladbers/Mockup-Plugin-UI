@@ -21,6 +21,10 @@ import {Walkthroug} from "../components/walkthroug";
 
 export const ScreenConstructor = (props) => {
     const Constructor = styled('div')(({theme}) => ({}));
+    const ConstructorBody = styled('div')(({theme}) => ({
+        paddingRight: '20px',
+        paddingLeft: '20px',
+    }));
     const [showState, setShowState] = useState(props.showPromotion);
 
     return (
@@ -37,6 +41,7 @@ export const ScreenConstructor = (props) => {
                 <UITabsHorizontal tabs={tabArrayMockThree} defaultTabId={0}
                                   selectedID={(e) => alert(e)}/>
             </UiHorizontalMenu>
+            <ConstructorBody>
             {/* Subheader */}
             <UiSubheader
                 onClickBack={() => alert('Back btn clicked')}
@@ -45,6 +50,7 @@ export const ScreenConstructor = (props) => {
                 defaultColorId={0}
                 onClickColor={(e) => alert('Color is selected ' + e.hex + ' where id is ' + e.id)}
                 type={'colors'}/>
+            </ConstructorBody>
             {/*   Canvas (mock)  */}
             <UiCanvas/>
             {/*  Past block container  */}

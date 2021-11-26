@@ -176,12 +176,12 @@ export const ScreenAccount = () => {
                 onClickBurger={() => alert('Burger is clicked')}>
                 <UITabsHorizontal tabs={tabArrayMockThree} defaultTabId={0} selectedID={(e) => console.log(e)}/>
             </UiHorizontalMenu>
+            <ProfileBody>
             <UiSubheader
                 onClickBack={() => alert('Back btn clicked')}
                 title="Profile"
                 type={'simple'}
             />
-            <ProfileBody>
                 <UiVerticalMenuDivider/>
                 <AccountBody>
                     <UiAccountLine data={userAccount} clickToCancel={() => alert('Cancel subscription')}/>

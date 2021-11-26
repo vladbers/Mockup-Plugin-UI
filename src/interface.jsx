@@ -13,6 +13,7 @@ import {UiBigButton} from "./UI/components/bigButton";
 import {UiPopupInfo} from "./UI/components/popupinfo";
 import {ScreenSortingBigHeader} from "./UI/screens/sortingBigHeader";
 import {ScreenSortingBigHeader2} from "./UI/screens/sortingBigHeader_2";
+import {ScreenSortingBigHeader3} from "./UI/screens/sortingBigHeader_3";
 
 
 export const Interface = () => {
@@ -74,10 +75,10 @@ export const Interface = () => {
                     Distort Transformation
                 </Typography>
                 <PreviewBlock>
-                    <ScreenBlock sx={{width: 400, height: '692px'}}>
+                    <ScreenBlock sx={{width: 400, height: '692px', background: (theme) => theme.palette.background['default']}}>
                         <ScreenConstructor showPromotion={true}/>
                     </ScreenBlock>
-                    <ScreenBlock sx={{width: 400, height: '692px', position: 'relative'}}>
+                    <ScreenBlock sx={{width: 400, height: '692px', position: 'relative', background: (theme) => theme.palette.background['default']}}>
                         <ScreenConstructor showPromotion={false} />
                         {/*  children props special for notification  */}
                         <BannerBox>
@@ -96,20 +97,20 @@ export const Interface = () => {
                             </div>
                         </BannerBox>
                     </ScreenBlock>
-                    <ScreenBlock sx={{width: 400, height: '692px', position: 'relative'}}>
+                    <ScreenBlock sx={{width: 400, height: '692px', position: 'relative', background: (theme) => theme.palette.background['default']}}>
                         <ScreenConstructor showPromotion={false} />
                         {/*  children props special for notification  */}
                         <BannerBox sx={{bottom: '145px'}}>
                             <div style={{marginLeft: '16px', marginRight: '16px'}}>
                                 <Collapse in={mockOpen}>
-                                <UiPopupInfo
-                                    close={(e) => setMockOpen(e)}
-                                    title={<div>Unlock high <br/> resolution mockups<br/> for free</div>}
-                                    subtext={<div>Just create an account or login if<br/> already have it. And you will be<br/> able to access free high resolution<br/> version of this mockup</div>}
-                                    button={
-                                        <UiBigButton text={'Go Pro'} fullWidth={false} variant={'basic'} onClick={() => alert('go to pro page')}/>
-                                    }
-                                />
+                                    <UiPopupInfo
+                                        close={(e) => setMockOpen(e)}
+                                        title={<div>Unlock high <br/> resolution mockups<br/> for free</div>}
+                                        subtext={<div>Just create an account or login if<br/> already have it. And you will be<br/> able to access free high resolution<br/> version of this mockup</div>}
+                                        button={
+                                            <UiBigButton text={'Go Pro'} fullWidth={false} variant={'basic'} onClick={() => alert('go to pro page')}/>
+                                        }
+                                    />
                                 </Collapse>
                             </div>
                         </BannerBox>
@@ -122,8 +123,11 @@ export const Interface = () => {
                     <ScreenBlock sx={{width: 400, height: 900, overflow: 'hidden'}}>
                         <ScreenSortingBigHeader />
                     </ScreenBlock>
-                    <ScreenBlock sx={{width: 400, height: 900, overflow: 'hidden'}}>
+                    <ScreenBlock sx={{width: 400, height: 900, overflow: 'hidden', background: (theme) => theme.palette.background['default']}}>
                         <ScreenSortingBigHeader2 />
+                    </ScreenBlock>
+                    <ScreenBlock sx={{width: 400, height: 900, overflow: 'hidden', background: (theme) => theme.palette.background['default']}}>
+                        <ScreenSortingBigHeader3 />
                     </ScreenBlock>
                 </PreviewBlock>
             </PreviewContainer>

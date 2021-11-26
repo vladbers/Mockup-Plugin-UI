@@ -26,11 +26,11 @@ export const Card = {
     items: [
         {
             id: 0,
-            pngFile: PresentationKit,
+            pngFile: Clay,
         },
         {
             id: 1,
-            pngFile: PresentationKit,
+            pngFile: Vector,
         },
         {
             id: 2,
