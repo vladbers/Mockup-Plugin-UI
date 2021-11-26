@@ -4,11 +4,11 @@ import {Typography} from "@mui/material";
 import {ArrowIcon} from "../icons/arrow";
 import {InfoIcon} from "../icons/info";
 
-export const UiSubheader = ({title, type, onClickBack, onClickInfo, onClickColor, colors, defaultColorId}) => {
+export const UiSubheader = ({title, type, onClickBack, onClickInfo, onClickColor, colors, defaultColorId, sx}) => {
     const [selected, setSelected] = useState(defaultColorId ? defaultColorId : 1);
 
     const Subheader = styled('div')(({theme}) => ({
-        background: theme.palette.pure['white'],
+        background: 'transparent',
         paddingTop: '13px',
         paddingBottom: '13px',
         display: 'flex',
@@ -47,7 +47,7 @@ export const UiSubheader = ({title, type, onClickBack, onClickInfo, onClickColor
     return (
         <>
             {type === 'simple' &&
-            <Subheader>
+            <Subheader sx={sx}>
                <StaticBlock>
                    <div onClick={onClickBack}>
                        <ArrowIcon sx={{width: 16, color: (theme) => theme.palette.text['high'], cursor: 'pointer'}} />
@@ -59,7 +59,7 @@ export const UiSubheader = ({title, type, onClickBack, onClickInfo, onClickColor
             </Subheader>
             }
             {type === 'info' &&
-            <Subheader sx={{background: 'transparent'}}>
+            <Subheader sx={sx}>
                 <StaticBlock>
                     <div onClick={onClickBack}>
                         <ArrowIcon sx={{width: 16, color: (theme) => theme.palette.text['high'], cursor: 'pointer'}} />
@@ -76,7 +76,7 @@ export const UiSubheader = ({title, type, onClickBack, onClickInfo, onClickColor
             </Subheader>
             }
             {type === 'colors' &&
-            <Subheader>
+            <Subheader sx={sx}>
                 <StaticBlock>
                     <div onClick={onClickBack}>
                         <ArrowIcon sx={{width: 16, color: (theme) => theme.palette.text['high'], cursor: 'pointer'}} />

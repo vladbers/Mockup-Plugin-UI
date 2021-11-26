@@ -41,7 +41,7 @@ export const ScreenConstructor = (props) => {
                 <UITabsHorizontal tabs={tabArrayMockThree} defaultTabId={0}
                                   selectedID={(e) => alert(e)}/>
             </UiHorizontalMenu>
-            <ConstructorBody>
+            <ConstructorBody sx={{backgroundColor: (theme) => theme.palette.pure['white']}}>
             {/* Subheader */}
             <UiSubheader
                 onClickBack={() => alert('Back btn clicked')}
