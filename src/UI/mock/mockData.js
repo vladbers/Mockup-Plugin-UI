@@ -5,6 +5,93 @@ import dropdownsIcon from "../../assets/dropdownsIcon.png";
 import Clay from "../../assets/ProductHeader/Clay.png";
 import PresentationKit from "../../assets/ProductHeader/PresentationKit.png";
 import Vector from "../../assets/ProductHeader/Vector.png";
+import CropImg from "../../assets/cropImg.png";
+
+
+export const bigImagesForCrop =  {
+    id: 0,
+    title: 'test for crop',
+    img:  CropImg,
+}
+
+export const Artbords = [
+    {
+        id: 0,
+        img: Clay
+    },
+    {
+        id: 1,
+        img: PresentationKit
+    },
+    {
+        id: 2,
+        img: Vector
+    },
+    {
+        id: 3,
+        img: Clay
+    },
+    {
+        id: 4,
+        img: PresentationKit
+    },
+    {
+        id: 5,
+        img: Vector
+    },
+    {
+        id: 6,
+        img: Clay
+    },
+    {
+        id: 7,
+        img: PresentationKit
+    },
+    {
+        id: 8,
+        img: Vector
+    },
+    {
+        id: 9,
+        img: Clay
+    },
+    {
+        id: 10,
+        img: PresentationKit
+    },
+    {
+        id: 11,
+        img: Vector
+    },
+    {
+        id: 12,
+        img: Clay
+    },
+    {
+        id: 13,
+        img: PresentationKit
+    },
+    {
+        id: 14,
+        img: Vector
+    },
+    {
+        id: 15,
+        img: Vector
+    },
+    {
+        id: 16,
+        img: Clay
+    },
+    {
+        id: 17,
+        img: PresentationKit
+    },
+    {
+        id: 18,
+        img: Vector
+    }
+]
 
 export const Images = [
     {
@@ -38,6 +125,24 @@ export const Card = {
         }
     ]
 }
+
+export const dropdownsSizeOldPlugin = [
+    {
+        id: 0,
+        title: '1x',
+        value:  1,
+    },
+    {
+        id: 1,
+        title: '2x',
+        value: 2,
+    },
+    {
+        id: 2,
+        title: '3x',
+        value: 3,
+    }
+]
 
 export const dropdownsSize = [
     {

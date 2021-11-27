@@ -55,19 +55,23 @@ import {UiPopupInfo} from "./UI/components/popupinfo";
 import {UiInvoiceLine} from "./UI/components/invoice";
 import {UiProductHeader} from "./UI/components/productHeader";
 import {UiSortingPreview} from "./UI/components/sortingPreview";
+import {UiProductHeaderFilter} from "./UI/components/productHeaderFilter";
+import {BigIconSVG} from "./UI/components/bigIconSvg";
+import {UiDistortTransitionBoxState} from "./UI/components/dtsb";
+import {UiSelectArtboardComponent} from "./UI/components/selectArtbordComponent";
+import {UiTransformationFooterComponent} from "./UI/components/tranformationFooterComponent";
+import {CropperImages} from "./UI/components/cropper";
 
 // mock data
 import {
-    ArrayMockColors, Card,
+    ArrayMockColors, Artbords, bigImagesForCrop, Card,
     dropdownsImage,
     dropdownsRealistic,
-    dropdownsSize, Images,
+    dropdownsSize, dropdownsSizeOldPlugin, Images,
     tabArrayMock, tabArrayMockFour,
     tabArrayMockThree,
     tabArrayMockTwo, userAccount
 } from "./UI/mock/mockData";
-import {UiProductHeaderFilter} from "./UI/components/productHeaderFilter";
-
 
 
 
@@ -185,7 +189,7 @@ export const Ui = () => {
                         <UiBigButton text={'Realistic'} icon={<NewWindowIcon sx={{width: 16}}/>} variant={'ghost'}
                                      onClick={() => alert('Realistic')}/>
                         <UiBigButton text={'Realistic'} icon={<NewWindowIcon sx={{width: 16}}/>}
-                                     onClick={() => alert('Realistic')}/>
+                                     onClick={() => alert('Realistic')} />
                     </GapContainer>
                 </PreviewBlock>
                 <PreviewBlock>
@@ -904,7 +908,10 @@ export const Ui = () => {
                                         alignContent: 'center'
                                     }}>
                                         <Typography variant="type-12" component="p"
-                                                    sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                                                    sx={{
+                                                        color: (theme) => theme.palette.transparent['dark-45'],
+                                                        marginBottom: '10px'
+                                                    }}>
                                             Sort by items or scenes
                                         </Typography>
                                         <div style={{marginBottom: '19px'}}>
@@ -933,12 +940,15 @@ export const Ui = () => {
                                         alignContent: 'center'
                                     }}>
                                         <Typography variant="type-12" component="p"
-                                                    sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                                                    sx={{
+                                                        color: (theme) => theme.palette.transparent['dark-45'],
+                                                        marginBottom: '10px'
+                                                    }}>
                                             Sort by items or scenes
                                         </Typography>
                                         <div style={{marginBottom: '19px'}}>
                                             <UiTabsHeader tabs={tabArrayMock} defaultTabId={2}
-                                                          selectedID={(e) => setMockTabContent(e)} />
+                                                          selectedID={(e) => setMockTabContent(e)}/>
                                         </div>
                                     </div>
                                 </UiProductHeader>
@@ -963,7 +973,10 @@ export const Ui = () => {
                                         alignContent: 'center'
                                     }}>
                                         <Typography variant="type-12" component="p"
-                                                    sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                                                    sx={{
+                                                        color: (theme) => theme.palette.transparent['dark-45'],
+                                                        marginBottom: '10px'
+                                                    }}>
                                             Sort by items or scenes
                                         </Typography>
                                         <div style={{marginBottom: '19px'}}>
@@ -983,7 +996,7 @@ export const Ui = () => {
                     </Typography>
                     <div>
                         <GapContainer sx={{flexDirection: 'row', gap: '15px', marginBottom: '25px'}}>
-                            <UiSortingPreview items={Card} onClick={() => alert('click')} />
+                            <UiSortingPreview items={Card} onClick={() => alert('click')}/>
                         </GapContainer>
                     </div>
                 </PreviewBlock>
@@ -1008,18 +1021,26 @@ export const Ui = () => {
                                 }}>
                                     <div style={{width: '170px'}}>
                                         <Typography variant="type-12" component="p"
-                                                    sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                                                    sx={{
+                                                        color: (theme) => theme.palette.transparent['dark-45'],
+                                                        marginBottom: '10px'
+                                                    }}>
                                             Style:
                                         </Typography>
-                                        <UiDropdown variant={'image'} autoWidth={false} sx={{width: '170px'}} data={dropdownsImage} isDropdownSelect={() => {
+                                        <UiDropdown variant={'image'} autoWidth={false} sx={{width: '170px'}}
+                                                    data={dropdownsImage} isDropdownSelect={() => {
                                         }}/>
                                     </div>
                                     <div style={{width: '170px'}}>
                                         <Typography variant="type-12" component="p"
-                                                    sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                                                    sx={{
+                                                        color: (theme) => theme.palette.transparent['dark-45'],
+                                                        marginBottom: '10px'
+                                                    }}>
                                             Platform:
                                         </Typography>
-                                        <UiDropdown variant={'usually'} autoWidth={false} sx={{width: '170px'}} data={dropdownsRealistic} isDropdownSelect={() => {
+                                        <UiDropdown variant={'usually'} autoWidth={false} sx={{width: '170px'}}
+                                                    data={dropdownsRealistic} isDropdownSelect={() => {
                                         }}/>
                                     </div>
                                 </div>
@@ -1033,23 +1054,126 @@ export const Ui = () => {
                                 }}>
                                     <div style={{width: '170px'}}>
                                         <Typography variant="type-12" component="p"
-                                                    sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                                                    sx={{
+                                                        color: (theme) => theme.palette.transparent['dark-45'],
+                                                        marginBottom: '10px'
+                                                    }}>
                                             Device
                                         </Typography>
-                                        <UiDropdown variant={'usually'} autoWidth={false} sx={{width: '170px'}} data={dropdownsRealistic} isDropdownSelect={() => {
+                                        <UiDropdown variant={'usually'} autoWidth={false} sx={{width: '170px'}}
+                                                    data={dropdownsRealistic} isDropdownSelect={() => {
                                         }}/>
                                     </div>
                                     <div style={{width: '170px'}}>
                                         <Typography variant="type-12" component="p"
-                                                    sx={{color: (theme) => theme.palette.transparent['dark-45'], marginBottom: '10px'}}>
+                                                    sx={{
+                                                        color: (theme) => theme.palette.transparent['dark-45'],
+                                                        marginBottom: '10px'
+                                                    }}>
                                             Angle
                                         </Typography>
-                                        <UiDropdown variant={'usually'} autoWidth={false} sx={{width: '170px'}} data={dropdownsRealistic} isDropdownSelect={() => {
+                                        <UiDropdown variant={'usually'} autoWidth={false} sx={{width: '170px'}}
+                                                    data={dropdownsRealistic} isDropdownSelect={() => {
                                         }}/>
                                     </div>
                                 </div>
                                 {/* Search filter inner end */}
                             </UiProductHeaderFilter>
+                        </GapContainer>
+                    </div>
+                </PreviewBlock>
+                <PreviewBlock>
+                    <Typography variant="type-16" component="p"
+                                sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                        Big Icon SVG
+                    </Typography>
+                    <div>
+                        <GapContainer sx={{flexDirection: 'row'}}>
+                            <BigIconSVG
+                                variant={'one'}
+                                width={'217px'}
+                                height={'135px'}
+                            />
+                        </GapContainer>
+                    </div>
+                </PreviewBlock>
+                <PreviewBlock>
+                    <Typography variant="type-16" component="p"
+                                sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                        Distort transformation state box
+                    </Typography>
+                    <div>
+                        <GapContainer sx={{flexDirection: 'row', width: 400}}>
+                            <UiDistortTransitionBoxState
+                                background={'#F6F6F6'}
+                                bigImage={
+                                    <BigIconSVG
+                                        variant={'one'}
+                                        width={'217px'}
+                                        height={'135px'}
+                                    />
+                                }
+                                title={
+                                    <Typography variant="type-14-Bold" component="p"
+                                                sx={{color: (theme) => theme.palette.text['high']}}>
+                                        Select a screen
+                                    </Typography>
+                                }
+                                subText={
+                                    <Typography variant="type-14" component="p"
+                                                sx={{color: (theme) => theme.palette.text['low'], textAlign: 'center'}}>
+                                        Click on any 4 point <br/> vector shape where you <br/> want to paste your
+                                        design
+                                    </Typography>
+                                }
+                                button={
+                                    <UiBigButton text={'Flatten'} variant={'basic'} onClick={() => alert('Realistic')}/>
+                                }
+                            />
+                        </GapContainer>
+                    </div>
+                </PreviewBlock>
+                <PreviewBlock>
+                    <Typography variant="type-16" component="p"
+                                sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                        Select Artbord
+                    </Typography>
+                    <div>
+                        <GapContainer sx={{flexDirection: 'row', width: 400}}>
+                            <UiSelectArtboardComponent
+                                artboardsArray={Artbords}
+                                toSelectId={0}
+                                fromSelectId={(e) => console.log('selected id: ', e)}
+                            />
+                        </GapContainer>
+                    </div>
+                </PreviewBlock>
+                <PreviewBlock>
+                    <Typography variant="type-16" component="p"
+                                sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                        Transformation footer component
+                    </Typography>
+                    <div>
+                        <GapContainer sx={{flexDirection: 'row', width: 366}}>
+                            <UiTransformationFooterComponent
+                                sizes={dropdownsSizeOldPlugin}
+                                callbackOptions={(e) => console.log('options', e)}/>
+                        </GapContainer>
+                    </div>
+                </PreviewBlock>
+                <PreviewBlock>
+                    <Typography variant="type-16" component="p"
+                                sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                        Crop
+                    </Typography>
+                    <div>
+                        <GapContainer sx={{flexDirection: 'row', width: 400}}>
+                            <CropperImages
+                                image={bigImagesForCrop.img}
+                                aspectRatio={361 / 533}
+                                defaultZoom={0.9}
+                                callbackData={(e) => alert('Image is cropped: width:'+e.width+' height:'+e.height)}
+                            />
                         </GapContainer>
                     </div>
                 </PreviewBlock>

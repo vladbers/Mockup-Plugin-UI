@@ -18,3 +18,6 @@ body {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently */
 }
+::-webkit-scrollbar {
+    width: 0!important;
+}

@@ -34,6 +34,8 @@ import {VariantIcon} from "../icons/variant";
 import {GoogleIcon} from "../icons/ggl";
 import {TwitterIcon} from "../icons/tw";
 import {FacebookIcon} from "../icons/fb";
+import {TurnRightIcon} from "../icons/turnRight";
+import {TurnLeftIcon} from "../icons/turnLeft";
 
 export const IconsMock = () => {
 
@@ -80,6 +82,8 @@ export const IconsMock = () => {
             <GoogleIcon sx={sxMock} />
             <TwitterIcon sx={sxMock}/>
             <FacebookIcon sx={sxMock}/>
+            <TurnRightIcon sx={sxMock}/>
+            <TurnLeftIcon sx={sxMock}/>
         </StackBlock>
     )
 }

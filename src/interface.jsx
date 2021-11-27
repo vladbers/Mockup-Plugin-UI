@@ -14,6 +14,9 @@ import {UiPopupInfo} from "./UI/components/popupinfo";
 import {ScreenSortingBigHeader} from "./UI/screens/sortingBigHeader";
 import {ScreenSortingBigHeader2} from "./UI/screens/sortingBigHeader_2";
 import {ScreenSortingBigHeader3} from "./UI/screens/sortingBigHeader_3";
+import {DistortTransformations1} from "./UI/screens/distortTransformation1";
+import {DistortTransformations2} from "./UI/screens/distortTransformation2";
+import {DistortTransformations3} from "./UI/screens/distortTransformation3";
 
 
 export const Interface = () => {
@@ -128,6 +131,20 @@ export const Interface = () => {
                     </ScreenBlock>
                     <ScreenBlock sx={{width: 400, height: 900, overflow: 'hidden', background: (theme) => theme.palette.background['default']}}>
                         <ScreenSortingBigHeader3 />
+                    </ScreenBlock>
+                </PreviewBlock>
+                <Typography variant="type-16" component="p" sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                    Distort Transformation (Old Plugin mode)
+                </Typography>
+                <PreviewBlock>
+                    <ScreenBlock sx={{width: 400, height: 'auto', overflow: 'hidden'}}>
+                        <DistortTransformations1 />
+                    </ScreenBlock>
+                    <ScreenBlock sx={{width: 400, height: 'auto', overflow: 'hidden'}}>
+                        <DistortTransformations2 />
+                    </ScreenBlock>
+                    <ScreenBlock sx={{width: 400, height: 'auto', overflow: 'hidden'}}>
+                        <DistortTransformations3 />
                     </ScreenBlock>
                 </PreviewBlock>
             </PreviewContainer>
