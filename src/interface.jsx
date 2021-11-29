@@ -17,6 +17,8 @@ import {ScreenSortingBigHeader3} from "./UI/screens/sortingBigHeader_3";
 import {DistortTransformations1} from "./UI/screens/distortTransformation1";
 import {DistortTransformations2} from "./UI/screens/distortTransformation2";
 import {DistortTransformations3} from "./UI/screens/distortTransformation3";
+import {ScreenAuth} from "./UI/screens/auth1";
+import {ScreenAuth2} from "./UI/screens/auth2";
 
 
 export const Interface = () => {
@@ -145,6 +147,17 @@ export const Interface = () => {
                     </ScreenBlock>
                     <ScreenBlock sx={{width: 400, height: 'auto', overflow: 'hidden'}}>
                         <DistortTransformations3 />
+                    </ScreenBlock>
+                </PreviewBlock>
+                <Typography variant="type-16" component="p" sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                    Auth
+                </Typography>
+                <PreviewBlock>
+                    <ScreenBlock sx={{width: 400, height: 647, position: 'relative'}}>
+                        <ScreenAuth />
+                    </ScreenBlock>
+                    <ScreenBlock sx={{width: 400, height: 648, position: 'relative'}}>
+                        <ScreenAuth2 />
                     </ScreenBlock>
                 </PreviewBlock>
             </PreviewContainer>

@@ -10,10 +10,12 @@ export const UiAuthButton = ({text, type, fullWidth, onClick}) => {
 
     const AuthButton = styled(Button)(({theme}) => ({
         borderRadius: 32,
+        display: 'flex',
+        justifyContent: 'flex-start',
         border: `solid 1px ${theme.palette.line}`,
         backgroundColor: theme.palette.pure['white'],
         boxShadow: 'none',
-        padding: '7px 21px',
+        padding: '7px 21px 7px 34.59px',
         '&:hover': {
             backgroundColor: theme.palette.background['default'],
             boxShadow: 'none'

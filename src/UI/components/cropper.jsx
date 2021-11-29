@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     },
     buttonBox: {
         position: 'absolute',
-        bottom: '72px',
+        bottom: '42px',
         marginLeft: 'auto',
         marginRight: 'auto',
         left: 0,
@@ -50,6 +50,8 @@ export const CropperImages = ({image, aspectRatio, defaultZoom, callbackData}) =
                     onCropChange={setCrop}
                     onCropComplete={onCropComplete}
                     onZoomChange={setZoom}
+                    style={{ containerStyle: {}, mediaStyle: {}, cropAreaStyle: {
+                    }}}
                 />
                 <div className={classes.buttonBox}>
                     <UiBigButton text={'Crop'} variant={'basic'} onClick={sendHandler}/>

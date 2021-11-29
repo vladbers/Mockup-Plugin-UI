@@ -61,6 +61,7 @@ import {UiDistortTransitionBoxState} from "./UI/components/dtsb";
 import {UiSelectArtboardComponent} from "./UI/components/selectArtbordComponent";
 import {UiTransformationFooterComponent} from "./UI/components/tranformationFooterComponent";
 import {CropperImages} from "./UI/components/cropper";
+import {UiLightBox} from "./UI/components/lightbox";
 
 // mock data
 import {
@@ -72,7 +73,7 @@ import {
     tabArrayMockThree,
     tabArrayMockTwo, userAccount
 } from "./UI/mock/mockData";
-
+import {UiChangeEmail} from "./UI/components/chengeEmail";
 
 
 // Preview styles
@@ -111,6 +112,7 @@ export const Ui = () => {
     };
     // Mock state
     const [mockOpen, setMockOpen] = useState(true);
+    const [mockOpenAuth, setMockOpenAuth] = useState(true);
     const [mockTabContent, setMockTabContent] = useState(2);
     const [mockTabContentTwo, setMockTabContentTwo] = useState(0);
 
@@ -189,7 +191,7 @@ export const Ui = () => {
                         <UiBigButton text={'Realistic'} icon={<NewWindowIcon sx={{width: 16}}/>} variant={'ghost'}
                                      onClick={() => alert('Realistic')}/>
                         <UiBigButton text={'Realistic'} icon={<NewWindowIcon sx={{width: 16}}/>}
-                                     onClick={() => alert('Realistic')} />
+                                     onClick={() => alert('Realistic')}/>
                     </GapContainer>
                 </PreviewBlock>
                 <PreviewBlock>
@@ -1171,9 +1173,45 @@ export const Ui = () => {
                             <CropperImages
                                 image={bigImagesForCrop.img}
                                 aspectRatio={361 / 533}
-                                defaultZoom={0.9}
-                                callbackData={(e) => alert('Image is cropped: width:'+e.width+' height:'+e.height)}
+                                defaultZoom={1}
+                                callbackData={(e) => alert('Image is cropped: width:' + e.width + ' height:' + e.height)}
                             />
+                        </GapContainer>
+                    </div>
+                </PreviewBlock>
+                <PreviewBlock>
+                    <Typography variant="type-16" component="p"
+                                sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                        Lightbox
+                    </Typography>
+                    <div>
+                        <GapContainer sx={{
+                            flexDirection: 'column',
+                            width: 400,
+                            height: 660,
+                            position: 'relative',
+                            overflow: 'auto',
+                            background: 'white'
+                        }}>
+                            <UiLightBox handleOpen={mockOpenAuth} handleClose={() => setMockOpenAuth(false)}>
+                                Any content can be here
+                            </UiLightBox>
+                        </GapContainer>
+                        <br/>
+                        <UiBigButton
+                            text={mockOpenAuth ? 'Close LightBox' : 'Open LightBox'}
+                            variant={mockOpenAuth ? 'ghost' : 'basic'}
+                            onClick={() => mockOpenAuth ? setMockOpenAuth(false) : setMockOpenAuth(true)}/>
+                    </div>
+                </PreviewBlock>
+                <PreviewBlock>
+                    <Typography variant="type-16" component="p"
+                                sx={{marginBottom: (theme) => theme.spacingsValues.xxs}}>
+                        Chenge email span
+                    </Typography>
+                    <div>
+                        <GapContainer>
+                            <UiChangeEmail email={'ruslanlatypov@ya.ru'} handlerChange={() => alert('Email changed')}/>
                         </GapContainer>
                     </div>
                 </PreviewBlock>
