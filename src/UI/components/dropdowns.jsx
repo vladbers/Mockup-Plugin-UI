@@ -3,6 +3,7 @@ import {makeStyles} from '@mui/styles';
 import Select from '@mui/material/Select';
 import {MenuItem} from "@mui/material";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import {MockSizeIcon} from "../icons/mocksize";
 
 
 const useStyles = makeStyles(theme => ({
@@ -240,7 +241,7 @@ export const UiDropdown = ({variant, data, isDropdownSelect, autoWidth, sx}) => 
         case 'size':
             return <Select className={classes.rootIcons} autoWidth={autoWidth} sx={sx} MenuProps={menuPropsSize} IconComponent={iconComponent}
                            onChange={handleChange} value={selected}>
-                {data.map(item => <MenuItem value={item.value}>{item.icon} {item.title}</MenuItem>)}
+                {data.map(item => <MenuItem value={item.value}><MockSizeIcon sx={{width: 16}}/> {item.title}</MenuItem>)}
             </Select>
         case 'usually':
             return <Select className={classes.rootUsually} autoWidth={autoWidth} sx={sx} MenuProps={menuProps} IconComponent={iconComponent}

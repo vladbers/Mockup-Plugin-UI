@@ -7,7 +7,6 @@ export const UiHorizontalMenu = ({children, button, onClickBurger}) => {
 
     const HorizontalMenu = styled('div')(({theme}) => ({
         position: 'relative',
-        minHeight: 46,
         background: theme.palette.pure['white'],
         zIndex: '0',
     }));

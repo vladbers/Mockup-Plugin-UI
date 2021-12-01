@@ -62,6 +62,7 @@ import {UiSelectArtboardComponent} from "./UI/components/selectArtbordComponent"
 import {UiTransformationFooterComponent} from "./UI/components/tranformationFooterComponent";
 import {CropperImages} from "./UI/components/cropper";
 import {UiLightBox} from "./UI/components/lightbox";
+import {UiChangeEmail} from "./UI/components/chengeEmail";
 
 // mock data
 import {
@@ -73,7 +74,7 @@ import {
     tabArrayMockThree,
     tabArrayMockTwo, userAccount
 } from "./UI/mock/mockData";
-import {UiChangeEmail} from "./UI/components/chengeEmail";
+
 
 
 // Preview styles

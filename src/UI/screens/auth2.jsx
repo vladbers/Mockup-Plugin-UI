@@ -9,6 +9,9 @@ import {tabArrayMockThree} from "../mock/mockData";
 import {UiLightBox} from "../components/lightbox";
 import {Typography} from "@mui/material";
 import {UiChangeEmail} from "../components/chengeEmail";
+import {UiInput} from "../components/input";
+import {UiBigButton} from "../components/bigButton";
+import {UiChekBox} from "../components/checkBox";
 
 
 export const ScreenAuth2 = () => {
@@ -23,6 +26,16 @@ export const ScreenAuth2 = () => {
     const ChengeEmail = styled('div')(({theme}) => ({
         marginTop: '20px',
         marginBottom: '12px',
+    }));
+    const FormBody = styled('div')(({theme}) => ({
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '8px'
+    }));
+    const CheckboxBody = styled('div')(({theme}) => ({
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
     }));
 
 
@@ -52,6 +65,36 @@ export const ScreenAuth2 = () => {
                 <ChengeEmail>
                     <UiChangeEmail email={'stasgalanin@yandex.ru'} handlerChange={() => alert('Email changed')}/>
                 </ChengeEmail>
+                <FormBody>
+                    <Typography variant="type-14" component="p"
+                                sx={{color: (theme) => theme.palette.text['high']}}>
+                        First name
+                    </Typography>
+                    <UiInput fullWidth={true} placeholder={''} type={'text'} dispatchValue={(e) => console.log(e)} />
+                    <Typography variant="type-14" component="p"
+                                sx={{color: (theme) => theme.palette.text['high']}}>
+                        Second name
+                    </Typography>
+                    <UiInput fullWidth={true} placeholder={''} type={'text'} dispatchValue={(e) => console.log(e)} />
+                    <Typography variant="type-14" component="p"
+                                sx={{color: (theme) => theme.palette.text['high']}}>
+                        Password
+                    </Typography>
+                    <UiInput fullWidth={true} placeholder={''} type={'password'} dispatchValue={(e) => console.log(e)} />
+                    <Typography variant="type-14" component="p"
+                                sx={{color: (theme) => theme.palette.text['high']}}>
+                        Repeat password
+                    </Typography>
+                    <UiInput fullWidth={true} placeholder={''} type={'password'} dispatchValue={(e) => console.log(e)} />
+                    <CheckboxBody>
+                        <UiChekBox defaultChecked={true}/>
+                        <Typography variant="type-14" component="p"
+                                    sx={{color: (theme) => theme.palette.text['low']}}>
+                            Agree to receive newsletter
+                        </Typography>
+                    </CheckboxBody>
+                    <UiBigButton fullWidth={true} text={'Create'} variant={'basic'} />
+                </FormBody>
             </UiLightBox>
         </Profile>
     )

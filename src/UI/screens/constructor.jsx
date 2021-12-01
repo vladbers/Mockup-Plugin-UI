@@ -61,7 +61,7 @@ export const ScreenConstructor = (props) => {
                     </WalkthrougThemeComponent>
                 } placement={'top'}>
                     <div>
-                        <UiDropdown variant={'image'} data={dropdownsImage} isDropdownSelect={() => {}}/>
+                        <UiDropdown variant={'size'} data={dropdownsImage} isDropdownSelect={() => {}}/>
                     </div>
                 </Walkthroug>
                 <UiBigButton text={'Paste in canvas'} variant={'basic'} onClick={() => alert('Paste in canvas')}/>
