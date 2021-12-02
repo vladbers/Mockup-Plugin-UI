@@ -8,8 +8,6 @@ import {MockSizeIcon} from "../icons/mocksize";
 
 const useStyles = makeStyles(theme => ({
     rootUsually: {
-        borderWidth: 1,
-        borderColor: 'transparent',
         '& .MuiInputBase-input': {
             outline: 'none',
             borderRadius: 8,
@@ -18,20 +16,14 @@ const useStyles = makeStyles(theme => ({
             alignItems: 'center',
             gap: theme.spacingsValues['xxs'],
             backgroundColor: theme.palette.pure['white'],
-            borderStyle: "solid",
-            borderWidth: 1,
-            borderColor: theme.palette.line,
-            fontSize: theme.typography['type-14'].fontSize,
-            fontWeight: theme.typography['type-14'].fontWeight,
-            fontFamily: theme.typography['type-14'].fontFamily,
-            lineHeight: theme.typography['type-14'].lineHeight,
+            boxShadow: '0px 0px 0px 1px #E1E4E8',
             color: theme.palette.text['high'],
-            padding: `${theme.spacingsValues['xs']}px ${theme.spacingsValues['l']}px ${theme.spacingsValues['xs']}px ${theme.spacingsValues['l']}px`,
+            padding: '6px 14px',
             transition: theme.transitions.create(['box-shadow']),
             '&:focus': {
                 borderRadius: 8,
                 borderStyle: "solid",
-                borderWidth: 1,
+                borderWidth: 2,
                 borderColor: theme.palette.accent['one'],
                 boxShadow: '0 0 0 2px #e1ecfc',
             }
@@ -43,8 +35,8 @@ const useStyles = makeStyles(theme => ({
     },
     iconImage: {
         borderRadius: 4,
-        width: 26,
-        height: 26,
+        width: 24,
+        height: 24,
         marginRight: 4,
     },
     paper: {
@@ -70,7 +62,7 @@ const useStyles = makeStyles(theme => ({
         boxShadow: '6px 4px 17px 0 rgba(204, 206, 210, 0.5)',
         background: theme.palette.pure['white'],
         "& li":{
-            padding: '8px 10px 8px 10px'
+            padding: '7px 14px',
         },
         "& li:hover":{
             textAlign: 'left',
@@ -89,19 +81,13 @@ const useStyles = makeStyles(theme => ({
             alignItems: 'center',
             gap: 8,
             borderRadius: 8,
-            backgroundColor: theme.palette.accent['one'],
-            fontSize: theme.typography['type-14'].fontSize,
-            fontWeight: theme.typography['type-14'].fontWeight,
-            fontFamily: theme.typography['type-14'].fontFamily,
-            lineHeight: theme.typography['type-14'].lineHeight,
+            backgroundColor: theme.palette.accent['one']
         },
         "& li.Mui-selected:hover":{
             background: theme.palette.accent['one']
         }
     },
     rootIcons: {
-        borderWidth: 1,
-        borderColor: 'transparent',
         '& .MuiInputBase-input': {
             outline: 'none',
             borderRadius: 8,
@@ -112,18 +98,15 @@ const useStyles = makeStyles(theme => ({
             backgroundColor: theme.palette.pure['white'],
             borderStyle: "solid",
             borderWidth: 1,
-            borderColor: theme.palette.line,
-            fontSize: theme.typography['type-14'].fontSize,
-            fontWeight: theme.typography['type-14'].fontWeight,
-            fontFamily: theme.typography['type-14'].fontFamily,
-            lineHeight: theme.typography['type-14'].lineHeight,
+            boxSizing: 'border-box',
+            borderColor: '#E1E4E8',
             color: theme.palette.text['high'],
-            padding: `5.5px 8px 5.5px 8px`,
+            padding: '4px 14px',
             transition: theme.transitions.create(['box-shadow']),
             '&:focus': {
                 borderRadius: 8,
                 borderStyle: "solid",
-                borderWidth: 1,
+                borderWidth: 2,
                 borderColor: theme.palette.accent['one'],
                 boxShadow: '0 0 0 2px #e1ecfc',
             }
@@ -164,10 +147,6 @@ const useStyles = makeStyles(theme => ({
             gap: 4,
             borderRadius: 8,
             backgroundColor: theme.palette.transparent['dark-5'],
-            fontSize: theme.typography['type-14'].fontSize,
-            fontWeight: theme.typography['type-14'].fontWeight,
-            fontFamily: theme.typography['type-14'].fontFamily,
-            lineHeight: theme.typography['type-14'].lineHeight,
         },
         "& li.Mui-selected:hover":{
             textAlign: 'left',
@@ -241,19 +220,24 @@ export const UiDropdown = ({variant, data, isDropdownSelect, autoWidth, sx}) => 
         case 'size':
             return <Select className={classes.rootIcons} autoWidth={autoWidth} sx={sx} MenuProps={menuPropsSize} IconComponent={iconComponent}
                            onChange={handleChange} value={selected}>
-                {data.map(item => <MenuItem value={item.value}><MockSizeIcon sx={{width: 16}}/> {item.title}</MenuItem>)}
+                {data.map(item => <MenuItem value={item.value}><MockSizeIcon sx={{width: 16}}/>
+                    {item.title}
+                </MenuItem>)}
             </Select>
         case 'usually':
             return <Select className={classes.rootUsually} autoWidth={autoWidth} sx={sx} MenuProps={menuProps} IconComponent={iconComponent}
                            onChange={handleChange} value={selected}>
-                {data.map(item => <MenuItem value={item.value}>{item.title}</MenuItem>)}
+                {data.map(item => <MenuItem value={item.value}>
+                    {item.title}
+                </MenuItem>)}
             </Select>
 
         case 'image':
             return <Select className={classes.rootIcons} autoWidth={autoWidth} sx={sx} MenuProps={menuPropsSize} IconComponent={iconComponent}
                            onChange={handleChange} value={selected}>
                 {data.map(item => <MenuItem value={item.value}>
-                    <img src={item.img} alt={item.title} className={classes.iconImage}/> {item.title}
+                    <img src={item.img} alt={item.title} className={classes.iconImage}/>
+                    {item.title}
                 </MenuItem>)}
             </Select>
 

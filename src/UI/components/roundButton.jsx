@@ -22,6 +22,6 @@ export const UiRoundButton = ({icon, variant, onClick}) => {
 
 
     return (
-        icon && <RoundButton disabled={variant === 'ignore' && true} onClick={onClick}>{icon}</RoundButton>
+        icon && <RoundButton onClick={variant !== 'ignore' && onClick}>{icon}</RoundButton>
     )
 }
