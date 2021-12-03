@@ -145,7 +145,7 @@ export const Interface = () => {
                     <ScreenBlock sx={{width: 400, height: 'auto', overflow: 'hidden'}}>
                         <DistortTransformations2 />
                     </ScreenBlock>
-                    <ScreenBlock sx={{width: 400, height: 'auto', overflow: 'hidden'}}>
+                    <ScreenBlock sx={{width: 411, height: 'auto', overflow: 'hidden'}}>
                         <DistortTransformations3 />
                     </ScreenBlock>
                 </PreviewBlock>

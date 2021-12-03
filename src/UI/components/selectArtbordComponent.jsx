@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {styled} from "@mui/material/styles";
-import {border, padding} from "@mui/system";
 
 export const UiSelectArtboardComponent = ({artboardsArray, toSelectId, fromSelectId}) => {
     const [selectedArtboard, setSelectedArtboard] = useState(toSelectId ? toSelectId : 0);
@@ -19,7 +18,8 @@ export const UiSelectArtboardComponent = ({artboardsArray, toSelectId, fromSelec
         flexDirection: 'row',
         flexWrap: 'wrap',
         gap: '11px 10px',
-        overflow: 'auto'
+        overflow: 'auto',
+        padding: '2px'
     }));
     const ArtboardSelect = styled('div')(({theme}) => ({
         width: '109px',
@@ -30,7 +30,6 @@ export const UiSelectArtboardComponent = ({artboardsArray, toSelectId, fromSelec
         alignItems: 'center',
         alignContent: 'center',
         background: theme.palette.transparent['dark-5'],
-        border: '2px solid transparent',
         cursor: 'pointer',
         padding: '4px'
     }));
@@ -38,7 +37,6 @@ export const UiSelectArtboardComponent = ({artboardsArray, toSelectId, fromSelec
         width: '100%',
         objectFit: 'contain',
         background: theme.palette.transparent['dark-5'],
-        borderRadius: '3px',
     }));
 
 
@@ -47,7 +45,7 @@ export const UiSelectArtboardComponent = ({artboardsArray, toSelectId, fromSelec
             {artboardsArray.map(artboard =>
                 <ArtboardSelect
                     onClick={() => artboardHandler(artboard.id)}
-                    sx={{border: (theme) => artboard.id === selectedArtboard && '2px solid ' + theme.palette.accent['one'],
+                    sx={{boxShadow: (theme) => artboard.id === selectedArtboard && '0px 0px 0px 2px ' + theme.palette.accent['one'],
                         background: (theme) => artboard.id === selectedArtboard && theme.palette.transparent['color-20']}}>
                     <ArtboardImage
                         src={artboard.img}
