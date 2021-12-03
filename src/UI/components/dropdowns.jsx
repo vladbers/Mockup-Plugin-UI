@@ -16,16 +16,13 @@ const useStyles = makeStyles(theme => ({
             alignItems: 'center',
             gap: theme.spacingsValues['xxs'],
             backgroundColor: theme.palette.pure['white'],
-            boxShadow: '0px 0px 0px 1px #E1E4E8',
             color: theme.palette.text['high'],
-            padding: '6px 14px',
+            boxShadow: '0 0 0 1px #E1E4E8',
+            padding: '7px 14px',
             transition: theme.transitions.create(['box-shadow']),
             '&:focus': {
                 borderRadius: 8,
-                borderStyle: "solid",
-                borderWidth: 2,
-                borderColor: theme.palette.accent['one'],
-                boxShadow: '0 0 0 2px #e1ecfc',
+                boxShadow: '0 0 0 2px ' + theme.palette.accent['one'] + ',0 0 0 4px #e1ecfc',
             }
         },
         '& .MuiOutlinedInput-notchedOutline': {
@@ -94,21 +91,38 @@ const useStyles = makeStyles(theme => ({
             position: 'relative',
             display: 'inline-flex',
             alignItems: 'center',
-            gap: theme.spacingsValues['xxs'],
+            gap: '2px',
             backgroundColor: theme.palette.pure['white'],
-            borderStyle: "solid",
-            borderWidth: 1,
-            boxSizing: 'border-box',
-            borderColor: '#E1E4E8',
+            boxShadow: '0 0 0 1px #E1E4E8',
             color: theme.palette.text['high'],
-            padding: '4px 14px',
+            padding: '5px 5.9px',
             transition: theme.transitions.create(['box-shadow']),
             '&:focus': {
                 borderRadius: 8,
-                borderStyle: "solid",
-                borderWidth: 2,
-                borderColor: theme.palette.accent['one'],
-                boxShadow: '0 0 0 2px #e1ecfc',
+                boxShadow: '0 0 0 2px ' + theme.palette.accent['one'] + ',0 0 0 4px #e1ecfc',
+            }
+        },
+        '& .MuiOutlinedInput-notchedOutline': {
+            outline: 'none',
+            border: 'none'
+        }
+    },
+    rootSize: {
+        '& .MuiInputBase-input': {
+            outline: 'none',
+            borderRadius: 8,
+            position: 'relative',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '5px',
+            backgroundColor: theme.palette.pure['white'],
+            boxShadow: '0 0 0 1px #E1E4E8',
+            color: theme.palette.text['high'],
+            padding: '5px 11px',
+            transition: theme.transitions.create(['box-shadow']),
+            '&:focus': {
+                borderRadius: 8,
+                boxShadow: '0 0 0 2px ' + theme.palette.accent['one'] + ',0 0 0 4px #e1ecfc',
             }
         },
         '& .MuiOutlinedInput-notchedOutline': {
@@ -128,7 +142,89 @@ const useStyles = makeStyles(theme => ({
         boxShadow: '6px 4px 17px 0 rgba(204, 206, 210, 0.5)',
         background: theme.palette.pure['white'],
         "& li":{
+            gap: 4,
+            paddingLeft: 3,
+            paddingRight: 0
+        },
+        "& li:hover":{
+            textAlign: 'left',
+            alignSelf: 'stretch',
+            borderRadius: 8,
+            backgroundColor: theme.palette.transparent['dark-5'],
+        },
+        "& li.Mui-selected":{
+            textAlign: 'left',
+            alignSelf: 'stretch',
+            flexGrow: 0,
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'flex-start',
+            alignItems: 'center',
+            gap: 4,
+            borderRadius: 8,
+            backgroundColor: theme.palette.transparent['dark-5'],
+        },
+        "& li.Mui-selected:hover":{
+            textAlign: 'left',
+            alignSelf: 'stretch',
+            borderRadius: 8,
+            backgroundColor: theme.palette.transparent['dark-5'],
+        }
+    },
+    listImage: {
+        padding: 4,
+        flexGrow: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        alignItems: 'stretch',
+        gap: 2,
+        borderRadius: 8,
+        boxShadow: '6px 4px 17px 0 rgba(204, 206, 210, 0.5)',
+        background: theme.palette.pure['white'],
+        "& li":{
             gap: 4
+        },
+        "& li:hover":{
+            textAlign: 'left',
+            alignSelf: 'stretch',
+            borderRadius: 8,
+            backgroundColor: theme.palette.transparent['dark-5'],
+        },
+        "& li.Mui-selected":{
+            textAlign: 'left',
+            alignSelf: 'stretch',
+            flexGrow: 0,
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'flex-start',
+            alignItems: 'center',
+            gap: 4,
+            borderRadius: 8,
+            backgroundColor: theme.palette.transparent['dark-5'],
+        },
+        "& li.Mui-selected:hover":{
+            textAlign: 'left',
+            alignSelf: 'stretch',
+            borderRadius: 8,
+            backgroundColor: theme.palette.transparent['dark-5'],
+        }
+    },
+    listSize: {
+        padding: 4,
+        flexGrow: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        alignItems: 'stretch',
+        gap: 2,
+        borderRadius: 8,
+        boxShadow: '6px 4px 17px 0 rgba(204, 206, 210, 0.5)',
+        background: theme.palette.pure['white'],
+        "& li":{
+            gap: 4,
+            paddingLeft: 7,
+            paddingRight: 0
         },
         "& li:hover":{
             textAlign: 'left',
@@ -173,7 +269,22 @@ export const UiDropdown = ({variant, data, isDropdownSelect, autoWidth, sx}) => 
     const menuProps = {
         classes: {
             paper: classes.paper,
-            list: classes.list
+            list: classes.list,
+        },
+        getContentAnchorEl: null,
+        anchorOrigin: {
+            vertical: "bottom",
+            horizontal: "left"
+        },
+        transformOrigin: {
+            vertical: "top",
+            horizontal: "left"
+        }
+    };
+    const menuPropsImage = {
+        classes: {
+            paper: classes.paper,
+            list: classes.listSizeImage,
         },
         getContentAnchorEl: null,
         anchorOrigin: {
@@ -188,7 +299,7 @@ export const UiDropdown = ({variant, data, isDropdownSelect, autoWidth, sx}) => 
     const menuPropsSize = {
         classes: {
             paper: classes.paper,
-            list: classes.listSizeImage
+            list: classes.listSize
         },
         getContentAnchorEl: null,
         anchorOrigin: {
@@ -218,7 +329,7 @@ export const UiDropdown = ({variant, data, isDropdownSelect, autoWidth, sx}) => 
 
     switch (variant) {
         case 'size':
-            return <Select className={classes.rootIcons} autoWidth={autoWidth} sx={sx} MenuProps={menuPropsSize} IconComponent={iconComponent}
+            return <Select className={classes.rootSize}  autoWidth={autoWidth} sx={sx} MenuProps={menuPropsSize} IconComponent={iconComponent}
                            onChange={handleChange} value={selected}>
                 {data.map(item => <MenuItem value={item.value}><MockSizeIcon sx={{width: 16}}/>
                     {item.title}
@@ -233,7 +344,7 @@ export const UiDropdown = ({variant, data, isDropdownSelect, autoWidth, sx}) => 
             </Select>
 
         case 'image':
-            return <Select className={classes.rootIcons} autoWidth={autoWidth} sx={sx} MenuProps={menuPropsSize} IconComponent={iconComponent}
+            return <Select className={classes.rootIcons} autoWidth={autoWidth} sx={sx} MenuProps={menuPropsImage} IconComponent={iconComponent}
                            onChange={handleChange} value={selected}>
                 {data.map(item => <MenuItem value={item.value}>
                     <img src={item.img} alt={item.title} className={classes.iconImage}/>

@@ -33,21 +33,17 @@ export const UiInput = ({placeholder, fullWidth, errorText, error, disabled, typ
                 '& .MuiInputBase-input': {
                     borderRadius: 2,
                     backgroundColor: (theme) => theme.palette.background['paper'],
-                    borderStyle: "solid",
-                    borderWidth: 1,
-                    borderColor: (theme) => theme.palette.line,
+                    boxShadow: (theme) => '0 0 0 1px ' + theme.palette.line,
                     padding: (theme) => `${theme.spacingsValues.s}px ${theme.spacingsValues.l}px`,
                     fontFamily: (theme) => theme.typography['type-14'].fontFamily,
                     fontSize: (theme) => theme.typography['type-14'].fontSize,
                     fontWeight: (theme) => theme.typography['type-14'].fontWeight,
                     lineHeight: (theme) => theme.typography['type-14'].lineHeight,
                     '&:focus': {
-                        boxShadow: '0 0 0 2px #e1ecfc',
-                        border: (theme) => `solid 1px ${theme.palette.accent['one']}`
+                        boxShadow: (theme) => '0 0 0 2px ' + theme.palette.accent['one'] + ',0 0 0 4px #e1ecfc',
                     },
                     '&:active': {
-                        boxShadow: '0 0 0 2px #e1ecfc',
-                        border: (theme) => `solid 1px ${theme.palette.accent['one']}`
+                        boxShadow: (theme) => '0 0 0 2px ' + theme.palette.accent['one'] + ',0 0 0 4px #e1ecfc',
                     },
                     '&:placeholder': {
                         fontFamily: (theme) => theme.typography['type-14'].fontFamily,
@@ -71,22 +67,18 @@ export const UiInput = ({placeholder, fullWidth, errorText, error, disabled, typ
                 '& .MuiInputBase-input': {
                     borderRadius: 2,
                     backgroundColor: (theme) => theme.palette.background['paper'],
-                    borderStyle: "solid",
-                    borderWidth: 1,
                     color: (theme) => theme.palette.error['main'],
-                    borderColor: (theme) => theme.palette.error['main'],
+                    boxShadow: (theme) => '0 0 0 1px ' + theme.palette.error['main'],
                     padding: (theme) => `${theme.spacingsValues.s}px ${theme.spacingsValues.l}px`,
                     fontFamily: (theme) => theme.typography['type-14'].fontFamily,
                     fontSize: (theme) => theme.typography['type-14'].fontSize,
                     fontWeight: (theme) => theme.typography['type-14'].fontWeight,
                     lineHeight: (theme) => theme.typography['type-14'].lineHeight,
                     '&:focus': {
-                        boxShadow: '0 0 0 2px #e1ecfc',
-                        border: (theme) => `solid 1px ${theme.palette.error['main']}`
+                        boxShadow: (theme) => '0 0 0 2px ' + theme.palette.error['main'] + ',0 0 0 4px #e1ecfc',
                     },
                     '&:active': {
-                        boxShadow: '0 0 0 2px #e1ecfc',
-                        border: (theme) => `solid 1px ${theme.palette.error['main']}`
+                        boxShadow: (theme) => '0 0 0 2px ' + theme.palette.error['main'] + ',0 0 0 4px #e1ecfc',
                     },
                     '&:placeholder': {
                         fontFamily: (theme) => theme.typography['type-14'].fontFamily,
@@ -102,10 +94,9 @@ export const UiInput = ({placeholder, fullWidth, errorText, error, disabled, typ
             disabled={disabled && disabled}
             endAdornment={<ErrorIcon sx={{ position: 'absolute', right: 12, fontSize: 14, color: (theme) => theme.palette.error['main']}} />}
             fullWidth={fullWidth && fullWidth}
-            placeholder={placeholder && placeholder}
             value={'Error'}
-            onChange={SetupText}/>
-            <Typography variant="type-10" component="p" sx={{color: (theme) => theme.palette.error['main']}}>
+            />
+            <Typography variant="type-10" component="p" sx={{color: (theme) => theme.palette.error['main'], marginTop: '10px'}}>
                 {errorText}
             </Typography>
         </div>
@@ -116,21 +107,17 @@ export const UiInput = ({placeholder, fullWidth, errorText, error, disabled, typ
                     '& .MuiInputBase-input': {
                         borderRadius: 2,
                         backgroundColor: (theme) => theme.palette.background['paper'],
-                        borderStyle: "solid",
-                        borderWidth: 1,
-                        borderColor: (theme) => theme.palette.line,
+                        boxShadow: (theme) => '0 0 0 1px ' + theme.palette.line,
                         padding: (theme) => `${theme.spacingsValues.s}px ${theme.spacingsValues.l}px`,
                         fontFamily: (theme) => theme.typography['type-14'].fontFamily,
                         fontSize: (theme) => theme.typography['type-14'].fontSize,
                         fontWeight: (theme) => theme.typography['type-14'].fontWeight,
                         lineHeight: (theme) => theme.typography['type-14'].lineHeight,
                         '&:focus': {
-                            boxShadow: '0 0 0 2px #e1ecfc',
-                            border: (theme) => `solid 1px ${theme.palette.accent['one']}`
+                            boxShadow: (theme) => '0 0 0 2px ' + theme.palette.accent['one'] + ',0 0 0 4px #e1ecfc',
                         },
                         '&:active': {
-                            boxShadow: '0 0 0 2px #e1ecfc',
-                            border: (theme) => `solid 1px ${theme.palette.accent['one']}`
+                            boxShadow: (theme) => '0 0 0 2px ' + theme.palette.accent['one'] + ',0 0 0 4px #e1ecfc',
                         },
                         '&:placeholder': {
                             fontFamily: (theme) => theme.typography['type-14'].fontFamily,

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {styled} from "@mui/material/styles";
+import {border, padding} from "@mui/system";
 
 export const UiSelectArtboardComponent = ({artboardsArray, toSelectId, fromSelectId}) => {
     const [selectedArtboard, setSelectedArtboard] = useState(toSelectId ? toSelectId : 0);
@@ -29,13 +30,15 @@ export const UiSelectArtboardComponent = ({artboardsArray, toSelectId, fromSelec
         alignItems: 'center',
         alignContent: 'center',
         background: theme.palette.transparent['dark-5'],
-        border: '2px solid ' + theme.palette.transparent['dark-5'],
+        border: '2px solid transparent',
         cursor: 'pointer',
+        padding: '4px'
     }));
     const ArtboardImage = styled('img')(({theme}) => ({
         width: '100%',
         objectFit: 'contain',
         background: theme.palette.transparent['dark-5'],
+        borderRadius: '3px',
     }));
 
 
