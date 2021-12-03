@@ -10,7 +10,7 @@ export const UiMenuPoint = ({icon, text, onClick, type}) => {
         alignItems: 'center',
         alignContent: 'center',
         justifyContent: 'flex-start',
-        padding: '7px 12px 7px 10px',
+        padding: '6px 12px 6px 10px',
         gap: 6.4,
         borderRadius: 8,
         transition: '0.5s',

@@ -831,7 +831,7 @@ export const Ui = () => {
                     <div>
                         <GapContainer sx={{flexDirection: 'column', width: 400}}>
                             <UiPasteBlockContainer>
-                                <UiDropdown variant={'image'} data={dropdownsImage} isDropdownSelect={() => {
+                                <UiDropdown variant={'size'} data={dropdownsImage} isDropdownSelect={() => {
                                 }}/>
                                 <UiBigButton text={'Paste in canvas'} variant={'basic'}
                                              onClick={() => alert('Paste in canvas')}/>

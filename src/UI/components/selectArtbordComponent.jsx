@@ -37,6 +37,7 @@ export const UiSelectArtboardComponent = ({artboardsArray, toSelectId, fromSelec
         width: '100%',
         objectFit: 'contain',
         background: theme.palette.transparent['dark-5'],
+        borderRadius: '3px',
     }));
 
 

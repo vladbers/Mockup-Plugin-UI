@@ -19,13 +19,13 @@ const useStyles = makeStyles(theme => ({
         padding: 2
     },
     tabButton: {
-        padding: '8px 7px',
+        padding: '5.5px 7px',
         cursor: 'pointer',
         transition: '1.5s',
     },
     tabActive: {
-        padding: '6.5px',
-        borderRadius: 8,
+        padding: '2.5px',
+        borderRadius: 6,
         backgroundColor: theme.palette.pure['white'],
         boxShadow: '1px 1px 1px 0 rgba(0, 0, 0, 0.08), 4px 4px 3px 0 rgba(0, 0, 0, 0.01)',
         cursor: 'pointer',
@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     ulHeader: {
         padding: '0px',
         margin: '0px',
-        marginTop: theme.spacingsValues.s
+        marginTop: '13px'
     },
     liBox: {
         listStyle: 'none',
@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'row',
         alignItems: 'center',
         gap: '8px',
-        marginTop: '-6px'
+        marginTop: '-9px'
     }
 }))
 
@@ -80,8 +80,7 @@ const UnlockTabsHeader = ({tabs, selectedID, defaultTabId}) => {
             <div className={selected === props.id ? classes.tabActive : classes.tabButton} key={props.id}
                  onClick={() => props.click(props.id)}>
                 <Typography variant="type-12" component="p" sx={{
-                    color: (theme) => selected === props.id ? theme.palette.text['high'] : theme.palette.pure['white'],
-                    fontWeight: 'bold'
+                    color: (theme) => selected === props.id ? theme.palette.text['high'] : theme.palette.pure['white']
                 }}>
                     {props.label} <TabSubtext text={props.subtext} id={props.id}/>
                 </Typography>
@@ -102,7 +101,10 @@ export const UiUnlockAccess = (props) => {
     const UnlockAccess = styled('div')(({theme}) => ({
         backgroundColor: theme.palette.accent['one'],
         borderRadius: '16px',
-        padding: '20px',
+        paddingLeft: '20px',
+        paddingRight: '20px',
+        paddingTop: '14px',
+        paddingBottom: '14px',
     }));
 
     const InnerBlockStart = styled('div')(({theme}) => ({
@@ -136,7 +138,7 @@ export const UiUnlockAccess = (props) => {
     }));
     const UnlockAccessBody = styled('div')(({theme}) => ({}));
     const UnlockAccessFooter = styled('div')(({theme}) => ({
-        marginTop: '35px',
+        marginTop: '25px',
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',

@@ -60,7 +60,7 @@ export const UiTabsHeader = ({tabs, selectedID, defaultTabId}) => {
     const TabButton = (props) => {
         return (
             <div className={selected === props.id ? classes.tabActive : classes.tabButton} key={props.id} onClick={() => props.click(props.id)}>
-                <Typography variant="type-10" component="p" sx={{ color: (theme) => theme.palette.text['high'] }}>
+                <Typography variant="type-12" component="p" sx={{ color: (theme) => theme.palette.text['high'] }}>
                     {props.label} <TabSubtext text={props.subtext}/>
                 </Typography>
             </div>

@@ -49,7 +49,7 @@ export const UiSubheader = ({title, type, onClickBack, onClickInfo, onClickColor
             {type === 'simple' &&
             <Subheader sx={sx}>
                <StaticBlock>
-                   <div onClick={onClickBack}>
+                   <div onClick={onClickBack} style={{display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
                        <ArrowIcon sx={{width: 16, color: (theme) => theme.palette.text['high'], cursor: 'pointer'}} />
                    </div>
                    <Typography variant="type-16" component="p" sx={{color: (theme) => theme.palette.text['high']}}>
@@ -61,7 +61,7 @@ export const UiSubheader = ({title, type, onClickBack, onClickInfo, onClickColor
             {type === 'info' &&
             <Subheader sx={sx}>
                 <StaticBlock>
-                    <div onClick={onClickBack}>
+                    <div onClick={onClickBack} style={{display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
                         <ArrowIcon sx={{width: 16, color: (theme) => theme.palette.text['high'], cursor: 'pointer'}} />
                     </div>
                     <Typography variant="type-16" component="p" sx={{color: (theme) => theme.palette.text['high']}}>
@@ -69,7 +69,7 @@ export const UiSubheader = ({title, type, onClickBack, onClickInfo, onClickColor
                     </Typography>
                 </StaticBlock>
                 <StaticBlock>
-                    <div onClick={onClickInfo}>
+                    <div onClick={onClickInfo} style={{display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
                         <InfoIcon sx={{width: 16, color: (theme) => theme.palette.text['high'], cursor: 'pointer'}} />
                     </div>
                 </StaticBlock>
@@ -78,7 +78,7 @@ export const UiSubheader = ({title, type, onClickBack, onClickInfo, onClickColor
             {type === 'colors' &&
             <Subheader sx={sx}>
                 <StaticBlock>
-                    <div onClick={onClickBack}>
+                    <div onClick={onClickBack} style={{display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
                         <ArrowIcon sx={{width: 16, color: (theme) => theme.palette.text['high'], cursor: 'pointer'}} />
                     </div>
                     <Typography variant="type-16" component="p" sx={{color: (theme) => theme.palette.text['high']}}>
