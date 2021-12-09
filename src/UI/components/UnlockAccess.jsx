@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import {styled} from "@mui/material/styles";
 import {Typography} from "@mui/material";
 import {makeStyles} from "@mui/styles";
-import {TableContainer} from "./tabsContainer";
-import {UiBigButton} from "./bigButton";
+import {TableContainer} from "./TabsContainer";
+import {UiBigButton} from "./BigButton";
 
 
 const useStyles = makeStyles(theme => ({
@@ -92,60 +92,59 @@ const UnlockTabsHeader = ({tabs, selectedID, defaultTabId}) => {
     </TabPanel>);
 }
 
+const UnlockAccess = styled('div')(({theme}) => ({
+    backgroundColor: theme.palette.accent['one'],
+    borderRadius: '16px',
+    paddingLeft: '20px',
+    paddingRight: '20px',
+    paddingTop: '14px',
+    paddingBottom: '14px',
+}));
+
+const InnerBlockStart = styled('div')(({theme}) => ({
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    alignContent: 'center',
+    gap: '8px',
+}));
+
+const InnerBlockEnd = styled('div')(({theme}) => ({
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    alignContent: 'center',
+    gap: '8px',
+}));
+
+const UnlockAccessHeader = styled('div')(({theme}) => ({
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    alignContent: 'center',
+}));
+const UnlockAccessDivider = styled('div')(({theme}) => ({
+    width: '100%',
+    height: 1,
+    backgroundColor: theme.palette.transparent['light-40'],
+    marginBottom: '9.4px',
+    marginTop: '11.7px'
+}));
+const UnlockAccessBody = styled('div')(({theme}) => ({}));
+const UnlockAccessFooter = styled('div')(({theme}) => ({
+    marginTop: '25px',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    alignContent: 'center',
+    gap: '7px'
+}));
+
 export const UiUnlockAccess = (props) => {
 
     const classes = useStyles()
 
     const [mockTabContent, setMockTabContent] = useState(1);
-
-    const UnlockAccess = styled('div')(({theme}) => ({
-        backgroundColor: theme.palette.accent['one'],
-        borderRadius: '16px',
-        paddingLeft: '20px',
-        paddingRight: '20px',
-        paddingTop: '14px',
-        paddingBottom: '14px',
-    }));
-
-    const InnerBlockStart = styled('div')(({theme}) => ({
-        display: 'flex',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        alignContent: 'center',
-        gap: '8px',
-    }));
-
-    const InnerBlockEnd = styled('div')(({theme}) => ({
-        display: 'flex',
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-        alignContent: 'center',
-        gap: '8px',
-    }));
-
-    const UnlockAccessHeader = styled('div')(({theme}) => ({
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        alignContent: 'center',
-    }));
-    const UnlockAccessDivider = styled('div')(({theme}) => ({
-        width: '100%',
-        height: 1,
-        backgroundColor: theme.palette.transparent['light-40'],
-        marginBottom: '9.4px',
-        marginTop: '11.7px'
-    }));
-    const UnlockAccessBody = styled('div')(({theme}) => ({}));
-    const UnlockAccessFooter = styled('div')(({theme}) => ({
-        marginTop: '25px',
-        display: 'flex',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        alignContent: 'center',
-        gap: '7px'
-    }));
-
 
     return (
         <UnlockAccess>

@@ -2,7 +2,7 @@ import React from 'react';
 
 // Иконка создана по примеру из mui https://mui.com/components/icons/
 
-export const BigIconSVG = (props) => {
+export const BigIconSvg = (props) => {
     return <>
         {props.variant === 'one' &&
             <svg {...props} viewBox="0 0 217 135" fill="none" xmlns="http://www.w3.org/2000/svg">

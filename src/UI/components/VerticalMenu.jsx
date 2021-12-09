@@ -1,27 +1,28 @@
 import React from 'react';
 import {styled} from "@mui/material/styles";
-import {UiVerticalMenuDivider} from "./verticalMenuDevider";
+import {UiVerticalMenuDivider} from "./VerticalMenuDevider";
 import {Typography} from "@mui/material";
 
+
+const VerticalMenu = styled('div')(({ theme }) => ({
+    display: 'flex',
+    flexDirection: 'column',
+    borderRadius: 16,
+    background: theme.palette.transparent['light-90'],
+    justifyContent: 'space-between',
+    gap: 2
+}));
+const VerticalMenuHeroBox = styled('div')(({ theme }) => ({
+    display: 'flex',
+    flexDirection: 'row',
+    padding: '20px 20px 14px',
+    alignItems: 'center',
+    alignContent: 'center',
+    cursor: 'pointer',
+}));
+
+
 export const UiVerticalMenu = ({children, type, icon, heroTitle, heroSubtext, onClick}) => {
-
-    const VerticalMenu = styled('div')(({ theme }) => ({
-        display: 'flex',
-        flexDirection: 'column',
-        borderRadius: 16,
-        background: theme.palette.transparent['light-90'],
-        justifyContent: 'space-between',
-        gap: 2
-    }));
-    const VerticalMenuHeroBox = styled('div')(({ theme }) => ({
-        display: 'flex',
-        flexDirection: 'row',
-        padding: '20px 20px 14px',
-        alignItems: 'center',
-        alignContent: 'center',
-        cursor: 'pointer',
-    }));
-
 
     return (
         <>

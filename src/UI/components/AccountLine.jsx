@@ -2,25 +2,25 @@ import React from 'react';
 import {styled} from "@mui/material/styles";
 import {Typography} from "@mui/material";
 
+const CcountLine = styled('div')(({theme}) => ({
+
+}));
+const BoxLine = styled('div')(({theme}) => ({
+    background: theme.palette.transparent['dark-5'],
+    borderRadius: '7px',
+}));
+const DaysLine = styled('div')(({theme}) => ({
+    background: theme.palette.transparent['dark-5'],
+    borderRadius: '7px',
+    padding: '7px 9px'
+}));
+const AutoReNewBox = styled('div')(({theme}) => ({
+    marginTop: '10px',
+    display: 'flex',
+    gap: '8px'
+}));
+
 export const UiAccountLine = ({data, clickToCancel}) => {
-
-    const AccountLine = styled('div')(({theme}) => ({
-
-    }));
-    const BoxLine = styled('div')(({theme}) => ({
-        background: theme.palette.transparent['dark-5'],
-        borderRadius: '7px',
-    }));
-    const DaysLine = styled('div')(({theme}) => ({
-        background: theme.palette.transparent['dark-5'],
-        borderRadius: '7px',
-        padding: '7px 9px'
-    }));
-    const AutoReNewBox = styled('div')(({theme}) => ({
-        marginTop: '10px',
-        display: 'flex',
-        gap: '8px'
-    }));
 
     const LineDays = ({days, eventTime}) => {
         const nextBuildDate = new Date(days * 1000);
@@ -65,7 +65,7 @@ export const UiAccountLine = ({data, clickToCancel}) => {
     }
 
     return (
-        <AccountLine>
+        <CcountLine>
             {data.subscriptions.map(subscription =>
                 <>
                     <Typography variant="type-16" component="p" sx={{
@@ -78,6 +78,6 @@ export const UiAccountLine = ({data, clickToCancel}) => {
                     <AutoReNew days={subscription.daysLeft} cancelClick={clickToCancel}/>
                 </>
             )}
-        </AccountLine>
+        </CcountLine>
     )
 }

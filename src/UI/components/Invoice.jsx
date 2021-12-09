@@ -3,28 +3,29 @@ import {styled} from "@mui/material/styles";
 import {Typography} from "@mui/material";
 import {VariantIcon} from "../icons/variant";
 
+const InvoicesBox = styled('div')(({theme}) => ({}));
+const InvoicesInnerBox = styled('div')(({theme}) => ({
+    borderRadius: '8px',
+    border: '1px solid ' + theme.palette.transparent['dark-10'],
+    padding: '10px'
+}));
+const InvoicesData = styled('div')(({theme}) => ({
+    display: 'flex',
+    gap: '7px',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    alignContent: 'center'
+}));
+const InvoicesLine = styled('div')(({theme}) => ({
+    width: '100%',
+    backgroundColor: theme.palette.line,
+    height: '1px',
+    marginBottom: '10px',
+    marginTop: '10px',
+}));
+
 export const UiInvoiceLine = ({data}) => {
 
-    const InvoicesBox = styled('div')(({theme}) => ({}));
-    const InvoicesInnerBox = styled('div')(({theme}) => ({
-        borderRadius: '8px',
-        border: '1px solid ' + theme.palette.transparent['dark-10'],
-        padding: '10px'
-    }));
-    const InvoicesData = styled('div')(({theme}) => ({
-        display: 'flex',
-        gap: '7px',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        alignContent: 'center'
-    }));
-    const InvoicesLine = styled('div')(({theme}) => ({
-        width: '100%',
-        backgroundColor: theme.palette.line,
-        height: '1px',
-        marginBottom: '10px',
-        marginTop: '10px',
-    }));
 
     const InvoiceLink = ({data}) => {
 

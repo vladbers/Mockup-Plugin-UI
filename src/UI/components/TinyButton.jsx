@@ -2,54 +2,56 @@ import React from 'react';
 import {Button, Typography} from "@mui/material";
 import {styled} from "@mui/material/styles";
 
-export const UiTinyButton = ({text, variant, icon, onClick}) => {
 
-    const AccentButton = styled(Button)(({theme}) => ({
-        padding: '4px 13px',
-        borderRadius: "8px",
-        backgroundColor: theme.palette.transparent['color-20'],
-        color: theme.palette.accent['two'],
-        boxShadow: 'none',
-        '&:hover': {
-            backgroundColor: theme.palette.transparent['color-40'],
-            boxShadow: 'none'
-        },
-        '& .MuiButton-startIcon': {
-            marginLeft: 0
-        }
-    }));
+const AccentButton = styled(Button)(({theme}) => ({
+    padding: '4px 13px',
+    borderRadius: "8px",
+    backgroundColor: theme.palette.transparent['color-20'],
+    color: theme.palette.accent['two'],
+    boxShadow: 'none',
+    '&:hover': {
+        backgroundColor: theme.palette.transparent['color-40'],
+        boxShadow: 'none'
+    },
+    '& .MuiButton-startIcon': {
+        marginLeft: 0
+    }
+}));
 
-    const GreyButton = styled(Button)(({theme}) => ({
-        padding: '4px 13px',
-        borderRadius: "8px",
-        color: theme.palette.text['low'],
-        backgroundColor: theme.palette.transparent['dark-5'],
-        boxShadow: 'none',
-        '&:hover': {
-            backgroundColor: theme.palette.transparent['dark-10'],
-            boxShadow: 'none'
-        },
-        '& .MuiButton-startIcon': {
-            marginLeft: 0
-        }
-    }));
+const GreyButton = styled(Button)(({theme}) => ({
+    padding: '4px 13px',
+    borderRadius: "8px",
+    color: theme.palette.text['low'],
+    backgroundColor: theme.palette.transparent['dark-5'],
+    boxShadow: 'none',
+    '&:hover': {
+        backgroundColor: theme.palette.transparent['dark-10'],
+        boxShadow: 'none'
+    },
+    '& .MuiButton-startIcon': {
+        marginLeft: 0
+    }
+}));
 
-    const DefaultButton = styled(Button)(({theme}) => ({
-        padding: '4px 13px',
-        borderRadius: "8px",
-        opacity: 0.3,
+const DefaultButton = styled(Button)(({theme}) => ({
+    padding: '4px 13px',
+    borderRadius: "8px",
+    opacity: 0.3,
+    color: theme.palette.pure['white'],
+    backgroundColor: theme.palette.text['low'],
+    boxShadow: 'none',
+    '&:hover': {
         color: theme.palette.pure['white'],
         backgroundColor: theme.palette.text['low'],
-        boxShadow: 'none',
-        '&:hover': {
-            color: theme.palette.pure['white'],
-            backgroundColor: theme.palette.text['low'],
-            boxShadow: 'none'
-        },
-        '& .MuiButton-startIcon': {
-            marginLeft: 0
-        }
-    }));
+        boxShadow: 'none'
+    },
+    '& .MuiButton-startIcon': {
+        marginLeft: 0
+    }
+}));
+
+export const UiTinyButton = ({text, variant, icon, onClick}) => {
+
 
     return (<>
             {variant === 'accent' && !icon &&

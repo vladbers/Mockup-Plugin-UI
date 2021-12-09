@@ -1,18 +1,19 @@
 import React from 'react';
 import {styled} from "@mui/material/styles";
 import {Typography} from "@mui/material";
-import {UiChekBox} from "./checkBox";
+import {UiChekBox} from "./CheckBox";
+
+
+const ThemeComponent = styled('div')(({ theme }) => ({
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignContent: 'center',
+    justifyContent: 'flex-start'
+}));
+
 
 export const WalkthrougThemeComponent = ({children, defaultChecked, onChange}) => {
-
-    const ThemeComponent = styled('div')(({ theme }) => ({
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        alignContent: 'center',
-        justifyContent: 'flex-start'
-    }));
-
 
     return (
         <>

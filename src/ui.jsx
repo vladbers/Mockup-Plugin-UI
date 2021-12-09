@@ -26,43 +26,43 @@ import {StarIcon} from "./UI/icons/star";
 import {IconsMock} from "./UI/mock/iconsMock";
 
 // components
-import {UiBigButton} from "./UI/components/bigButton";
-import {UiTinyButton} from "./UI/components/tinyButton";
-import {UiRoundButton} from "./UI/components/roundButton";
-import {UiToggleButton} from "./UI/components/toggleButton";
-import {UiDropdown} from "./UI/components/dropdowns";
-import {UiInput} from "./UI/components/input";
-import {UiBanner} from "./UI/components/banner";
+import {UiBigButton} from "./UI/components/BigButton";
+import {UiTinyButton} from "./UI/components/TinyButton";
+import {UiRoundButton} from "./UI/components/RoundButton";
+import {UiToggleButton} from "./UI/components/ToggleButton";
+import {UiDropdown} from "./UI/components/Dropdowns";
+import {UiInput} from "./UI/components/Input";
+import {UiBanner} from "./UI/components/Banner";
 import {UiTabsHeader} from "./UI/components/UITabs";
-import {TableContainer} from "./UI/components/tabsContainer";
-import {UiAuthButton} from "./UI/components/authBtn";
-import {UiChekBox} from "./UI/components/checkBox";
+import {TableContainer} from "./UI/components/TabsContainer";
+import {UiAuthButton} from "./UI/components/AuthBtn";
+import {UiChekBox} from "./UI/components/CheckBox";
 import {UITabsHorizontal} from "./UI/components/UITabsHorizontal";
-import {UiInfoBar} from "./UI/components/info";
-import {UiMenuPoint} from "./UI/components/menuPoint";
-import {UiVerticalMenu} from "./UI/components/verticalMenu";
-import {UiVerticalMenuDivider} from "./UI/components/verticalMenuDevider";
-import {UiHorizontalMenu} from "./UI/components/horizontalMenu";
-import {UiVerticalMenuBox} from "./UI/components/verticalMenuBox";
-import {InfoBox} from "./UI/components/infoBox";
-import {UiSubheader} from "./UI/components/subheaders";
-import {Walkthroug} from "./UI/components/walkthroug";
-import {WalkthrougThemeComponent} from "./UI/components/walkthrougThemeComponent";
-import {UiUnlockAccess} from "./UI/components/unlockAccess";
-import {UiAccountLine} from "./UI/components/accountLine";
-import {UiPasteBlockContainer} from "./UI/components/pasteblockcontainer";
-import {UiPopupInfo} from "./UI/components/popupinfo";
-import {UiInvoiceLine} from "./UI/components/invoice";
-import {UiProductHeader} from "./UI/components/productHeader";
-import {UiSortingPreview} from "./UI/components/sortingPreview";
-import {UiProductHeaderFilter} from "./UI/components/productHeaderFilter";
-import {BigIconSVG} from "./UI/components/bigIconSvg";
-import {UiDistortTransitionBoxState} from "./UI/components/dtsb";
-import {UiSelectArtboardComponent} from "./UI/components/selectArtbordComponent";
-import {UiTransformationFooterComponent} from "./UI/components/tranformationFooterComponent";
-import {CropperImages} from "./UI/components/cropper";
-import {UiLightBox} from "./UI/components/lightbox";
-import {UiChangeEmail} from "./UI/components/chengeEmail";
+import {UiInfoBar} from "./UI/components/Info";
+import {UiMenuPoint} from "./UI/components/MenuPoint";
+import {UiVerticalMenu} from "./UI/components/VerticalMenu";
+import {UiVerticalMenuDivider} from "./UI/components/VerticalMenuDevider";
+import {UiHorizontalMenu} from "./UI/components/HorizontalMenu";
+import {UiVerticalMenuBox} from "./UI/components/VerticalMenuBox";
+import {InfoBox} from "./UI/components/InfoBox";
+import {UiSubheader} from "./UI/components/Subheaders";
+import {Walkthroug} from "./UI/components/Walkthroug";
+import {WalkthrougThemeComponent} from "./UI/components/WalkthrougThemeComponent";
+import {UiUnlockAccess} from "./UI/components/UnlockAccess";
+import {UiAccountLine} from "./UI/components/AccountLine";
+import {UiPasteBlockContainer} from "./UI/components/PasteBlockContainer";
+import {UiPopupInfo} from "./UI/components/PopupInfo";
+import {UiInvoiceLine} from "./UI/components/Invoice";
+import {UiProductHeader} from "./UI/components/ProductHeader";
+import {UiSortingPreview} from "./UI/components/SortingPreview";
+import {UiProductHeaderFilter} from "./UI/components/ProductHeaderFilter";
+import {BigIconSvg} from "./UI/components/BigIconSvg";
+import {UiDistortTransitionBoxState} from "./UI/components/Dtsb";
+import {UiSelectArtboardComponent} from "./UI/components/SelectArtbordComponent";
+import {UiTransformationFooterComponent} from "./UI/components/TranformationFooterComponent";
+import {CropperImages} from "./UI/components/Cropper";
+import {UiLightBox} from "./UI/components/Lightbox";
+import {UiChangeEmail} from "./UI/components/ChengeEmail";
 
 // mock data
 import {
@@ -831,8 +831,7 @@ export const Ui = () => {
                     <div>
                         <GapContainer sx={{flexDirection: 'column', width: 400}}>
                             <UiPasteBlockContainer>
-                                <UiDropdown variant={'size'} data={dropdownsImage} isDropdownSelect={() => {
-                                }}/>
+                                <UiDropdown variant={'size'} data={dropdownsImage} isDropdownSelect={(e) => {}}/>
                                 <UiBigButton text={'Paste in canvas'} variant={'basic'}
                                              onClick={() => alert('Paste in canvas')}/>
                             </UiPasteBlockContainer>
@@ -1092,7 +1091,7 @@ export const Ui = () => {
                     </Typography>
                     <div>
                         <GapContainer sx={{flexDirection: 'row'}}>
-                            <BigIconSVG
+                            <BigIconSvg
                                 variant={'one'}
                                 width={'217px'}
                                 height={'135px'}
@@ -1110,7 +1109,7 @@ export const Ui = () => {
                             <UiDistortTransitionBoxState
                                 background={'#F6F6F6'}
                                 bigImage={
-                                    <BigIconSVG
+                                    <BigIconSvg
                                         variant={'one'}
                                         width={'217px'}
                                         height={'135px'}

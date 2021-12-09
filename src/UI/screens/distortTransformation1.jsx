@@ -1,15 +1,14 @@
 import React from 'react'
 import {styled} from "@mui/material/styles";
-import {UiTinyButton} from "../components/tinyButton";
+import {UiTinyButton} from "../components/TinyButton";
 import {CrownIcon} from "../icons/crown";
 import {UITabsHorizontal} from "../components/UITabsHorizontal";
-import {UiHorizontalMenu} from "../components/horizontalMenu";
-import {UiSubheader} from "../components/subheaders";
+import {UiHorizontalMenu} from "../components/HorizontalMenu";
+import {UiSubheader} from "../components/Subheaders";
 import {tabArrayMockThree} from "../mock/mockData";
-import {BigIconSVG} from "../components/bigIconSvg";
+import {BigIconSvg} from "../components/BigIconSvg";
 import {Typography} from "@mui/material";
-import {UiDistortTransitionBoxState} from "../components/dtsb";
-// import {UiVerticalMenuDivider} from "../components/verticalMenuDevider";
+import {UiDistortTransitionBoxState} from "../components/Dtsb";
 
 
 export const DistortTransformations1 = () => {
@@ -46,7 +45,7 @@ export const DistortTransformations1 = () => {
                 <UiDistortTransitionBoxState
                     background={'#F6F6F6'}
                     bigImage={
-                        <BigIconSVG
+                        <BigIconSvg
                             variant={'one'}
                             width={'217px'}
                             height={'135px'}

@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import Cropper from 'react-easy-crop'
 import {makeStyles} from "@mui/styles";
-import {UiBigButton} from "./bigButton";
+import {UiBigButton} from "./BigButton";
 
 const useStyles = makeStyles(theme => ({
     home: {

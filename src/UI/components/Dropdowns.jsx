@@ -311,6 +311,8 @@ export const UiDropdown = ({variant, data, isDropdownSelect, autoWidth, sx}) => 
             horizontal: "left"
         }
     };
+
+
     const handleChange = (event) => {
         setSelected(event.target.value);
         isDropdownSelect(event.target.value)

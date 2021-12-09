@@ -1,15 +1,15 @@
 import React from 'react'
 import {styled} from "@mui/material/styles";
-import {UiTinyButton} from "../components/tinyButton";
+import {UiTinyButton} from "../components/TinyButton";
 import {CrownIcon} from "../icons/crown";
 import {UITabsHorizontal} from "../components/UITabsHorizontal";
-import {UiHorizontalMenu} from "../components/horizontalMenu";
+import {UiHorizontalMenu} from "../components/HorizontalMenu";
 import {Card, dropdownsRealistic, Images, tabArrayMockThree} from "../mock/mockData";
-import {UiSubheader} from "../components/subheaders";
+import {UiSubheader} from "../components/Subheaders";
 import {Typography} from "@mui/material";
-import {UiProductHeader} from "../components/productHeader";
-import {UiSortingPreview} from "../components/sortingPreview";
-import {UiDropdown} from "../components/dropdowns";
+import {UiProductHeader} from "../components/ProductHeader";
+import {UiSortingPreview} from "../components/SortingPreview";
+import {UiDropdown} from "../components/Dropdowns";
 
 
 

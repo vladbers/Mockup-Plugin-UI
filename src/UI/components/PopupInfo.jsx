@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import {makeStyles} from "@mui/styles";
 import {CloseIcon} from "../icons/close";
-import {UiRoundButton} from "./roundButton";
+import {UiRoundButton} from "./RoundButton";
 
 
 const useStyles = makeStyles(theme => ({

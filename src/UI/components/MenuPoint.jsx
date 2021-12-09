@@ -2,35 +2,34 @@ import React from 'react';
 import {styled} from "@mui/material/styles";
 
 
+const MenuPoint = styled('div')(({theme}) => ({
+    minWidth: 168,
+    display: 'flex',
+    alignItems: 'center',
+    alignContent: 'center',
+    justifyContent: 'flex-start',
+    padding: '6px 12px 6px 10px',
+    gap: 6.4,
+    borderRadius: 8,
+    transition: '0.5s',
+    cursor: 'pointer',
+    '&:hover': {
+        transition: '0.3s',
+        backgroundColor: theme.palette.line
+    }
+}));
+const PointEntery = styled('div')(({theme}) => ({
+    display: 'flex',
+    alignItems: 'center',
+    alignContent: 'center',
+    fontSize: theme.typography['type-14'].fontSize,
+    fontWeight: theme.typography['type-14'].fontWeight,
+    fontFamily: theme.typography['type-14'].fontFamily,
+    lineHeight: theme.typography['type-14'].lineHeight,
+    color: theme.palette.text['high']
+}));
+
 export const UiMenuPoint = ({icon, text, onClick, type}) => {
-
-    const MenuPoint = styled('div')(({theme}) => ({
-        minWidth: 168,
-        display: 'flex',
-        alignItems: 'center',
-        alignContent: 'center',
-        justifyContent: 'flex-start',
-        padding: '6px 12px 6px 10px',
-        gap: 6.4,
-        borderRadius: 8,
-        transition: '0.5s',
-        cursor: 'pointer',
-        '&:hover': {
-            transition: '0.3s',
-            backgroundColor: theme.palette.line
-        }
-    }));
-    const PointEntery = styled('div')(({theme}) => ({
-        display: 'flex',
-        alignItems: 'center',
-        alignContent: 'center',
-        fontSize: theme.typography['type-14'].fontSize,
-        fontWeight: theme.typography['type-14'].fontWeight,
-        fontFamily: theme.typography['type-14'].fontFamily,
-        lineHeight: theme.typography['type-14'].lineHeight,
-        color: theme.palette.text['high']
-    }));
-
 
     return (
         <>

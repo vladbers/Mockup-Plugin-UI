@@ -169,5 +169,4 @@ const CardsBroum = ({items, onClick}) => {
     )
 }
 
-
 export default trackWindowScroll(CardsBroum);

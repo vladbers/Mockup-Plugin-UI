@@ -6,15 +6,16 @@ import Typography from '@mui/material/Typography';
 import {ArrowIcon} from "../icons/arrow";
 import {styled} from "@mui/material/styles";
 
-export const InfoBox = ({title, children, expanded}) => {
+const UiAccordion = styled(Accordion)(({theme}) => ({
+    backgroundColor: theme.palette.background['default'],
+    border: 'none',
+    boxShadow: 'none',
+    margin: 0,
+    paddingBottom: '20px'
+}));
 
-    const UiAccordion = styled(Accordion)(({theme}) => ({
-        backgroundColor: theme.palette.background['default'],
-        border: 'none',
-        boxShadow: 'none',
-        margin: 0,
-        paddingBottom: '20px'
-    }));
+
+export const InfoBox = ({title, children, expanded}) => {
 
     return (
         <div>

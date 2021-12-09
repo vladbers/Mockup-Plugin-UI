@@ -1,18 +1,18 @@
 import React, {useState} from 'react'
 import {styled} from "@mui/material/styles";
-import {UiTinyButton} from "../components/tinyButton";
+import {UiTinyButton} from "../components/TinyButton";
 import {CrownIcon} from "../icons/crown";
 import {UITabsHorizontal} from "../components/UITabsHorizontal";
-import {UiHorizontalMenu} from "../components/horizontalMenu";
-import {UiSubheader} from "../components/subheaders";
+import {UiHorizontalMenu} from "../components/HorizontalMenu";
+import {UiSubheader} from "../components/Subheaders";
 import {tabArrayMockThree, userAccount} from "../mock/mockData";
 import {Typography} from "@mui/material";
-import {UiVerticalMenuDivider} from "../components/verticalMenuDevider";
-import {UiToggleButton} from "../components/toggleButton";
-import {UiInput} from "../components/input";
-import {UiBigButton} from "../components/bigButton";
-import {UiAccountLine} from "../components/accountLine";
-import {UiInvoiceLine} from "../components/invoice";
+import {UiVerticalMenuDivider} from "../components/VerticalMenuDevider";
+import {UiToggleButton} from "../components/ToggleButton";
+import {UiInput} from "../components/Input";
+import {UiBigButton} from "../components/BigButton";
+import {UiAccountLine} from "../components/AccountLine";
+import {UiInvoiceLine} from "../components/Invoice";
 
 export const ScreenAccount = () => {
 

@@ -1,16 +1,16 @@
 import React, {useState} from 'react'
 import {styled} from "@mui/material/styles";
-import {UiTinyButton} from "../components/tinyButton";
+import {UiTinyButton} from "../components/TinyButton";
 import {CrownIcon} from "../icons/crown";
 import {UITabsHorizontal} from "../components/UITabsHorizontal";
-import {UiHorizontalMenu} from "../components/horizontalMenu";
-import {UiSubheader} from "../components/subheaders";
+import {UiHorizontalMenu} from "../components/HorizontalMenu";
+import {UiSubheader} from "../components/Subheaders";
 import {tabArrayMockThree} from "../mock/mockData";
-import {UiLightBox} from "../components/lightbox";
+import {UiLightBox} from "../components/Lightbox";
 import {Typography} from "@mui/material";
-import {UiAuthButton} from "../components/authBtn";
-import {UiInput} from "../components/input";
-import {UiBigButton} from "../components/bigButton";
+import {UiAuthButton} from "../components/AuthBtn";
+import {UiInput} from "../components/Input";
+import {UiBigButton} from "../components/BigButton";
 
 export const ScreenAuth = () => {
     const [mockOpenAuth, setMockOpenAuth] = useState(true);

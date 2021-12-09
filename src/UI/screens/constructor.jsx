@@ -1,22 +1,22 @@
 import React, {useState} from 'react'
 import {styled} from "@mui/material/styles";
 import {ArrayMockColors, dropdownsImage, tabArrayMockThree} from "../mock/mockData";
-import {UiSubheader} from "../components/subheaders";
-import {UiTinyButton} from "../components/tinyButton";
+import {UiSubheader} from "../components/Subheaders";
+import {UiTinyButton} from "../components/TinyButton";
 import {CrownIcon} from "../icons/crown";
 import {UITabsHorizontal} from "../components/UITabsHorizontal";
-import {UiHorizontalMenu} from "../components/horizontalMenu";
-import {UiCanvas} from "../components/canvasMock";
-import {UiPasteBlockContainer} from "../components/pasteblockcontainer";
-import {UiDropdown} from "../components/dropdowns";
-import {UiBigButton} from "../components/bigButton";
-import {UiInfoBar} from "../components/info";
+import {UiHorizontalMenu} from "../components/HorizontalMenu";
+import {UiCanvas} from "../components/CanvasMock";
+import {UiPasteBlockContainer} from "../components/PasteBlockContainer";
+import {UiDropdown} from "../components/Dropdowns";
+import {UiBigButton} from "../components/BigButton";
+import {UiInfoBar} from "../components/Info";
 import {SizeIcon} from "../icons/size";
 import {ResizeIcon} from "../icons/resize";
 import {StyleIcon} from "../icons/style";
-import {InfoBox} from "../components/infoBox";
-import {WalkthrougThemeComponent} from "../components/walkthrougThemeComponent";
-import {Walkthroug} from "../components/walkthroug";
+import {InfoBox} from "../components/InfoBox";
+import {WalkthrougThemeComponent} from "../components/WalkthrougThemeComponent";
+import {Walkthroug} from "../components/Walkthroug";
 
 
 export const ScreenConstructor = (props) => {

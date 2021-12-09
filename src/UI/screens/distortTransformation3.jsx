@@ -1,17 +1,17 @@
 import React from 'react'
 import {styled} from "@mui/material/styles";
-import {UiTinyButton} from "../components/tinyButton";
+import {UiTinyButton} from "../components/TinyButton";
 import {CrownIcon} from "../icons/crown";
 import {UITabsHorizontal} from "../components/UITabsHorizontal";
-import {UiHorizontalMenu} from "../components/horizontalMenu";
-import {UiSubheader} from "../components/subheaders";
+import {UiHorizontalMenu} from "../components/HorizontalMenu";
+import {UiSubheader} from "../components/Subheaders";
 import {Artbords, dropdownsSizeOldPlugin, tabArrayMockThree} from "../mock/mockData";
-import {UiVerticalMenuDivider} from "../components/verticalMenuDevider";
+import {UiVerticalMenuDivider} from "../components/VerticalMenuDevider";
 import {NewWindowIcon} from "../icons/newWindow";
-import {UiBigButton} from "../components/bigButton";
+import {UiBigButton} from "../components/BigButton";
 import {Typography} from "@mui/material";
-import {UiSelectArtboardComponent} from "../components/selectArtbordComponent";
-import {UiTransformationFooterComponent} from "../components/tranformationFooterComponent";
+import {UiSelectArtboardComponent} from "../components/SelectArtbordComponent";
+import {UiTransformationFooterComponent} from "../components/TranformationFooterComponent";
 
 
 export const DistortTransformations3 = () => {

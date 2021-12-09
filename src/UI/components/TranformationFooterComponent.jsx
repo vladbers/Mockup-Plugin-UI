@@ -1,24 +1,27 @@
 import React, {useState} from 'react';
 import {styled} from "@mui/material/styles";
-import {UiDropdown} from "./dropdowns";
-import {UiBigButton} from "./bigButton";
+import {UiDropdown} from "./Dropdowns";
+import {UiBigButton} from "./BigButton";
 import {TurnLeftIcon} from "../icons/turnLeft";
 import {TurnRightIcon} from "../icons/turnRight";
+
+
+const TransformationFooterComponent = styled('div')(({theme}) => ({
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    alignContent: 'center',
+    justifyContent: 'space-between',
+    marginTop: '10px'
+}));
+const FooterComponent = styled('div')(({theme}) => ({
+    display: 'flex',
+}));
+
 
 export const UiTransformationFooterComponent = ({sizes, callbackOptions}) => {
     const [options, setOptions] = useState({selectedID: 0, turnHandler: null});
 
-    const TransformationFooterComponent = styled('div')(({theme}) => ({
-        width: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        alignContent: 'center',
-        justifyContent: 'space-between',
-        marginTop: '10px'
-    }));
-    const FooterComponent = styled('div')(({theme}) => ({
-        display: 'flex',
-    }));
 
     const optionsHandler = () => {
         callbackOptions(options)

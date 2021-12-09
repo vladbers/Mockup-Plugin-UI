@@ -4,40 +4,42 @@ import {Typography} from "@mui/material";
 import {ArrowIcon} from "../icons/arrow";
 import {InfoIcon} from "../icons/info";
 
+
+const Subheader = styled('div')(({theme}) => ({
+    background: 'transparent',
+    paddingTop: '13px',
+    paddingBottom: '13px',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignContent: 'center',
+    justifyContent: 'space-between'
+}));
+
+const StaticBlock = styled('div')(({theme}) => ({
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignContent: 'center',
+    justifyContent: 'space-between',
+    gap: 10
+}));
+
+const ColorBtn = styled('div')(({theme}) => ({
+    width: 16,
+    height: 16,
+    borderRadius: 20,
+    transition: '0.4s',
+    cursor: 'pointer',
+    '&:hover': {
+        opacity: 0.9,
+        transition: '0.4ms',
+    }
+}));
+
+
 export const UiSubheader = ({title, type, onClickBack, onClickInfo, onClickColor, colors, defaultColorId, sx}) => {
     const [selected, setSelected] = useState(defaultColorId ? defaultColorId : 1);
-
-    const Subheader = styled('div')(({theme}) => ({
-        background: 'transparent',
-        paddingTop: '13px',
-        paddingBottom: '13px',
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        alignContent: 'center',
-        justifyContent: 'space-between'
-    }));
-
-    const StaticBlock = styled('div')(({theme}) => ({
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        alignContent: 'center',
-        justifyContent: 'space-between',
-        gap: 10
-    }));
-
-    const ColorBtn = styled('div')(({theme}) => ({
-        width: 16,
-        height: 16,
-        borderRadius: 20,
-        transition: '0.4s',
-        cursor: 'pointer',
-        '&:hover': {
-            opacity: 0.9,
-            transition: '0.4ms',
-        }
-    }));
 
     const setupColor = (e) => {
         onClickColor(e);

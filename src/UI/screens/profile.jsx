@@ -1,17 +1,17 @@
 import React, {useState} from 'react'
 import {styled} from "@mui/material/styles";
-import {UiTinyButton} from "../components/tinyButton";
+import {UiTinyButton} from "../components/TinyButton";
 import {CrownIcon} from "../icons/crown";
 import {UITabsHorizontal} from "../components/UITabsHorizontal";
-import {UiHorizontalMenu} from "../components/horizontalMenu";
-import {UiSubheader} from "../components/subheaders";
+import {UiHorizontalMenu} from "../components/HorizontalMenu";
+import {UiSubheader} from "../components/Subheaders";
 import {tabArrayMockFour, tabArrayMockThree} from "../mock/mockData";
-import {UiUnlockAccess} from "../components/unlockAccess";
+import {UiUnlockAccess} from "../components/UnlockAccess";
 import {Typography} from "@mui/material";
-import {UiVerticalMenuDivider} from "../components/verticalMenuDevider";
-import {UiToggleButton} from "../components/toggleButton";
-import {UiInput} from "../components/input";
-import {UiBigButton} from "../components/bigButton";
+import {UiVerticalMenuDivider} from "../components/VerticalMenuDevider";
+import {UiToggleButton} from "../components/ToggleButton";
+import {UiInput} from "../components/Input";
+import {UiBigButton} from "../components/BigButton";
 
 export const ScreenProfile = (props) => {
 

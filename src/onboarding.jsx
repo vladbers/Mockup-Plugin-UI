@@ -6,7 +6,7 @@ import {styled} from "@mui/material/styles";
 import {Typography} from "@mui/material";
 import logo from './assets/logo.png'
 import {NewWindowIcon} from "./UI/icons/newWindow";
-import {UiBigButton} from "./UI/components/bigButton";
+import {UiBigButton} from "./UI/components/BigButton";
 
 const Home = () => {
     const navigate = useNavigate()
